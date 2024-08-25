@@ -9284,6 +9284,10 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
     case ABILITY_SUPREME_OVERLORD:
         modifier = uq4_12_multiply(modifier, GetSupremeOverlordModifier(battlerAtk));
         break;
+    case ABILITY_DRAGON_SKIN:
+        if (moveType == TYPE_DRAGON && gBattleStruct->ateBoost[battlerAtk])
+            modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
+        break;
     }
 
     // field abilities

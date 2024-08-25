@@ -2607,4 +2607,11 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_DRAGON_SKIN] =
+    {
+        .name = _("Dragon Skin"),
+        .description = COMPOUND_STRING("Normal moves become Dragon."),
+        .aiRating = 8,
+    },
 };
