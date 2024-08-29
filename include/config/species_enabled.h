@@ -60,7 +60,7 @@
 #define P_FAMILY_CHARMANDER              P_GEN_1_POKEMON
 #define P_FAMILY_SQUIRTLE                P_GEN_1_POKEMON
 #define P_FAMILY_CATERPIE                P_GEN_1_POKEMON
-#define P_FAMILY_WEEDLE                  P_GEN_1_POKEMON
+#define P_FAMILY_WEEDLE                  FALSE
 #define P_FAMILY_PIDGEY                  P_GEN_1_POKEMON
 #define P_FAMILY_RATTATA                 P_GEN_1_POKEMON
 #define P_FAMILY_SPEAROW                 P_GEN_1_POKEMON

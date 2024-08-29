@@ -10294,6 +10294,11 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
     else if ((moveType == TYPE_FIGHTING || moveType == TYPE_NORMAL) && defType == TYPE_GHOST
         && (abilityAtk == ABILITY_SCRAPPY || abilityAtk == ABILITY_MINDS_EYE)
         && mod == UQ_4_12(0.0))
+
+    // Corrosion now lets Poison-type moves hit Steel-type Pokemon
+    else if((moveType == TYPE_POISON && defType == TYPE_STEEL 
+        && abilityAtk == ABILITY_CORROSION)
+        && mod == UQ_4_12(0.0))
     {
         mod = UQ_4_12(1.0);
         if (recordAbilities)
