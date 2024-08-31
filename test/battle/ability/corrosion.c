@@ -225,3 +225,19 @@ SINGLE_BATTLE_TEST("Corrosion's effect is lost if the move used by the Pokémon 
         }
     }
 }
+
+SINGLE_BATTLE_TEST("Corrosion allows to hit Steel-type Pokémon with Poison-type moves")
+{
+    u32 move;
+    PARAMETRIZE { move = MOVE_SLUDGE_BOMB; }
+
+    GIVEN {
+        PLAYER(SPECIES_SALAZZLE) { Ability(ABILITY_CORROSION); };
+        OPPONENT(SPECIES_STEELIX);
+    } WHEN {
+        TURN { MOVE(player, move); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, move, player);
+        HP_BAR(opponent);
+    }
+}
