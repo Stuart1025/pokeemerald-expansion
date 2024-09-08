@@ -5297,6 +5297,10 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 if (moveType == TYPE_GROUND)
                     effect = 1;
                 break;
+            case ABILITY_BUG_CATCHER:
+                if (moveType == TYPE_BUG)
+                    effect = 2, statId = STAT_ATK;
+                break;
             }
             if (caseID == ABILITYEFFECT_WOULD_ABSORB)
             {
@@ -10514,7 +10518,8 @@ uq4_12_t GetTypeEffectiveness(struct Pokemon *mon, u8 moveType)
                                        || abilityDef == ABILITY_STORM_DRAIN))
          || (moveType == TYPE_ELECTRIC && (abilityDef == ABILITY_LIGHTNING_ROD // TODO: Add Gen 3/4 config check
                                        || abilityDef == ABILITY_VOLT_ABSORB
-                                       || abilityDef == ABILITY_MOTOR_DRIVE)))
+                                       || abilityDef == ABILITY_MOTOR_DRIVE))
+         || (moveType == TYPE_BUG      &&  abilityDef == ABILITY_BUG_CATCHER))
         {
             modifier = UQ_4_12(0.0);
         }

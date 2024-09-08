@@ -359,6 +359,10 @@ static bool32 FindMonThatAbsorbsOpponentsMove(u32 battler, bool32 emitResult)
     {
         absorbingTypeAbilities[numAbsorbingAbilities++] = ABILITY_EARTH_EATER;
     }
+    else if (gMovesInfo[gLastLandedMoves[battler]].type == TYPE_BUG)
+    {
+        absorbingTypeAbilities[numAbsorbingAbilities++] = ABILITY_BUG_CATCHER;
+    }
     else
     {
         return FALSE;

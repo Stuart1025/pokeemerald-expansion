@@ -2614,4 +2614,12 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Normal moves become Dragon."),
         .aiRating = 8,
     },
+
+    [ABILITY_BUG_CATCHER] =
+    {
+        .name = _("Bug Catcher"),
+        .description = COMPOUND_STRING("Bug moves increases Attack."),
+        .aiRating = 7,
+        .breakable = TRUE,
+    },
 };

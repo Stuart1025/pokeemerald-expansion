@@ -2946,6 +2946,14 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                     RETURN_SCORE_PLUS(WEAK_EFFECT);
                 }
                 break;
+            case ABILITY_BUG_CATCHER:
+                if (moveType == TYPE_BUG
+                    && HasMoveWithCategory(battlerAtkPartner, DAMAGE_CATEGORY_PHYSICAL)
+                    && BattlerStatCanRise(battlerAtkPartner, atkPartnerAbility, STAT_ATK))
+                {
+                    RETURN_SCORE_PLUS(WEAK_EFFECT);
+                }
+                break;
             case ABILITY_JUSTIFIED:
                 if (moveType == TYPE_DARK
                     && !IS_MOVE_STATUS(move)
