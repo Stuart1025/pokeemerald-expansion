@@ -14744,7 +14744,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Immerses the foe in heated\n"
             "steam. May inflict a burn."),
         .effect = EFFECT_HIT,
-        .power = 110,
+        .power = 120,
         .type = TYPE_WATER,
         .accuracy = 95,
         .pp = 5,
