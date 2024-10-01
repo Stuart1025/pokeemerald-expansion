@@ -202,6 +202,7 @@ enum RandomTag
     RNG_AI_SWITCH_HASBADODDS,
     RNG_AI_SWITCH_WONDER_GUARD,
     RNG_SHELL_SIDE_ARM,
+    RNG_FRIGID_BODY,
 };
 
 #define RandomWeighted(tag, ...) \

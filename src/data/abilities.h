@@ -2622,4 +2622,10 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 7,
         .breakable = TRUE,
     },
+    [ABILITY_FRIGID_BODY] =
+    {
+        .name = _("Frigid Body"),
+        .description = COMPOUND_STRING("Frostbite on contact."),
+        .aiRating = 4,
+    },
 };
