@@ -1254,7 +1254,7 @@ static void Cmd_attackcanceler(void)
     // Check Protean activation.
     if (ProteanTryChangeType(gBattlerAttacker, attackerAbility, gCurrentMove, moveType))
     {
-        if (B_PROTEAN_LIBERO == GEN_9 && ability == ABILITY_PROTEAN || ability == ABILITY_LIBERO)
+        if (B_PROTEAN_LIBERO == GEN_9 && (ability == ABILITY_PROTEAN || ability == ABILITY_LIBERO))
             gDisableStructs[gBattlerAttacker].usedProteanLibero = TRUE;
         PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
         gBattlerAbility = gBattlerAttacker;
