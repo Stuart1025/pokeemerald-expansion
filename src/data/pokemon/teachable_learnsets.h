@@ -22635,6 +22635,7 @@ static const u16 sCacneaTeachableLearnset[] = {
     MOVE_RETURN,
     MOVE_SANDSTORM,
     MOVE_SCARY_FACE,
+    MOVE_SCORCHING_SANDS, /* New Change */
     MOVE_SEED_BOMB,
     MOVE_SLEEP_TALK,
     MOVE_SOLAR_BEAM,
@@ -22690,6 +22691,7 @@ static const u16 sCacturneTeachableLearnset[] = {
     MOVE_RETURN,
     MOVE_SANDSTORM,
     MOVE_SCARY_FACE,
+    MOVE_SCORCHING_SANDS, /* New Change */
     MOVE_SEED_BOMB,
     MOVE_SHADOW_BALL,
     MOVE_SLEEP_TALK,
@@ -33163,6 +33165,7 @@ static const u16 sMaractusTeachableLearnset[] = {
     MOVE_RETURN,
     MOVE_ROUND,
     MOVE_SAFEGUARD,
+    MOVE_SCORCHING_SANDS, /* New Change */
     MOVE_SCREECH,
     MOVE_SEED_BOMB,
     MOVE_SLEEP_TALK,
@@ -36165,6 +36168,7 @@ static const u16 sStunfiskTeachableLearnset[] = {
     MOVE_SLEEP_TALK,
     MOVE_SLUDGE_BOMB,
     MOVE_SLUDGE_WAVE,
+    MOVE_SPIKES, /* New Change */
     MOVE_STEALTH_ROCK,
     MOVE_STOMPING_TANTRUM,
     MOVE_STONE_EDGE,
@@ -36176,6 +36180,7 @@ static const u16 sStunfiskTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_UPROAR,
+    MOVE_VOLT_SWITCH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -36200,6 +36205,7 @@ static const u16 sStunfiskGalarianTeachableLearnset[] = {
     MOVE_SLEEP_TALK,
     MOVE_SLUDGE_BOMB,
     MOVE_SLUDGE_WAVE,
+    MOVE_SPIKES, /* New Change */
     MOVE_STEALTH_ROCK,
     MOVE_STEEL_BEAM,
     MOVE_STONE_EDGE,
