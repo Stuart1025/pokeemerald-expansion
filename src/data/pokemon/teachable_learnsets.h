@@ -7967,7 +7967,7 @@ static const u16 sMarowakTeachableLearnset[] = {
 static const u16 sMarowakAlolanTeachableLearnset[] = {
     MOVE_ALLY_SWITCH,
     MOVE_ATTRACT,
-    MOVE_BLAZE_KICK,
+    MOVE_BLAZE_KICK, /* New Change */
     MOVE_BLIZZARD,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
@@ -14680,6 +14680,7 @@ static const u16 sWooperPaldeanTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_AVALANCHE,
     MOVE_BLIZZARD,
+    MOVE_BODY_PRESS,
     MOVE_BODY_SLAM,
     MOVE_BULLDOZE,
     MOVE_CHILLING_WATER,
@@ -20782,6 +20783,7 @@ static const u16 sNosepassTeachableLearnset[] = {
 #if P_GEN_4_CROSS_EVOS
 static const u16 sProbopassTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BODY_PRESS,
     MOVE_BULLDOZE,
     MOVE_DAZZLING_GLEAM,
     MOVE_EARTH_POWER,
@@ -21314,6 +21316,7 @@ static const u16 sMedichamTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_AURA_SPHERE,
     MOVE_BATON_PASS,
+    MOVE_BLAZE_KICK,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
     MOVE_BULK_UP,
@@ -30269,18 +30272,42 @@ static const u16 sVictiniTeachableLearnset[] = {
 
 #if P_FAMILY_SNIVY
 static const u16 sSnivyTeachableLearnset[] = {
+    MOVE_AERIAL_ACE,
     MOVE_AQUA_TAIL,
     MOVE_ATTRACT,
+    MOVE_BULLET_SEED,
+    MOVE_CALM_MIND,
+    MOVE_DOUBLE_EDGE,
     MOVE_ENDURE,
+    MOVE_ENERGY_BALL,
     MOVE_FACADE,
     MOVE_FRUSTRATION,
+    MOVE_GIGA_DRAIN,
+    MOVE_GRASS_KNOT,
+    MOVE_GRASS_PLEDGE,
+    MOVE_GRASSY_GLIDE,
+    MOVE_GRASSY_TERRAIN,
+    MOVE_HELPING_HAND,
+    MOVE_KNOCK_OFF,
+    MOVE_LEAF_STORM,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MAGICAL_LEAF,
+    MOVE_PETAL_BLIZZARD,
     MOVE_PROTECT,
+    MOVE_REFLECT,
     MOVE_REST,
     MOVE_RETURN,
+    MOVE_SEED_BOMB,
     MOVE_SLEEP_TALK,
+    MOVE_SOLAR_BEAM,
     MOVE_SUBSTITUTE,
+    MOVE_SUNNY_DAY,
     MOVE_SWAGGER,
+    MOVE_SWIFT,
+    MOVE_SWORDS_DANCE,
     MOVE_TAKE_DOWN,
+    MOVE_TAUNT,
+    MOVE_TRAILBLAZE,
     MOVE_UNAVAILABLE,
 };
 
@@ -30320,6 +30347,7 @@ static const u16 sSerperiorTeachableLearnset[] = {
 #if P_FAMILY_TEPIG
 static const u16 sTepigTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BODY_SLAM,
     MOVE_ENDURE,
     MOVE_FACADE,
     MOVE_FRUSTRATION,
@@ -30963,7 +30991,7 @@ static const u16 sPansearTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AMNESIA,
     MOVE_ATTRACT,
-    MOVE_BLAZE_KICK,
+    MOVE_BLAZE_KICK, /* New Change */
     MOVE_BURNING_JEALOUSY,
     MOVE_COVET,
     MOVE_CRUNCH,
@@ -31024,7 +31052,7 @@ static const u16 sSimisearTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AMNESIA,
     MOVE_ATTRACT,
-    MOVE_BLAZE_KICK,
+    MOVE_BLAZE_KICK, /* New Change */
     MOVE_BRICK_BREAK,
     MOVE_BURNING_JEALOUSY,
     MOVE_CLOSE_COMBAT, /* New Change */
