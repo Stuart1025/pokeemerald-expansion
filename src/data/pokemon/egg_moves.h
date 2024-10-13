@@ -1181,6 +1181,7 @@ static const u16 sMimeJrEggMoveLearnset[] = {
     MOVE_MAGIC_ROOM,
     MOVE_ICY_WIND,
     MOVE_PSYCHIC_TERRAIN,
+    MOVE_FOLLOW_ME,
     MOVE_UNAVAILABLE,
 };
 #endif //P_GEN_4_CROSS_EVOS
@@ -1198,6 +1199,7 @@ static const u16 sMrMimeEggMoveLearnset[] = {
     MOVE_MAGIC_ROOM,
     MOVE_ICY_WIND,
     MOVE_PSYCHIC_TERRAIN,
+    MOVE_FOLLOW_ME,
     MOVE_UNAVAILABLE,
 };
 #if P_GALARIAN_FORMS
@@ -1206,6 +1208,7 @@ static const u16 sMrMimeGalarianEggMoveLearnset[] = {
     MOVE_CONFUSE_RAY,
     MOVE_POWER_SPLIT,
     MOVE_TICKLE,
+    MOVE_FOLLOW_ME,
     MOVE_UNAVAILABLE,
 };
 #endif //P_GALARIAN_FORMS
@@ -1258,6 +1261,7 @@ static const u16 sElekidEggMoveLearnset[] = {
     MOVE_FEINT,
     MOVE_HAMMER_ARM,
     MOVE_FOCUS_PUNCH,
+    MOVE_FOLLOW_ME,
     MOVE_UNAVAILABLE,
 };
 #endif //P_GEN_2_CROSS_EVOS
@@ -1280,6 +1284,7 @@ static const u16 sMagbyEggMoveLearnset[] = {
     MOVE_FOCUS_ENERGY,
     MOVE_POWER_SWAP,
     MOVE_BELCH,
+    MOVE_FOLLOW_ME,
     MOVE_UNAVAILABLE,
 };
 #endif //P_GEN_2_CROSS_EVOS
