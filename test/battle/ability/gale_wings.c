@@ -1,7 +1,7 @@
 #include "global.h"
 #include "test/battle.h"
 
-SINGLE_BATTLE_TEST("Gale Wings only grants priority at full HP")
+SINGLE_BATTLE_TEST("Gale Wings only grants priority at 50 percent HP or more")
 {
     u16 hp;
     PARAMETRIZE { hp = 100; }
@@ -9,7 +9,7 @@ SINGLE_BATTLE_TEST("Gale Wings only grants priority at full HP")
     GIVEN {
         ASSUME(B_GALE_WINGS >= GEN_7);
         ASSUME(gMovesInfo[MOVE_AERIAL_ACE].type == TYPE_FLYING);
-        PLAYER(SPECIES_TALONFLAME) { Ability(ABILITY_GALE_WINGS); HP(hp); MaxHP(100); Speed(1);}
+        PLAYER(SPECIES_TALONFLAME) { Ability(ABILITY_GALE_WINGS); HP(hp); MaxHP(50); Speed(1);}
         OPPONENT(SPECIES_WOBBUFFET) { Speed(100);};
     } WHEN {
         TURN { MOVE(player, MOVE_AERIAL_ACE); }
