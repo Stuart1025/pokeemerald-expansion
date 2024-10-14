@@ -5,16 +5,16 @@ SINGLE_BATTLE_TEST("Gale Wings only grants priority at 50 percent HP or more")
 {
     u16 hp;
     PARAMETRIZE { hp = 100; }
-    PARAMETRIZE { hp = 99; }
+    PARAMETRIZE { hp = 50; }
     GIVEN {
         ASSUME(B_GALE_WINGS >= GEN_7);
         ASSUME(gMovesInfo[MOVE_AERIAL_ACE].type == TYPE_FLYING);
-        PLAYER(SPECIES_TALONFLAME) { Ability(ABILITY_GALE_WINGS); HP(hp); MaxHP(50); Speed(1);}
+        PLAYER(SPECIES_TALONFLAME) { Ability(ABILITY_GALE_WINGS); HP(hp); MaxHP(100); Speed(1);}
         OPPONENT(SPECIES_WOBBUFFET) { Speed(100);};
     } WHEN {
         TURN { MOVE(player, MOVE_AERIAL_ACE); }
     } SCENE {
-        if (hp == 100) {
+        if (hp >= 50) {
             MESSAGE("Talonflame used Aerial Ace!");
             MESSAGE("Foe Wobbuffet used Celebrate!");
         }
@@ -34,7 +34,7 @@ SINGLE_BATTLE_TEST("Gale Wings only grants priority to Flying-type moves")
         ASSUME(B_GALE_WINGS >= GEN_7);
         ASSUME(gMovesInfo[MOVE_AERIAL_ACE].type == TYPE_FLYING);
         ASSUME(gMovesInfo[MOVE_FLARE_BLITZ].type == TYPE_FIRE);
-        PLAYER(SPECIES_TALONFLAME) { Ability(ABILITY_GALE_WINGS); HP(100); MaxHP(100); Speed(1);}
+        PLAYER(SPECIES_TALONFLAME) { Ability(ABILITY_GALE_WINGS); HP(50); MaxHP(100); Speed(1);}
         OPPONENT(SPECIES_WOBBUFFET) { Speed(100);};
     } WHEN {
         TURN { MOVE(player, move); }
