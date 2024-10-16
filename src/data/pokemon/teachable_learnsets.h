@@ -618,6 +618,7 @@ static const u16 sButterfreeTeachableLearnset[] = {
     MOVE_POLLEN_PUFF,
     MOVE_PROTECT,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE,
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -3167,6 +3168,7 @@ static const u16 sBellossomTeachableLearnset[] = {
     MOVE_MOONBLAST,
     MOVE_PLAY_ROUGH,
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE,
     MOVE_REST,
     MOVE_RETURN,
     MOVE_ROUND,
@@ -3328,6 +3330,7 @@ static const u16 sVenomothTeachableLearnset[] = {
     MOVE_POUNCE,
     MOVE_PROTECT,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
     MOVE_RETURN,
@@ -11951,6 +11954,7 @@ static const u16 sArticunoTeachableLearnset[] = {
     MOVE_ICY_WIND,
     MOVE_LIGHT_SCREEN,
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -12001,6 +12005,7 @@ static const u16 sArticunoGalarianTeachableLearnset[] = {
     MOVE_PSYCHIC,
     MOVE_PSYCHO_CUT,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -13218,6 +13223,7 @@ static const u16 sLedianTeachableLearnset[] = {
     MOVE_HYPER_BEAM,
     MOVE_LIGHT_SCREEN,
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_REFLECT,
     MOVE_REST,
     MOVE_RETURN,
@@ -13491,6 +13497,7 @@ static const u16 sTogeticTeachableLearnset[] = {
     MOVE_PSYCH_UP,
     MOVE_PSYCHIC,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -13569,6 +13576,7 @@ static const u16 sTogekissTeachableLearnset[] = {
     MOVE_PSYCH_UP,
     MOVE_PSYCHIC,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -14482,6 +14490,7 @@ static const u16 sYanmaTeachableLearnset[] = {
     MOVE_LEECH_LIFE,
     MOVE_PROTECT,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_REST,
     MOVE_RETURN,
     MOVE_ROOST,
@@ -14519,6 +14528,7 @@ static const u16 sYanmegaTeachableLearnset[] = {
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_REST,
     MOVE_RETURN,
     MOVE_ROOST,
@@ -18138,6 +18148,7 @@ static const u16 sCelebiTeachableLearnset[] = {
     MOVE_PSYCHIC,
     MOVE_PSYCHIC_TERRAIN,
     MOVE_PSYCHO_CUT,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -19072,6 +19083,7 @@ static const u16 sBeautiflyTeachableLearnset[] = {
     MOVE_LEECH_LIFE,
     MOVE_PROTECT,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE,
     MOVE_REST,
     MOVE_RETURN,
     MOVE_ROOST,
@@ -19114,6 +19126,7 @@ static const u16 sDustoxTeachableLearnset[] = {
     MOVE_LIGHT_SCREEN,
     MOVE_PROTECT,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE,
     MOVE_REST,
     MOVE_RETURN,
     MOVE_ROOST,
@@ -19255,6 +19268,7 @@ static const u16 sLudicoloTeachableLearnset[] = {
     MOVE_MUD_SHOT,
     MOVE_MUDDY_WATER,
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -19809,6 +19823,7 @@ static const u16 sGardevoirTeachableLearnset[] = {
     MOVE_PSYCHIC,
     MOVE_PSYCHIC_TERRAIN,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -20025,6 +20040,7 @@ static const u16 sMasquerainTeachableLearnset[] = {
     MOVE_POUNCE,
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
+    MOVE_QUIVER_DANCE,
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -21577,6 +21593,7 @@ static const u16 sIllumiseTeachableLearnset[] = {
     MOVE_MOONBLAST, /* New Change */
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -21710,6 +21727,7 @@ static const u16 sRoseradeTeachableLearnset[] = {
     MOVE_POWER_WHIP,
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -22457,6 +22475,7 @@ static const u16 sVibravaTeachableLearnset[] = {
     MOVE_MUD_SHOT,
     MOVE_OUTRAGE,
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_REST,
     MOVE_RETURN,
     MOVE_ROCK_SLIDE,
@@ -22523,6 +22542,7 @@ static const u16 sFlygonTeachableLearnset[] = {
     MOVE_MUD_SHOT,
     MOVE_OUTRAGE,
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_REST,
     MOVE_RETURN,
     MOVE_ROCK_SLIDE,
@@ -22762,6 +22782,7 @@ static const u16 sAltariaTeachableLearnset[] = {
     MOVE_PLAY_ROUGH,
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -25267,6 +25288,7 @@ static const u16 sLatiasTeachableLearnset[] = {
     MOVE_PSYCHIC,
     MOVE_PSYCHO_CUT,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -25349,6 +25371,7 @@ static const u16 sLatiosTeachableLearnset[] = {
     MOVE_PSYCHIC,
     MOVE_PSYCHO_CUT,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -25652,6 +25675,7 @@ static const u16 sJirachiTeachableLearnset[] = {
     MOVE_PSYCH_UP,
     MOVE_PSYCHIC,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -26967,6 +26991,7 @@ static const u16 sWormadamPlantCloakTeachableLearnset[] = {
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE,
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -27000,6 +27025,7 @@ static const u16 sWormadamSandyCloakTeachableLearnset[] = {
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE,
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -27036,6 +27062,7 @@ static const u16 sWormadamTrashCloakTeachableLearnset[] = {
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE,
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -27073,6 +27100,7 @@ static const u16 sMothimTeachableLearnset[] = {
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE,
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -28950,6 +28978,7 @@ static const u16 sFinneonTeachableLearnset[] = {
     MOVE_PAYBACK,
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -28998,6 +29027,7 @@ static const u16 sLumineonTeachableLearnset[] = {
     MOVE_PAYBACK,
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -29224,6 +29254,7 @@ static const u16 sUxieTeachableLearnset[] = {
     MOVE_PSYCHIC,
     MOVE_PSYCHO_CUT,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -29301,6 +29332,7 @@ static const u16 sMespritTeachableLearnset[] = {
     MOVE_PSYCHIC,
     MOVE_PSYCHO_CUT,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -29380,6 +29412,7 @@ static const u16 sAzelfTeachableLearnset[] = {
     MOVE_PSYCHIC,
     MOVE_PSYCHO_CUT,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -29802,6 +29835,7 @@ static const u16 sCresseliaTeachableLearnset[] = {
     MOVE_PSYCHIC_TERRAIN,
     MOVE_PSYCHO_CUT,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -29848,6 +29882,7 @@ static const u16 sPhioneTeachableLearnset[] = {
     MOVE_MOONBLAST,
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -29889,6 +29924,7 @@ static const u16 sManaphyTeachableLearnset[] = {
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -30125,6 +30161,7 @@ static const u16 sArceusTeachableLearnset[] = {
     MOVE_PSYCHIC,
     MOVE_PSYCHIC_TERRAIN,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -30211,6 +30248,7 @@ static const u16 sVictiniTeachableLearnset[] = {
     MOVE_PROTECT,
     MOVE_PSYCHIC,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_REST,
     MOVE_RETURN,
     MOVE_REVERSAL,
@@ -32513,6 +32551,7 @@ static const u16 sLilligantTeachableLearnset[] = {
     MOVE_LIGHT_SCREEN,
     MOVE_MAGICAL_LEAF,
     MOVE_POLLEN_PUFF,
+    MOVE_QUIVER_DANCE,
     MOVE_PROTECT,
     MOVE_REST,
     MOVE_RETURN,
@@ -33348,6 +33387,7 @@ static const u16 sSigilyphTeachableLearnset[] = {
     MOVE_PSYCHIC,
     MOVE_PSYCHO_CUT,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -37230,6 +37270,7 @@ static const u16 sVolcaronaTeachableLearnset[] = {
     MOVE_POUNCE,
     MOVE_PROTECT,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE,
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -37587,6 +37628,7 @@ static const u16 sReshiramTeachableLearnset[] = {
     MOVE_PAYBACK,
     MOVE_PROTECT,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -37886,6 +37928,7 @@ static const u16 sMeloettaTeachableLearnset[] = {
     MOVE_PROTECT,
     MOVE_PSYCHIC,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -38713,6 +38756,7 @@ static const u16 sVivillonTeachableLearnset[] = {
     MOVE_POUNCE,
     MOVE_PROTECT,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE,
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -41509,6 +41553,7 @@ static const u16 sDiancieTeachableLearnset[] = {
     MOVE_PLAY_ROUGH,
     MOVE_POWER_GEM,
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_PSYCHIC,
     MOVE_PSYSHOCK,
     MOVE_RAIN_DANCE,
@@ -42615,6 +42660,7 @@ static const u16 sOricorioTeachableLearnset[] = {
     MOVE_HURRICANE,
     MOVE_ICY_WIND,
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE,
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
@@ -42661,6 +42707,7 @@ static const u16 sCutieflyTeachableLearnset[] = {
     MOVE_PLAY_ROUGH,
     MOVE_PROTECT,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
     MOVE_RETURN,
@@ -42710,6 +42757,7 @@ static const u16 sRibombeeTeachableLearnset[] = {
     MOVE_POLLEN_PUFF,
     MOVE_PROTECT,
     MOVE_PSYCHIC,
+    MOVE_QUIVER_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
     MOVE_RETURN,
@@ -44847,6 +44895,7 @@ static const u16 sTapuKokoTeachableLearnset[] = {
     MOVE_LIGHT_SCREEN,
     MOVE_MOONBLAST, /* New Change */
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -44903,6 +44952,7 @@ static const u16 sTapuLeleTeachableLearnset[] = {
     MOVE_PSYCHIC_TERRAIN,
     MOVE_PSYCHO_CUT,
     MOVE_PSYSHOCK,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_REFLECT,
     MOVE_REST,
     MOVE_RETURN,
@@ -44955,6 +45005,7 @@ static const u16 sTapuBuluTeachableLearnset[] = {
     MOVE_MOONBLAST, /* New Change */
     MOVE_PAYBACK,
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_REFLECT,
     MOVE_REST,
     MOVE_RETURN,
@@ -45013,6 +45064,7 @@ static const u16 sTapuFiniTeachableLearnset[] = {
     MOVE_MUDDY_WATER,
     MOVE_PLAY_ROUGH,
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
@@ -45303,6 +45355,7 @@ static const u16 sPheromosaTeachableLearnset[] = {
     MOVE_OUTRAGE,
     MOVE_POISON_JAB,
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE,
     MOVE_REST,
     MOVE_RETURN,
     MOVE_ROUND,
@@ -48606,6 +48659,7 @@ static const u16 sFrosmothTeachableLearnset[] = {
     MOVE_PLAY_ROUGH,
     MOVE_POUNCE,
     MOVE_PROTECT,
+    MOVE_QUIVER_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
     MOVE_RETURN,
