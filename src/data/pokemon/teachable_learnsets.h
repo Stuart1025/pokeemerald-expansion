@@ -972,6 +972,7 @@ static const u16 sRaticateTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_UPROAR,
     MOVE_U_TURN,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_ZEN_HEADBUTT,
@@ -2867,6 +2868,7 @@ static const u16 sWigglytuffTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_TRI_ATTACK,
     MOVE_UPROAR,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WATER_PULSE,
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
@@ -4402,6 +4404,7 @@ static const u16 sArcanineTeachableLearnset[] = {
     MOVE_TELEPORT,
     MOVE_THIEF,
     MOVE_THUNDER_FANG,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_UNAVAILABLE,
@@ -4514,6 +4517,7 @@ static const u16 sArcanineHisuianTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_THIEF,
     MOVE_THUNDER_FANG,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_UNAVAILABLE,
@@ -5463,6 +5467,8 @@ static const u16 sGeodudeAlolanTeachableLearnset[] = {
     MOVE_THUNDER_PUNCH,
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
 
@@ -5498,6 +5504,8 @@ static const u16 sGravelerAlolanTeachableLearnset[] = {
     MOVE_THUNDER_PUNCH,
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
 
@@ -5535,6 +5543,8 @@ static const u16 sGolemAlolanTeachableLearnset[] = {
     MOVE_THUNDER_PUNCH,
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
 #endif //P_ALOLAN_FORMS
@@ -5625,6 +5635,7 @@ static const u16 sRapidashTeachableLearnset[] = {
     MOVE_SWORDS_DANCE,
     MOVE_TAKE_DOWN,
     MOVE_THROAT_CHOP,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_UNAVAILABLE,
@@ -5714,6 +5725,7 @@ static const u16 sRapidashGalarianTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_THROAT_CHOP,
     MOVE_TRICK_ROOM,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WONDER_ROOM,
     MOVE_ZEN_HEADBUTT,
@@ -6305,6 +6317,7 @@ static const u16 sMagnetonTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_TRI_ATTACK,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -6356,6 +6369,7 @@ static const u16 sMagnezoneTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_TRI_ATTACK,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -7633,6 +7647,7 @@ static const u16 sElectrodeTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_TORMENT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -7719,6 +7734,7 @@ static const u16 sElectrodeHisuianTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -9007,6 +9023,7 @@ static const u16 sBlisseyTeachableLearnset[] = {
     MOVE_TRICK,
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_ZEN_HEADBUTT,
@@ -10212,6 +10229,7 @@ static const u16 sElectabuzzTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_UPROAR,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -10275,6 +10293,7 @@ static const u16 sElectivireTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_VOLT_SWITCH,
     MOVE_WEATHER_BALL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -10556,6 +10575,7 @@ static const u16 sTaurosTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WHIRLPOOL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_ZEN_HEADBUTT,
@@ -10608,6 +10628,7 @@ static const u16 sTaurosPaldeanCombatBreedTeachableLearnset[] = {
     MOVE_THUNDER,
     MOVE_THUNDERBOLT,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -10658,6 +10679,7 @@ static const u16 sTaurosPaldeanBlazeBreedTeachableLearnset[] = {
     MOVE_THUNDER,
     MOVE_THUNDERBOLT,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -10708,6 +10730,7 @@ static const u16 sTaurosPaldeanAquaBreedTeachableLearnset[] = {
     MOVE_THUNDER,
     MOVE_THUNDERBOLT,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -11014,6 +11037,7 @@ static const u16 sJolteonTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_VOLT_SWITCH,
     MOVE_WEATHER_BALL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -11954,6 +11978,7 @@ static const u16 sSnorlaxTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WHIRLPOOL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_ZEN_HEADBUTT,
@@ -12111,6 +12136,7 @@ static const u16 sZapdosTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_VOLT_SWITCH,
     MOVE_WEATHER_BALL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -12819,6 +12845,7 @@ static const u16 sTyphlosionTeachableLearnset[] = {
     MOVE_SWIFT,
     MOVE_TAKE_DOWN,
     MOVE_THUNDER_PUNCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_WORK_UP,
@@ -12878,6 +12905,7 @@ static const u16 sTyphlosionHisuianTeachableLearnset[] = {
     MOVE_SWIFT,
     MOVE_TAKE_DOWN,
     MOVE_THUNDER_PUNCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_ZEN_HEADBUTT,
@@ -13423,6 +13451,7 @@ static const u16 sLanturnTeachableLearnset[] = {
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
     MOVE_WHIRLPOOL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -13892,6 +13921,7 @@ static const u16 sAmpharosTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_TRAILBLAZE,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -15474,6 +15504,7 @@ static const u16 sDudunsparceTeachableLearnset[] = {
     MOVE_THUNDER,
     MOVE_THUNDERBOLT,
     MOVE_TOXIC,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -15692,6 +15723,8 @@ static const u16 sGranbullTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_TORMENT,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_WATER_PULSE,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -17473,6 +17506,7 @@ static const u16 sStantlerTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_TRICK,
     MOVE_TRICK_ROOM,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_ZEN_HEADBUTT,
@@ -17528,6 +17562,7 @@ static const u16 sWyrdeerTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_TRICK,
     MOVE_TRICK_ROOM,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -17659,6 +17694,7 @@ static const u16 sRaikouTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
     MOVE_WEATHER_BALL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -20379,6 +20415,7 @@ static const u16 sSlakingTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_TRAILBLAZE,
     MOVE_WATER_PULSE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_X_SCISSOR,
@@ -20944,6 +20981,8 @@ static const u16 sDelcattyTeachableLearnset[] = {
     MOVE_THUNDER,
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_WATER_PULSE,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -21504,6 +21543,7 @@ static const u16 sManectricTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_UPROAR,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -21538,6 +21578,8 @@ static const u16 sPlusleTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_PLUSLE
@@ -21570,6 +21612,8 @@ static const u16 sMinunTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_MINUN
@@ -22446,6 +22490,8 @@ static const u16 sSpindaTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_THIEF,
     MOVE_TRICK_ROOM,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_WATER_PULSE,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -25674,6 +25720,7 @@ static const u16 sRayquazaTeachableLearnset[] = {
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
     MOVE_WHIRLPOOL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -26810,6 +26857,7 @@ static const u16 sLuxrayTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_TRAILBLAZE,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -27296,6 +27344,7 @@ static const u16 sPachirisuTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_U_TURN,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -30260,6 +30309,7 @@ static const u16 sArceusTeachableLearnset[] = {
     MOVE_TRICK_ROOM,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_WORK_UP,
@@ -30329,6 +30379,7 @@ static const u16 sVictiniTeachableLearnset[] = {
     MOVE_TRICK_ROOM,
     MOVE_U_TURN,
     MOVE_UPROAR,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_WORK_UP,
@@ -30455,6 +30506,8 @@ static const u16 sEmboarTeachableLearnset[] = {
     MOVE_SUBSTITUTE,
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_TEPIG
@@ -30811,6 +30864,7 @@ static const u16 sStoutlandTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_UPROAR,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -31915,6 +31969,7 @@ static const u16 sAudinoTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_TRICK_ROOM,
     MOVE_UPROAR,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_ZEN_HEADBUTT,
@@ -34807,6 +34862,7 @@ static const u16 sSawsbuckTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_THUNDER_WAVE,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -34851,6 +34907,7 @@ static const u16 sEmolgaTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_U_TURN,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -35220,6 +35277,7 @@ static const u16 sGalvantulaTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
@@ -35411,6 +35469,7 @@ static const u16 sKlinklangTeachableLearnset[] = {
     MOVE_TRICK_ROOM,
     MOVE_UPROAR,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -35512,6 +35571,7 @@ static const u16 sEelektrossTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_U_TURN,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -36743,6 +36803,7 @@ static const u16 sBouffalantTeachableLearnset[] = {
     MOVE_TAUNT,
     MOVE_THROAT_CHOP,
     MOVE_UPROAR,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_ZEN_HEADBUTT,
@@ -37348,6 +37409,7 @@ static const u16 sVolcaronaTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_TRAILBLAZE,
     MOVE_U_TURN,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_ZEN_HEADBUTT,
@@ -37646,6 +37708,7 @@ static const u16 sThundurusTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_VOLT_SWITCH,
     MOVE_WEATHER_BALL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -37773,6 +37836,7 @@ static const u16 sZekromTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
     MOVE_WEATHER_BALL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -38641,6 +38705,7 @@ static const u16 sDiggersbyTeachableLearnset[] = {
     MOVE_THUNDER_PUNCH,
     MOVE_U_TURN,
     MOVE_UPROAR,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -38920,6 +38985,7 @@ static const u16 sPyroarTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_THUNDER_FANG,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_UNAVAILABLE,
@@ -39185,6 +39251,7 @@ static const u16 sGogoatTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -39334,6 +39401,8 @@ static const u16 sFurfrouTeachableLearnset[] = {
     MOVE_SUBSTITUTE,
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_FURFROU
@@ -40291,6 +40360,7 @@ static const u16 sHelioliskTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_VOLT_SWITCH,
     MOVE_WEATHER_BALL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -40637,6 +40707,7 @@ static const u16 sDedenneTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_U_TURN,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -41430,6 +41501,7 @@ static const u16 sNoivernTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
@@ -41813,6 +41885,7 @@ static const u16 sVolcanionTeachableLearnset[] = {
     MOVE_THUNDER_FANG,
     MOVE_WATER_PULSE,
     MOVE_WEATHER_BALL,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_UNAVAILABLE,
@@ -42482,6 +42555,7 @@ static const u16 sGumshoosTeachableLearnset[] = {
     MOVE_THUNDER_PUNCH,
     MOVE_TRAILBLAZE,
     MOVE_U_TURN,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -42595,6 +42669,7 @@ static const u16 sVikavoltTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
@@ -44533,6 +44608,7 @@ static const u16 sTogedemaruTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_U_TURN,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_ZEN_HEADBUTT,
@@ -44987,6 +45063,7 @@ static const u16 sTapuKokoTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_U_TURN,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -45229,6 +45306,7 @@ static const u16 sSolgaleoTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_TRICK_ROOM,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_ZEN_HEADBUTT,
@@ -45479,6 +45557,7 @@ static const u16 sXurkitreeTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -46064,6 +46143,7 @@ static const u16 sZeraoraTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -46131,6 +46211,8 @@ static const u16 sMelmetalTeachableLearnset[] = {
     MOVE_THUNDER_PUNCH,
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_MELTAN
@@ -46666,6 +46748,7 @@ static const u16 sGreedentTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_THUNDER_FANG,
     MOVE_UPROAR,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -47109,6 +47192,7 @@ static const u16 sDubwoolTeachableLearnset[] = {
     MOVE_SWORDS_DANCE,
     MOVE_TAKE_DOWN,
     MOVE_THUNDER_WAVE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -47295,6 +47379,7 @@ static const u16 sBoltundTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_UPROAR,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -47894,6 +47979,7 @@ static const u16 sToxtricityAmpedTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_VENOSHOCK,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -47955,6 +48041,7 @@ static const u16 sToxtricityLowKeyTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_VENOSHOCK,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -48680,6 +48767,7 @@ static const u16 sPincurchinTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_TOXIC_SPIKES,
     MOVE_VENOSHOCK,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -49004,6 +49092,7 @@ static const u16 sMorpekoTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_UPROAR,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -49160,6 +49249,7 @@ static const u16 sDracozoltTeachableLearnset[] = {
     MOVE_THUNDER_PUNCH,
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -49209,6 +49299,7 @@ static const u16 sArctozoltTeachableLearnset[] = {
     MOVE_THUNDER_PUNCH,
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -49603,6 +49694,7 @@ static const u16 sZacianTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_THUNDER_FANG,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -49667,6 +49759,7 @@ static const u16 sZamazentaTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_THUNDER_FANG,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -50007,6 +50100,7 @@ static const u16 sRegielekiTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -51154,6 +51248,7 @@ static const u16 sPawmotTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -51750,6 +51845,7 @@ static const u16 sBelliboltTeachableLearnset[] = {
     MOVE_TOXIC,
     MOVE_VOLT_SWITCH,
     MOVE_WATER_PULSE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -51823,6 +51919,7 @@ static const u16 sKilowattrelTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_U_TURN,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -51900,6 +51997,7 @@ static const u16 sMabosstiffTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_THUNDER_FANG,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -52904,6 +53002,7 @@ static const u16 sCyclizarTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_TRAILBLAZE,
     MOVE_U_TURN,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -53610,6 +53709,7 @@ static const u16 sSlitherWingTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_TRAILBLAZE,
     MOVE_U_TURN,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_ZEN_HEADBUTT,
@@ -53656,6 +53756,7 @@ static const u16 sSandyShocksTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -53703,6 +53804,7 @@ static const u16 sIronTreadsTeachableLearnset[] = {
     MOVE_THUNDER,
     MOVE_THUNDER_FANG,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -53795,6 +53897,7 @@ static const u16 sIronHandsTeachableLearnset[] = {
     MOVE_THUNDER_PUNCH,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -53962,6 +54065,7 @@ static const u16 sIronThornsTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -54497,6 +54601,7 @@ static const u16 sKoraidonTeachableLearnset[] = {
     MOVE_TAUNT,
     MOVE_THUNDER_FANG,
     MOVE_U_TURN,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -54549,6 +54654,7 @@ static const u16 sMiraidonTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_U_TURN,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -54629,6 +54735,8 @@ static const u16 sIronLeavesTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_SWIFT,
     MOVE_TAKE_DOWN,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
     MOVE_UNAVAILABLE,
@@ -54814,6 +54922,8 @@ static const u16 sRagingBoltTeachableLearnset[] = {
     MOVE_ENDURE,
     MOVE_SLEEP_TALK,
     MOVE_THUNDER_WAVE,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_RAGING_BOLT
@@ -54838,6 +54948,8 @@ static const u16 sIronBoulderTeachableLearnset[] = {
     MOVE_ENDURE,
     MOVE_SLEEP_TALK,
     MOVE_SWORDS_DANCE,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_IRON_BOULDER
@@ -54887,6 +54999,8 @@ static const u16 sTerapagosTeachableLearnset[] = {
     MOVE_SLEEP_TALK,
     MOVE_TOXIC,
     MOVE_RAPID_SPIN,
+    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_TERAPAGOS
