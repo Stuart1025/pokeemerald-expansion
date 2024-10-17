@@ -468,6 +468,7 @@ static const u16 sSquirtleTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
@@ -515,6 +516,7 @@ static const u16 sWartortleTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
@@ -577,6 +579,7 @@ static const u16 sBlastoiseTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_TERRAIN_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
@@ -4020,6 +4023,7 @@ static const u16 sPsyduckTeachableLearnset[] = {
     MOVE_TRI_ATTACK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WONDER_ROOM,
     MOVE_ZEN_HEADBUTT,
@@ -4093,6 +4097,7 @@ static const u16 sGolduckTeachableLearnset[] = {
     MOVE_TRI_ATTACK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WONDER_ROOM,
     MOVE_ZEN_HEADBUTT,
@@ -4560,6 +4565,7 @@ static const u16 sPoliwagTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -4606,6 +4612,7 @@ static const u16 sPoliwhirlTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -4673,6 +4680,7 @@ static const u16 sPoliwrathTeachableLearnset[] = {
     MOVE_THROAT_CHOP,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -4729,6 +4737,7 @@ static const u16 sPolitoedTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
@@ -5250,6 +5259,7 @@ static const u16 sTentacoolTeachableLearnset[] = {
     MOVE_VENOSHOCK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -5302,6 +5312,7 @@ static const u16 sTentacruelTeachableLearnset[] = {
     MOVE_VENOSHOCK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -5797,6 +5808,7 @@ static const u16 sSlowpokeTeachableLearnset[] = {
     MOVE_TRICK_ROOM,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_WONDER_ROOM,
@@ -5882,6 +5894,7 @@ static const u16 sSlowbroTeachableLearnset[] = {
     MOVE_TRICK_ROOM,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_WONDER_ROOM,
@@ -5968,6 +5981,7 @@ static const u16 sSlowkingTeachableLearnset[] = {
     MOVE_TRICK_ROOM,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_WONDER_ROOM,
@@ -6609,6 +6623,7 @@ static const u16 sSeelTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -6643,6 +6658,7 @@ static const u16 sDewgongTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_SEEL
@@ -6932,6 +6948,7 @@ static const u16 sShellderTeachableLearnset[] = {
     MOVE_TRI_ATTACK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -6991,6 +7008,7 @@ static const u16 sCloysterTeachableLearnset[] = {
     MOVE_TRI_ATTACK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
@@ -7515,6 +7533,7 @@ static const u16 sKrabbyTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_THIEF,
     MOVE_WATER_PULSE,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
@@ -7567,6 +7586,7 @@ static const u16 sKinglerTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_THIEF,
     MOVE_WATER_PULSE,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
@@ -8838,6 +8858,7 @@ static const u16 sHappinyTeachableLearnset[] = {
     MOVE_PSYCH_UP,
     MOVE_PSYCHIC,
     MOVE_RAIN_DANCE,
+    MOVE_RAPID_SPIN, /* New Change */
     MOVE_REST,
     MOVE_RETURN,
     MOVE_ROUND,
@@ -8901,6 +8922,7 @@ static const u16 sChanseyTeachableLearnset[] = {
     MOVE_PSYCH_UP,
     MOVE_PSYCHIC,
     MOVE_RAIN_DANCE,
+    MOVE_RAPID_SPIN, /* New Change */
     MOVE_REFLECT,
     MOVE_REST,
     MOVE_RETALIATE,
@@ -8988,6 +9010,7 @@ static const u16 sBlisseyTeachableLearnset[] = {
     MOVE_PSYCH_UP,
     MOVE_PSYCHIC,
     MOVE_RAIN_DANCE,
+    MOVE_RAPID_SPIN, /* New Change */
     MOVE_REST,
     MOVE_RETALIATE,
     MOVE_RETURN,
@@ -9332,6 +9355,7 @@ static const u16 sKingdraTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -9377,6 +9401,7 @@ static const u16 sGoldeenTeachableLearnset[] = {
     MOVE_THROAT_CHOP,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -9421,6 +9446,7 @@ static const u16 sSeakingTeachableLearnset[] = {
     MOVE_THROAT_CHOP,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -9467,6 +9493,7 @@ static const u16 sStaryuTeachableLearnset[] = {
     MOVE_TRI_ATTACK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -9526,6 +9553,7 @@ static const u16 sStarmieTeachableLearnset[] = {
     MOVE_TRICK_ROOM,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WONDER_ROOM,
     MOVE_UNAVAILABLE,
@@ -10731,6 +10759,7 @@ static const u16 sTaurosPaldeanAquaBreedTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_TRAILBLAZE,
     MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WAVE_CRASH,
     MOVE_WILD_CHARGE,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -10811,6 +10840,7 @@ static const u16 sGyaradosTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -10871,6 +10901,7 @@ static const u16 sLaprasTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
@@ -10977,6 +11008,7 @@ static const u16 sVaporeonTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
@@ -11600,6 +11632,7 @@ static const u16 sOmanyteTeachableLearnset[] = {
     MOVE_TOXIC_SPIKES,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -11654,6 +11687,7 @@ static const u16 sOmastarTeachableLearnset[] = {
     MOVE_TOXIC_SPIKES,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -11705,6 +11739,7 @@ static const u16 sKabutoTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -11767,6 +11802,7 @@ static const u16 sKabutopsTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
@@ -12494,6 +12530,7 @@ static const u16 sDragoniteTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -12945,6 +12982,7 @@ static const u16 sTotodileTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
 };
@@ -12982,6 +13020,7 @@ static const u16 sCroconawTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
 };
@@ -13029,6 +13068,7 @@ static const u16 sFeraligatrTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
 };
@@ -13405,6 +13445,7 @@ static const u16 sChinchouTeachableLearnset[] = {
     MOVE_VOLT_SWITCH,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
@@ -13448,10 +13489,11 @@ static const u16 sLanturnTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_THUNDERBOLT,
     MOVE_VOLT_SWITCH,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
-    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_UNAVAILABLE,
 };
@@ -14036,6 +14078,7 @@ static const u16 sMarillTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -14108,6 +14151,7 @@ static const u16 sAzumarillTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -14667,6 +14711,7 @@ static const u16 sWooperTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -14736,6 +14781,7 @@ static const u16 sQuagsireTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -15791,6 +15837,7 @@ static const u16 sQwilfishTeachableLearnset[] = {
     MOVE_VENOSHOCK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -16789,6 +16836,7 @@ static const u16 sCorsolaTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_THROAT_CHOP,
     MOVE_WATER_PULSE,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -16958,6 +17006,7 @@ static const u16 sRemoraidTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -17014,6 +17063,7 @@ static const u16 sOctilleryTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -17120,6 +17170,7 @@ static const u16 sMantykeTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -17179,6 +17230,7 @@ static const u16 sMantineTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -17807,6 +17859,7 @@ static const u16 sSuicuneTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
@@ -18102,6 +18155,7 @@ static const u16 sLugiaTeachableLearnset[] = {
     MOVE_TRICK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_WONDER_ROOM,
@@ -18647,6 +18701,7 @@ static const u16 sMudkipTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -18699,6 +18754,7 @@ static const u16 sMarshtompTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -18766,6 +18822,7 @@ static const u16 sSwampertTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
@@ -19253,6 +19310,7 @@ static const u16 sLotadTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -19305,6 +19363,7 @@ static const u16 sLombreTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -19365,6 +19424,7 @@ static const u16 sLudicoloTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
@@ -19649,6 +19709,7 @@ static const u16 sWingullTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -19705,6 +19766,7 @@ static const u16 sPelipperTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
@@ -20079,6 +20141,7 @@ static const u16 sSurskitTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -20136,6 +20199,7 @@ static const u16 sMasquerainTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_SURSKIT
@@ -21990,6 +22054,7 @@ static const u16 sCarvanhaTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -22051,6 +22116,7 @@ static const u16 sSharpedoTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -22097,6 +22163,7 @@ static const u16 sWailmerTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
@@ -22146,6 +22213,7 @@ static const u16 sWailordTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
@@ -23213,6 +23281,7 @@ static const u16 sBarboachTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -23273,6 +23342,7 @@ static const u16 sWhiscashTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
@@ -23324,6 +23394,7 @@ static const u16 sCorphishTeachableLearnset[] = {
     MOVE_TAUNT,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
@@ -23386,6 +23457,7 @@ static const u16 sCrawdauntTeachableLearnset[] = {
     MOVE_TAUNT,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
@@ -23734,6 +23806,7 @@ static const u16 sFeebasTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -23788,6 +23861,7 @@ static const u16 sMiloticTeachableLearnset[] = {
     MOVE_TRIPLE_AXEL,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
@@ -24585,6 +24659,7 @@ static const u16 sSphealTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -24625,6 +24700,7 @@ static const u16 sSealeoTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -24677,6 +24753,7 @@ static const u16 sWalreinTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -24704,6 +24781,7 @@ static const u16 sClamperlTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -24731,6 +24809,7 @@ static const u16 sHuntailTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -24763,6 +24842,7 @@ static const u16 sGorebyssTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_CLAMPERL
@@ -24819,6 +24899,7 @@ static const u16 sRelicanthTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -24856,6 +24937,7 @@ static const u16 sLuvdiscTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_LUVDISC
@@ -25414,6 +25496,7 @@ static const u16 sLatiasTeachableLearnset[] = {
     MOVE_TRICK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -25497,6 +25580,7 @@ static const u16 sLatiosTeachableLearnset[] = {
     MOVE_TRICK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WONDER_ROOM,
     MOVE_ZEN_HEADBUTT,
@@ -25556,6 +25640,7 @@ static const u16 sKyogreTeachableLearnset[] = {
     MOVE_UPROAR,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -26464,6 +26549,7 @@ static const u16 sEmpoleonTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
 };
@@ -26666,6 +26752,7 @@ static const u16 sBibarelTeachableLearnset[] = {
     MOVE_THUNDERBOLT,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
 };
@@ -27397,6 +27484,7 @@ static const u16 sBuizelTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_UNAVAILABLE,
 };
 
@@ -27456,6 +27544,7 @@ static const u16 sFloatzelTeachableLearnset[] = {
     MOVE_TORMENT,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_BUIZEL
@@ -27574,6 +27663,7 @@ static const u16 sShellosTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -27631,6 +27721,7 @@ static const u16 sGastrodonTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
@@ -29099,6 +29190,7 @@ static const u16 sFinneonTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -29148,6 +29240,7 @@ static const u16 sLumineonTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_FINNEON
@@ -29700,6 +29793,7 @@ static const u16 sPalkiaTeachableLearnset[] = {
     MOVE_TRICK_ROOM,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -30001,6 +30095,7 @@ static const u16 sPhioneTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
 };
@@ -30046,6 +30141,7 @@ static const u16 sManaphyTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
 };
@@ -30307,9 +30403,10 @@ static const u16 sArceusTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_TRICK,
     MOVE_TRICK_ROOM,
+    MOVE_VOLT_TACKLE, /* New Change */
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
-    MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_WORK_UP,
@@ -30645,6 +30742,7 @@ static const u16 sSamurottTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
 };
@@ -30712,31 +30810,116 @@ static const u16 sSamurottHisuianTeachableLearnset[] = {
 #if P_FAMILY_PATRAT
 static const u16 sPatratTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BATON_PASS,
+    MOVE_BODY_SLAM,
+    MOVE_BULLET_SEED,
+    MOVE_COVET,
+    MOVE_CRUNCH,
+    MOVE_CUT,
+    MOVE_DIG,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENDEAVOR,
     MOVE_ENDURE,
     MOVE_FACADE,
+    MOVE_FLING,
+    MOVE_FOCUS_ENERGY,
     MOVE_FRUSTRATION,
+    MOVE_GRASS_KNOT,
+    MOVE_GUNK_SHOT,
+    MOVE_HELPING_HAND,
+    MOVE_IRON_TAIL,
+    MOVE_LAST_RESORT,
+    MOVE_LOW_KICK,
+    MOVE_NASTY_PLOT,
     MOVE_PROTECT,
+    MOVE_RAIN_DANCE,
     MOVE_REST,
+    MOVE_RETALIATE,
     MOVE_RETURN,
+    MOVE_REVENGE,
+    MOVE_ROUND,
+    MOVE_SCREECH,
+    MOVE_SEED_BOMB,
+    MOVE_SHADOW_BALL,
+    MOVE_SHOCK_WAVE,
     MOVE_SLEEP_TALK,
+    MOVE_SNORE,
     MOVE_SUBSTITUTE,
+    MOVE_SUNNY_DAY,
+    MOVE_SUPER_FANG,
     MOVE_SWAGGER,
+    MOVE_SWORDS_DANCE,
     MOVE_TAKE_DOWN,
+    MOVE_THUNDERBOLT,
+    MOVE_WORK_UP,
+    MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
 };
 
 static const u16 sWatchogTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BATON_PASS,
+    MOVE_BODY_SLAM,
+    MOVE_BULLET_SEED,
+    MOVE_CONFUSE_RAY,
+    MOVE_COVET,
+    MOVE_CRUNCH,
+    MOVE_CUT,
+    MOVE_DIG,
+    MOVE_DOUBLE_EDGE,
+    MOVE_DREAM_EATER,
+    MOVE_ENDEAVOR,
     MOVE_ENDURE,
     MOVE_FACADE,
+    MOVE_FIRE_PUNCH,
+    MOVE_FLAMETHROWER,
+    MOVE_FLING,
+    MOVE_FOCUS_BLAST,
+    MOVE_FOCUS_ENERGY,
     MOVE_FRUSTRATION,
+    MOVE_GIGA_IMPACT,
+    MOVE_GRASS_KNOT,
+    MOVE_GUNK_SHOT,
+    MOVE_HELPING_HAND,
+    MOVE_HYPER_BEAM,
+    MOVE_ICE_PUNCH,
+    MOVE_IRON_TAIL,
+    MOVE_KNOCK_OFF,
+    MOVE_LAST_RESORT,
+    MOVE_LIGHT_SCREEN,
+    MOVE_LOW_KICK,
+    MOVE_NASTY_PLOT,
+    MOVE_POWER_UP_PUNCH,
     MOVE_PROTECT,
+    MOVE_PSYCH_UP,
+    MOVE_RAIN_DANCE,
     MOVE_REST,
+    MOVE_RETALIATE,
     MOVE_RETURN,
+    MOVE_REVENGE,
+    MOVE_ROCK_SMASH,
+    MOVE_ROUND,
+    MOVE_SCREECH,
+    MOVE_SEED_BOMB,
+    MOVE_SHADOW_BALL,
+    MOVE_SHOCK_WAVE,
+    MOVE_SIGNAL_BEAM,
     MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_STOMPING_TANTRUM,
+    MOVE_STRENGTH,
     MOVE_SUBSTITUTE,
+    MOVE_SUNNY_DAY,
+    MOVE_SUPER_FANG,
     MOVE_SWAGGER,
+    MOVE_SWORDS_DANCE,
     MOVE_TAKE_DOWN,
+    MOVE_THUNDER,
+    MOVE_THUNDERBOLT,
+    MOVE_THUNDER_PUNCH,
+    MOVE_THUNDER_WAVE,
+    MOVE_WORK_UP,
+    MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_PATRAT
@@ -32157,6 +32340,7 @@ static const u16 sTympoleTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_TOXIC,
     MOVE_UPROAR,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_UNAVAILABLE,
 };
@@ -32193,6 +32377,7 @@ static const u16 sPalpitoadTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_TOXIC,
     MOVE_UPROAR,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_UNAVAILABLE,
 };
@@ -32247,6 +32432,7 @@ static const u16 sSeismitoadTeachableLearnset[] = {
     MOVE_TOXIC,
     MOVE_UPROAR,
     MOVE_VENOSHOCK,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_UNAVAILABLE,
 };
@@ -32768,6 +32954,7 @@ static const u16 sBasculinTeachableLearnset[] = {
     MOVE_TAUNT,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
 };
@@ -32803,6 +32990,7 @@ static const u16 sBasculinWhiteStripedTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
 };
@@ -32847,6 +33035,7 @@ static const u16 sBasculegionTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
 };
@@ -33748,6 +33937,7 @@ static const u16 sTirtougaTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -33801,6 +33991,7 @@ static const u16 sCarracostaTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -34660,6 +34851,7 @@ static const u16 sDucklettTeachableLearnset[] = {
     MOVE_SUBSTITUTE,
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -34680,6 +34872,7 @@ static const u16 sSwannaTeachableLearnset[] = {
     MOVE_SUBSTITUTE,
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_DUCKLETT
@@ -35103,6 +35296,7 @@ static const u16 sFrillishTeachableLearnset[] = {
     MOVE_TRICK,
     MOVE_TRICK_ROOM,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WILL_O_WISP,
     MOVE_UNAVAILABLE,
@@ -35149,6 +35343,7 @@ static const u16 sJellicentTeachableLearnset[] = {
     MOVE_TRICK,
     MOVE_TRICK_ROOM,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WILL_O_WISP,
     MOVE_UNAVAILABLE,
@@ -35194,6 +35389,7 @@ static const u16 sAlomomolaTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
 };
@@ -36104,6 +36300,7 @@ static const u16 sBearticTeachableLearnset[] = {
     MOVE_THROAT_CHOP,
     MOVE_TRAILBLAZE,
     MOVE_WATER_PULSE,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
 };
@@ -38011,6 +38208,7 @@ static const u16 sKeldeoTeachableLearnset[] = {
     MOVE_SWORDS_DANCE,
     MOVE_TAKE_DOWN,
     MOVE_TAUNT,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WORK_UP,
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
@@ -38504,6 +38702,7 @@ static const u16 sFroakieTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -38552,6 +38751,7 @@ static const u16 sFrogadierTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -38606,6 +38806,7 @@ static const u16 sGreninjaTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_FROAKIE
@@ -39988,6 +40189,7 @@ static const u16 sBinacleTeachableLearnset[] = {
     MOVE_TAUNT,
     MOVE_THIEF,
     MOVE_UPROAR,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
 };
@@ -40052,6 +40254,7 @@ static const u16 sBarbaracleTeachableLearnset[] = {
     MOVE_TAUNT,
     MOVE_THIEF,
     MOVE_UPROAR,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
@@ -40105,6 +40308,7 @@ static const u16 sSkrelpTeachableLearnset[] = {
     MOVE_VENOSHOCK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -40158,6 +40362,7 @@ static const u16 sDragalgeTeachableLearnset[] = {
     MOVE_VENOSHOCK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_SKRELP
@@ -40208,6 +40413,7 @@ static const u16 sClauncherTeachableLearnset[] = {
     MOVE_VENOSHOCK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -40262,6 +40468,7 @@ static const u16 sClawitzerTeachableLearnset[] = {
     MOVE_VENOSHOCK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_CLAUNCHER
@@ -41883,9 +42090,10 @@ static const u16 sVolcanionTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_TAUNT,
     MOVE_THUNDER_FANG,
-    MOVE_WATER_PULSE,
-    MOVE_WEATHER_BALL,
     MOVE_VOLT_TACKLE, /* New Change */
+    MOVE_WATER_PULSE,
+    MOVE_WAVE_CRASH, /* New Change */
+    MOVE_WEATHER_BALL,
     MOVE_WILD_CHARGE,
     MOVE_WILL_O_WISP,
     MOVE_UNAVAILABLE,
@@ -42303,6 +42511,7 @@ static const u16 sPopplioTeachableLearnset[] = {
     MOVE_TRIPLE_AXEL,
     MOVE_UPROAR,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WONDER_ROOM,
     MOVE_WORK_UP,
@@ -42347,6 +42556,7 @@ static const u16 sBrionneTeachableLearnset[] = {
     MOVE_TRIPLE_AXEL,
     MOVE_UPROAR,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WONDER_ROOM,
     MOVE_WORK_UP,
@@ -42405,6 +42615,7 @@ static const u16 sPrimarinaTeachableLearnset[] = {
     MOVE_TRIPLE_AXEL,
     MOVE_UPROAR,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_WONDER_ROOM,
@@ -43168,6 +43379,7 @@ static const u16 sWishiwashiTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_UPROAR,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -43214,6 +43426,7 @@ static const u16 sMareanieTeachableLearnset[] = {
     MOVE_TOXIC_SPIKES,
     MOVE_VENOSHOCK,
     MOVE_WATER_PULSE,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 
@@ -43264,6 +43477,7 @@ static const u16 sToxapexTeachableLearnset[] = {
     MOVE_TOXIC_SPIKES,
     MOVE_VENOSHOCK,
     MOVE_WATER_PULSE,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_MAREANIE
@@ -43385,6 +43599,7 @@ static const u16 sDewpiderTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WONDER_ROOM,
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
@@ -43424,6 +43639,7 @@ static const u16 sAraquanidTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WONDER_ROOM,
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
@@ -44204,6 +44420,7 @@ static const u16 sGolisopodTeachableLearnset[] = {
     MOVE_THROAT_CHOP,
     MOVE_VENOSHOCK,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
 };
@@ -44717,6 +44934,7 @@ static const u16 sBruxishTeachableLearnset[] = {
     MOVE_VENOSHOCK,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_BRUXISH
@@ -45229,6 +45447,7 @@ static const u16 sTapuFiniTeachableLearnset[] = {
     MOVE_TAUNT,
     MOVE_TRICK,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WONDER_ROOM,
     MOVE_UNAVAILABLE,
@@ -46563,6 +46782,7 @@ static const u16 sSobbleTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
@@ -46601,6 +46821,7 @@ static const u16 sDrizzileTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
@@ -46660,6 +46881,7 @@ static const u16 sInteleonTeachableLearnset[] = {
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
@@ -47236,6 +47458,7 @@ static const u16 sChewtleTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -47303,6 +47526,7 @@ static const u16 sDrednawTeachableLearnset[] = {
     MOVE_THROAT_CHOP,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -47809,6 +48033,7 @@ static const u16 sCramorantTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_THROAT_CHOP,
     MOVE_UPROAR,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WEATHER_BALL,
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
@@ -47852,6 +48077,7 @@ static const u16 sArrokudaTeachableLearnset[] = {
     MOVE_THROAT_CHOP,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -47898,6 +48124,7 @@ static const u16 sBarraskewdaTeachableLearnset[] = {
     MOVE_THROAT_CHOP,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
@@ -49348,6 +49575,7 @@ static const u16 sDracovishTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -49392,6 +49620,7 @@ static const u16 sArctovishTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_TAKE_DOWN,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -49988,6 +50217,7 @@ static const u16 sUrshifuRapidStrikeStyleTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_U_TURN,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_WHIRLPOOL,
     MOVE_WORK_UP,
     MOVE_ZEN_HEADBUTT,
@@ -50900,6 +51130,7 @@ static const u16 sQuaquavalTeachableLearnset[] = {
     MOVE_TAUNT,
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
+    MOVE_WAVE_CRASH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_QUAXLY
@@ -52880,6 +53111,7 @@ static const u16 sPalafinTeachableLearnset[] = {
     MOVE_TAUNT,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
 };
@@ -53375,6 +53607,7 @@ static const u16 sVeluzaTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
 };
@@ -53414,6 +53647,7 @@ static const u16 sDondozoTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
 };
@@ -53850,6 +54084,7 @@ static const u16 sIronBundleTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_U_TURN,
     MOVE_WATER_PULSE,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_IRON_BUNDLE
@@ -54697,6 +54932,7 @@ static const u16 sWalkingWakeTeachableLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_WATER_PULSE,
     MOVE_WATERFALL,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_WALKING_WAKE
