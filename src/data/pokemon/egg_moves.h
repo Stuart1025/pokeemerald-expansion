@@ -170,6 +170,7 @@ static const u16 sPichuEggMoveLearnset[] = {
     MOVE_BESTOW,
     MOVE_DISARMING_VOICE,
     MOVE_ELECTRIC_TERRAIN,
+    MOVE_FOLLOW_ME,
     MOVE_UNAVAILABLE,
 };
 #endif //P_GEN_2_CROSS_EVOS
@@ -753,6 +754,7 @@ static const u16 sFarfetchdEggMoveLearnset[] = {
     MOVE_SIMPLE_BEAM,
     MOVE_FIRST_IMPRESSION,
     MOVE_FINAL_GAMBIT,
+    MOVE_WISH,
     MOVE_UNAVAILABLE,
 };
 #if P_GALARIAN_FORMS
@@ -918,6 +920,7 @@ static const u16 sDrowzeeEggMoveLearnset[] = {
     MOVE_SKILL_SWAP,
     MOVE_POWER_SPLIT,
     MOVE_PSYCHIC_TERRAIN,
+    MOVE_WISH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_DROWZEE
@@ -956,6 +959,7 @@ static const u16 sExeggcuteEggMoveLearnset[] = {
     MOVE_NATURAL_GIFT,
     MOVE_BLOCK,
     MOVE_GRASSY_TERRAIN,
+    MOVE_WISH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_EXEGGCUTE
@@ -1011,6 +1015,7 @@ static const u16 sLickitungEggMoveLearnset[] = {
     MOVE_ZEN_HEADBUTT,
     MOVE_BELCH,
     MOVE_THRASH,
+    MOVE_WISH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_LICKITUNG
@@ -1070,6 +1075,7 @@ static const u16 sHappinyEggMoveLearnset[] = {
     MOVE_MUD_BOMB,
     MOVE_NATURAL_GIFT,
     MOVE_ENDURE,
+    MOVE_WISH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_GEN_4_CROSS_EVOS
@@ -1085,6 +1091,7 @@ static const u16 sChanseyEggMoveLearnset[] = {
     MOVE_NATURAL_GIFT,
     MOVE_ENDURE,
     MOVE_SEISMIC_TOSS,
+    MOVE_WISH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_CHANSEY
@@ -1123,6 +1130,7 @@ static const u16 sKangaskhanEggMoveLearnset[] = {
     MOVE_TRUMP_CARD,
     MOVE_UPROAR,
     MOVE_CIRCLE_THROW,
+    MOVE_WISH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_KANGASKHAN
