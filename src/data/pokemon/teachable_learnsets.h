@@ -608,6 +608,7 @@ static const u16 sButterfreeTeachableLearnset[] = {
     MOVE_AIR_SLASH,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DRAINING_KISS,
     MOVE_DUAL_WINGBEAT,
@@ -665,7 +666,6 @@ static const u16 sBeedrillTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BRICK_BREAK,
@@ -857,7 +857,6 @@ static const u16 sPidgeotTeachableLearnset[] = {
 
 #if P_FAMILY_RATTATA
 static const u16 sRattataTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_SLAM,
@@ -913,7 +912,6 @@ static const u16 sRattataTeachableLearnset[] = {
 };
 
 static const u16 sRaticateTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_SLAM,
@@ -974,7 +972,6 @@ static const u16 sRaticateTeachableLearnset[] = {
 
 #if P_ALOLAN_FORMS
 static const u16 sRattataAlolanTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_SLAM,
@@ -1031,7 +1028,6 @@ static const u16 sRattataAlolanTeachableLearnset[] = {
 };
 
 static const u16 sRaticateAlolanTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_SLAM,
@@ -1096,7 +1092,6 @@ static const u16 sSpearowTeachableLearnset[] = {
     MOVE_ACROBATICS, /* New Change */
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BRAVE_BIRD, /* New Change */
@@ -1138,7 +1133,6 @@ static const u16 sFearowTeachableLearnset[] = {
     MOVE_ACROBATICS, /* New Change */
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BRAVE_BIRD, /* New Change */
@@ -1186,6 +1180,7 @@ static const u16 sFearowTeachableLearnset[] = {
 static const u16 sEkansTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
     MOVE_ATTRACT,
+    MOVE_BRUTAL_SWING,
     MOVE_BULLDOZE,
     MOVE_CRUNCH,
     MOVE_DARK_PULSE,
@@ -1250,6 +1245,7 @@ static const u16 sArbokTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
+    MOVE_BRUTAL_SWING,
     MOVE_BULLDOZE,
     MOVE_CRUNCH,
     MOVE_DARK_PULSE,
@@ -2399,6 +2395,7 @@ static const u16 sVulpixTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
+    MOVE_BURNING_JEALOUSY,
     MOVE_DARK_PULSE,
     MOVE_DAZZLING_GLEAM, /* New Change */
     MOVE_DIG,
@@ -2446,6 +2443,7 @@ static const u16 sNinetalesTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
     MOVE_DARK_PULSE,
     MOVE_DAZZLING_GLEAM, /* New Change */
@@ -2850,7 +2848,6 @@ static const u16 sZubatTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRAVE_BIRD,
     MOVE_CRUNCH,
@@ -2894,7 +2891,6 @@ static const u16 sGolbatTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRAVE_BIRD,
     MOVE_CRUNCH,
@@ -2942,7 +2938,6 @@ static const u16 sCrobatTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRAVE_BIRD,
     MOVE_CROSS_POISON,
@@ -3169,6 +3164,7 @@ static const u16 sParasTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
     MOVE_BULLET_SEED,
+    MOVE_BUG_BITE,
     MOVE_CUT,
     MOVE_DIG,
     MOVE_ENDURE,
@@ -3203,6 +3199,7 @@ static const u16 sParasectTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BULLET_SEED,
     MOVE_CUT,
     MOVE_DIG,
@@ -3242,6 +3239,7 @@ static const u16 sVenonatTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CONFUSE_RAY,
     MOVE_ENDURE,
@@ -3285,6 +3283,7 @@ static const u16 sVenomothTeachableLearnset[] = {
     MOVE_AIR_SLASH,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CONFUSE_RAY,
     MOVE_DEFOG,
@@ -3333,7 +3332,6 @@ static const u16 sDiglettTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BULLDOZE,
@@ -3381,7 +3379,6 @@ static const u16 sDugtrioTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BULLDOZE,
@@ -3435,7 +3432,6 @@ static const u16 sDiglettAlolanTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BULLDOZE,
@@ -3485,7 +3481,6 @@ static const u16 sDugtrioAlolanTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BULLDOZE,
@@ -3545,7 +3540,6 @@ static const u16 sMeowthTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_CHARM,
@@ -3604,7 +3598,6 @@ static const u16 sPersianTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_CHARM,
@@ -3667,7 +3660,6 @@ static const u16 sMeowthAlolanTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_CHARM,
@@ -3721,9 +3713,9 @@ static const u16 sPersianAlolanTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CHARM,
     MOVE_CONFUSE_RAY,
     MOVE_DARK_PULSE,
@@ -3778,7 +3770,6 @@ static const u16 sPersianAlolanTeachableLearnset[] = {
 static const u16 sMeowthGalarianTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
@@ -3838,7 +3829,6 @@ static const u16 sMeowthGalarianTeachableLearnset[] = {
 static const u16 sPerrserkerTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BODY_SLAM,
@@ -4982,7 +4972,6 @@ static const u16 sMachokeTeachableLearnset[] = {
 };
 
 static const u16 sMachampTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
@@ -5081,6 +5070,7 @@ static const u16 sBellsproutTeachableLearnset[] = {
 static const u16 sWeepinbellTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BULLET_SEED,
     MOVE_CUT,
     MOVE_ENDURE,
@@ -5110,6 +5100,7 @@ static const u16 sWeepinbellTeachableLearnset[] = {
 static const u16 sVictreebelTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BULLET_SEED,
     MOVE_CUT,
     MOVE_ENDURE,
@@ -5375,6 +5366,7 @@ static const u16 sGolemTeachableLearnset[] = {
 static const u16 sGeodudeAlolanTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_BULLDOZE,
     MOVE_DIG,
     MOVE_EARTH_POWER,
@@ -5412,6 +5404,7 @@ static const u16 sGravelerAlolanTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_PRESS,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_BULLDOZE,
     MOVE_DIG,
     MOVE_EARTH_POWER,
@@ -5448,6 +5441,7 @@ static const u16 sGravelerAlolanTeachableLearnset[] = {
 static const u16 sGolemAlolanTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_BULLDOZE,
     MOVE_DIG,
     MOVE_EARTH_POWER,
@@ -6356,7 +6350,6 @@ static const u16 sFarfetchdTeachableLearnset[] = {
 
 #if P_GALARIAN_FORMS
 static const u16 sFarfetchdGalarianTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRAVE_BIRD,
@@ -6391,7 +6384,6 @@ static const u16 sFarfetchdGalarianTeachableLearnset[] = {
 };
 
 static const u16 sSirfetchdTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRAVE_BIRD,
@@ -6708,6 +6700,7 @@ static const u16 sGrimerAlolanTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_CRUNCH,
     MOVE_DARK_PULSE,
     MOVE_DIG,
@@ -6765,6 +6758,7 @@ static const u16 sMukAlolanTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_CRUNCH,
     MOVE_DARK_PULSE,
     MOVE_DIG,
@@ -7939,6 +7933,7 @@ static const u16 sMarowakAlolanTeachableLearnset[] = {
     MOVE_BRICK_BREAK,
     MOVE_BRUTAL_SWING,
     MOVE_BULLDOZE,
+    MOVE_BURNING_JEALOUSY,
     MOVE_DARK_PULSE,
     MOVE_DIG,
     MOVE_DREAM_EATER,
@@ -8339,7 +8334,6 @@ static const u16 sLickilickyTeachableLearnset[] = {
 #if P_FAMILY_KOFFING
 static const u16 sKoffingTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_DARK_PULSE,
     MOVE_ENDURE,
@@ -8379,7 +8373,6 @@ static const u16 sKoffingTeachableLearnset[] = {
 
 static const u16 sWeezingTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_DARK_PULSE,
     MOVE_ENDURE,
@@ -8424,7 +8417,6 @@ static const u16 sWeezingTeachableLearnset[] = {
 #if P_GALARIAN_FORMS
 static const u16 sWeezingGalarianTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRUTAL_SWING,
     MOVE_DARK_PULSE,
@@ -9030,7 +9022,6 @@ static const u16 sTangrowthTeachableLearnset[] = {
 #if P_FAMILY_KANGASKHAN
 static const u16 sKangaskhanTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AVALANCHE,
     MOVE_BLIZZARD,
@@ -9727,11 +9718,11 @@ static const u16 sScytherTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BRICK_BREAK,
     MOVE_BRUTAL_SWING,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CALM_MIND,
     MOVE_CLOSE_COMBAT,
@@ -9784,11 +9775,11 @@ static const u16 sScizorTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BRICK_BREAK,
     MOVE_BRUTAL_SWING,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CALM_MIND,
     MOVE_CLOSE_COMBAT,
@@ -9855,6 +9846,8 @@ static const u16 sKleavorTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CALM_MIND,
     MOVE_CLOSE_COMBAT,
@@ -10195,6 +10188,7 @@ static const u16 sMagbyTeachableLearnset[] = {
     MOVE_AURA_SPHERE, /* New Change */
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
+    MOVE_BURNING_JEALOUSY,
     MOVE_ENDURE,
     MOVE_FACADE,
     MOVE_FIRE_BLAST,
@@ -10399,7 +10393,6 @@ static const u16 sPinsirTeachableLearnset[] = {
 
 #if P_FAMILY_TAUROS
 static const u16 sTaurosTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_SLAM,
@@ -11046,7 +11039,6 @@ static const u16 sEspeonTeachableLearnset[] = {
 
 static const u16 sUmbreonTeachableLearnset[] = {
     MOVE_ALLURING_VOICE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AURA_SPHERE, /* New Change */
     MOVE_BATON_PASS,
@@ -11648,7 +11640,6 @@ static const u16 sKabutopsTeachableLearnset[] = {
 static const u16 sAerodactylTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRAVE_BIRD, /* New Change */
     MOVE_BRUTAL_SWING,
@@ -12012,7 +12003,6 @@ static const u16 sZapdosGalarianTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_BLAZE_KICK,
     MOVE_BOUNCE,
     MOVE_BRAVE_BIRD,
@@ -12071,6 +12061,7 @@ static const u16 sMoltresTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
     MOVE_BRAVE_BIRD,
+    MOVE_BURNING_JEALOUSY,
     MOVE_DEFOG,
     MOVE_ENDURE,
     MOVE_FACADE,
@@ -12120,7 +12111,6 @@ static const u16 sMoltresGalarianTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_BRAVE_BIRD,
     MOVE_DARK_PULSE,
     MOVE_DUAL_WINGBEAT,
@@ -12582,6 +12572,7 @@ static const u16 sCyndaquilTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CUT,
     MOVE_DIG,
     MOVE_ENDURE,
@@ -12620,6 +12611,7 @@ static const u16 sQuilavaTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CUT,
     MOVE_DIG,
     MOVE_ENDURE,
@@ -12663,6 +12655,7 @@ static const u16 sTyphlosionTeachableLearnset[] = {
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
     MOVE_BULLDOZE,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CUT,
     MOVE_DIG,
     MOVE_EARTHQUAKE,
@@ -12724,6 +12717,7 @@ static const u16 sTyphlosionHisuianTeachableLearnset[] = {
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
     MOVE_BULLDOZE,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
     MOVE_CONFUSE_RAY,
     MOVE_DIG,
@@ -12910,6 +12904,7 @@ static const u16 sSentretTeachableLearnset[] = {
     MOVE_BATON_PASS,
     MOVE_BLIZZARD,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_CHARGE_BEAM,
     MOVE_CUT,
     MOVE_DIG,
@@ -12950,6 +12945,7 @@ static const u16 sFurretTeachableLearnset[] = {
     MOVE_BATON_PASS,
     MOVE_BLIZZARD,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_CHARGE_BEAM,
     MOVE_CUT,
     MOVE_DIG,
@@ -13101,6 +13097,7 @@ static const u16 sLedybaTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DIG,
     MOVE_DRAIN_PUNCH,
@@ -13138,6 +13135,7 @@ static const u16 sLedianTeachableLearnset[] = {
     MOVE_AURA_SPHERE, /* New Change */
     MOVE_BATON_PASS,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DIG,
     MOVE_DRAIN_PUNCH,
@@ -13179,6 +13177,7 @@ static const u16 sSpinarakTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BOUNCE,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DIG,
     MOVE_ENDURE,
@@ -13209,6 +13208,7 @@ static const u16 sAriadosTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BOUNCE,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DIG,
     MOVE_ENDURE,
@@ -13741,6 +13741,7 @@ static const u16 sAmpharosTeachableLearnset[] = {
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_BULLDOZE,
     MOVE_CHARGE_BEAM,
     MOVE_CONFUSE_RAY,
@@ -14408,6 +14409,7 @@ static const u16 sYanmaTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DEFOG,
     MOVE_DREAM_EATER,
@@ -14443,6 +14445,7 @@ static const u16 sYanmegaTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DEFOG,
     MOVE_DREAM_EATER,
@@ -14828,6 +14831,7 @@ static const u16 sMisdreavusTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ALLURING_VOICE,
     MOVE_ATTRACT,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
     MOVE_CHARGE_BEAM,
     MOVE_CHARM,
@@ -14893,6 +14897,7 @@ static const u16 sMismagiusTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ALLURING_VOICE,
     MOVE_ATTRACT,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
     MOVE_CHARGE_BEAM,
     MOVE_CHARM,
@@ -15113,6 +15118,7 @@ static const u16 sFarigirafTeachableLearnset[] = {
 static const u16 sPinecoTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_BULLDOZE,
     MOVE_DIG,
@@ -15164,6 +15170,7 @@ static const u16 sForretressTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_PRESS,
     MOVE_BODY_SLAM,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_BULLDOZE,
     MOVE_DIG,
@@ -15438,6 +15445,7 @@ static const u16 sGliscorTeachableLearnset[] = {
     MOVE_BATON_PASS,
     MOVE_BREAKING_SWIPE,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_BULLDOZE,
     MOVE_CUT,
     MOVE_DARK_PULSE,
@@ -15601,7 +15609,6 @@ static const u16 sGranbullTeachableLearnset[] = {
 static const u16 sQwilfishTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BOUNCE,
@@ -15760,6 +15767,7 @@ static const u16 sShuckleTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_PRESS /* New Change */
     MOVE_BODY_SLAM,
+    MOVE_BUG_BITE,
     MOVE_BULLDOZE,
     MOVE_DIG,
     MOVE_EARTH_POWER,
@@ -15806,11 +15814,11 @@ static const u16 sShuckleTeachableLearnset[] = {
 #if P_FAMILY_HERACROSS
 static const u16 sHeracrossTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
     MOVE_BRUTAL_SWING,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_BULK_UP,
     MOVE_BULLDOZE,
@@ -15945,7 +15953,6 @@ static const u16 sWeavileTeachableLearnset[] = {
     MOVE_ACROBATICS, /* New Change */
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AVALANCHE,
     MOVE_BATON_PASS,
@@ -16416,6 +16423,7 @@ static const u16 sMagcargoTeachableLearnset[] = {
     MOVE_AMNESIA,
     MOVE_ATTRACT,
     MOVE_BULLDOZE,
+    MOVE_BURNING_JEALOUSY,
     MOVE_EARTHQUAKE,
     MOVE_ENDURE,
     MOVE_EXPLOSION,
@@ -16775,7 +16783,6 @@ static const u16 sCursolaTeachableLearnset[] = {
 #if P_FAMILY_REMORAID
 static const u16 sRemoraidTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BOUNCE,
@@ -16823,7 +16830,6 @@ static const u16 sRemoraidTeachableLearnset[] = {
 
 static const u16 sOctilleryTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BOUNCE,
@@ -16885,7 +16891,6 @@ static const u16 sDelibirdTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AVALANCHE,
     MOVE_BATON_PASS,
@@ -16992,7 +16997,6 @@ static const u16 sMantineTeachableLearnset[] = {
     MOVE_AIR_SLASH,
     MOVE_AMNESIA,
     MOVE_AQUA_RING,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_PRESS,
@@ -17049,7 +17053,6 @@ static const u16 sSkarmoryTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_PRESS,
     MOVE_BRAVE_BIRD,
@@ -17100,6 +17103,7 @@ static const u16 sSkarmoryTeachableLearnset[] = {
 static const u16 sHoundourTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CRUNCH,
     MOVE_DARK_PULSE,
     MOVE_DREAM_EATER,
@@ -17153,6 +17157,7 @@ static const u16 sHoundourTeachableLearnset[] = {
 static const u16 sHoundoomTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CRUNCH,
     MOVE_DARK_PULSE,
     MOVE_DREAM_EATER,
@@ -17678,7 +17683,6 @@ static const u16 sSuicuneTeachableLearnset[] = {
 
 #if P_FAMILY_LARVITAR
 static const u16 sLarvitarTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
@@ -17735,7 +17739,6 @@ static const u16 sLarvitarTeachableLearnset[] = {
 
 static const u16 sPupitarTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
@@ -17792,7 +17795,6 @@ static const u16 sPupitarTeachableLearnset[] = {
 
 static const u16 sTyranitarTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AVALANCHE,
     MOVE_BLIZZARD,
@@ -18120,7 +18122,6 @@ static const u16 sTreeckoTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
@@ -18171,7 +18172,6 @@ static const u16 sGrovyleTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
@@ -18227,7 +18227,6 @@ static const u16 sSceptileTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
@@ -18300,7 +18299,6 @@ static const u16 sSceptileTeachableLearnset[] = {
 static const u16 sTorchicTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BODY_SLAM,
@@ -18343,7 +18341,6 @@ static const u16 sTorchicTeachableLearnset[] = {
 static const u16 sCombuskenTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BLAZE_KICK,
@@ -18400,7 +18397,6 @@ static const u16 sBlazikenTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AURA_SPHERE,
     MOVE_BATON_PASS,
@@ -18805,7 +18801,6 @@ static const u16 sLinooneTeachableLearnset[] = {
 
 #if P_GALARIAN_FORMS
 static const u16 sZigzagoonGalarianTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_SLAM,
@@ -18855,7 +18850,6 @@ static const u16 sZigzagoonGalarianTeachableLearnset[] = {
 };
 
 static const u16 sLinooneGalarianTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_PRESS,
@@ -18911,7 +18905,6 @@ static const u16 sLinooneGalarianTeachableLearnset[] = {
 };
 
 static const u16 sObstagoonTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_PRESS,
@@ -19001,6 +18994,7 @@ static const u16 sBeautiflyTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DEFOG,
     MOVE_ENDURE,
@@ -19044,6 +19038,7 @@ static const u16 sDustoxTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DEFOG,
     MOVE_ENDURE,
@@ -19268,7 +19263,6 @@ static const u16 sSeedotTeachableLearnset[] = {
 static const u16 sNuzleafTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
@@ -19326,7 +19320,6 @@ static const u16 sShiftryTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BOUNCE,
@@ -19897,6 +19890,7 @@ static const u16 sSurskitTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BLIZZARD,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_ENDURE,
     MOVE_FACADE,
@@ -19942,6 +19936,7 @@ static const u16 sMasquerainTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BLIZZARD,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DEFOG,
     MOVE_ENDURE,
@@ -20276,6 +20271,7 @@ static const u16 sSlakingTeachableLearnset[] = {
 #if P_FAMILY_NINCADA
 static const u16 sNincadaTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CUT,
     MOVE_DIG,
@@ -20309,6 +20305,7 @@ static const u16 sNinjaskTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
     MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CUT,
     MOVE_DEFOG,
@@ -20350,6 +20347,7 @@ static const u16 sShedinjaTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
     MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CUT,
     MOVE_DIG,
@@ -20912,7 +20910,6 @@ static const u16 sSableyeTeachableLearnset[] = {
 
 #if P_FAMILY_MAWILE
 static const u16 sMawileTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BODY_SLAM,
@@ -21456,6 +21453,7 @@ static const u16 sVolbeatTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CHARGE_BEAM,
     MOVE_DAZZLING_GLEAM,
@@ -21494,6 +21492,7 @@ static const u16 sIllumiseTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CHARGE_BEAM,
     MOVE_DAZZLING_GLEAM,
@@ -21775,7 +21774,6 @@ static const u16 sSwalotTeachableLearnset[] = {
 #if P_FAMILY_CARVANHA
 static const u16 sCarvanhaTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BOUNCE,
@@ -21823,7 +21821,6 @@ static const u16 sCarvanhaTeachableLearnset[] = {
 
 static const u16 sSharpedoTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AVALANCHE,
     MOVE_BLIZZARD,
@@ -22324,6 +22321,7 @@ static const u16 sSpindaTeachableLearnset[] = {
 static const u16 sTrapinchTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
+    MOVE_BUG_BITE,
     MOVE_BULLDOZE,
     MOVE_CRUNCH,
     MOVE_DIG,
@@ -22362,6 +22360,7 @@ static const u16 sVibravaTeachableLearnset[] = {
     MOVE_AIR_SLASH,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_BULLDOZE,
     MOVE_CRUNCH,
@@ -22420,6 +22419,7 @@ static const u16 sFlygonTeachableLearnset[] = {
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
     MOVE_BRUTAL_SWING,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_BULLDOZE,
     MOVE_CRUNCH,
@@ -22794,6 +22794,7 @@ static const u16 sSeviperTeachableLearnset[] = {
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_BULLDOZE,
     MOVE_CRUNCH,
     MOVE_DARK_PULSE,
@@ -23428,6 +23429,7 @@ static const u16 sAnorithTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_CROSS_POISON,
     MOVE_CUT,
     MOVE_DIG,
@@ -23469,6 +23471,7 @@ static const u16 sArmaldoTeachableLearnset[] = {
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
     MOVE_BRUTAL_SWING,
+    MOVE_BUG_BITE,
     MOVE_BULLDOZE,
     MOVE_CROSS_POISON,
     MOVE_CUT,
@@ -23751,6 +23754,7 @@ static const u16 sShuppetTeachableLearnset[] = {
 
 static const u16 sBanetteTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
     MOVE_CHARGE_BEAM,
     MOVE_CONFUSE_RAY,
@@ -23995,6 +23999,7 @@ static const u16 sTropiusTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_PRESS,
     MOVE_BODY_SLAM,
+    MOVE_BRUTAL_SWING,
     MOVE_BULLDOZE,
     MOVE_BULLET_SEED,
     MOVE_CUT,
@@ -24134,7 +24139,6 @@ static const u16 sChimechoTeachableLearnset[] = {
 static const u16 sAbsolTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BLIZZARD,
@@ -25616,6 +25620,7 @@ static const u16 sDeoxysNormalTeachableLearnset[] = {
     MOVE_AVALANCHE,
     MOVE_BODY_PRESS, /* New Change */
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_CALM_MIND,
     MOVE_CHARGE_BEAM,
     MOVE_CLOSE_COMBAT, /* New Change */
@@ -25678,6 +25683,7 @@ static const u16 sDeoxysAttackTeachableLearnset[] = {
     MOVE_AVALANCHE,
     MOVE_BODY_PRESS, /* New Change */
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_CALM_MIND,
     MOVE_CHARGE_BEAM,
     MOVE_CLOSE_COMBAT, /* New Change */
@@ -25741,6 +25747,7 @@ static const u16 sDeoxysDefenseTeachableLearnset[] = {
     MOVE_AVALANCHE,
     MOVE_BODY_PRESS, /* New Change */
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_CALM_MIND,
     MOVE_CHARGE_BEAM,
     MOVE_CLOSE_COMBAT, /* New Change */
@@ -25803,6 +25810,7 @@ static const u16 sDeoxysSpeedTeachableLearnset[] = {
     MOVE_AVALANCHE,
     MOVE_BODY_PRESS, /* New Change */
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_CALM_MIND,
     MOVE_CHARGE_BEAM,
     MOVE_CLOSE_COMBAT, /* New Change */
@@ -25992,6 +26000,7 @@ static const u16 sChimcharTeachableLearnset[] = {
     MOVE_BLAZE_KICK,
     MOVE_BRICK_BREAK,
     MOVE_BULK_UP,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CUT,
     MOVE_DIG,
     MOVE_ENDURE,
@@ -26040,6 +26049,7 @@ static const u16 sMonfernoTeachableLearnset[] = {
     MOVE_BLAZE_KICK,
     MOVE_BRICK_BREAK,
     MOVE_BULK_UP,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CLOSE_COMBAT,
     MOVE_CUT,
     MOVE_DIG,
@@ -26095,6 +26105,7 @@ static const u16 sInfernapeTeachableLearnset[] = {
     MOVE_BRICK_BREAK,
     MOVE_BULK_UP,
     MOVE_BULLDOZE,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
     MOVE_CLOSE_COMBAT,
     MOVE_CUT,
@@ -26482,6 +26493,7 @@ static const u16 sBibarelTeachableLearnset[] = {
 
 #if P_FAMILY_KRICKETOT
 static const u16 sKricketotTeachableLearnset[] = {
+    MOVE_BUG_BITE,
     MOVE_STRUGGLE_BUG,
     MOVE_UNAVAILABLE,
 };
@@ -26491,6 +26503,7 @@ static const u16 sKricketuneTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CUT,
     MOVE_ENDURE,
@@ -26883,12 +26896,14 @@ static const u16 sBastiodonTeachableLearnset[] = {
 
 #if P_FAMILY_BURMY
 static const u16 sBurmyTeachableLearnset[] = {
+    MOVE_BUG_BITE,
     MOVE_PROTECT,
     MOVE_UNAVAILABLE,
 };
 
 static const u16 sWormadamPlantCloakTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_BULLET_SEED,
     MOVE_DIG,
@@ -26924,6 +26939,7 @@ static const u16 sWormadamPlantCloakTeachableLearnset[] = {
 
 static const u16 sWormadamSandyCloakTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_BULLDOZE,
     MOVE_DIG,
@@ -26961,6 +26977,7 @@ static const u16 sWormadamSandyCloakTeachableLearnset[] = {
 
 static const u16 sWormadamTrashCloakTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DIG,
     MOVE_DREAM_EATER,
@@ -27001,6 +27018,7 @@ static const u16 sMothimTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DEFOG,
     MOVE_DREAM_EATER,
@@ -27039,6 +27057,7 @@ static const u16 sMothimTeachableLearnset[] = {
 static const u16 sCombeeTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DUAL_WINGBEAT,
     MOVE_SLEEP_TALK,
@@ -27053,8 +27072,8 @@ static const u16 sVespiquenTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CONFUSE_RAY,
     MOVE_CROSS_POISON,
@@ -27572,7 +27591,6 @@ static const u16 sDrifblimTeachableLearnset[] = {
 #if P_FAMILY_BUNEARY
 static const u16 sBunearyTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BOUNCE,
@@ -27626,7 +27644,6 @@ static const u16 sBunearyTeachableLearnset[] = {
 static const u16 sLopunnyTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AURA_SPHERE,
     MOVE_BATON_PASS,
@@ -27772,7 +27789,6 @@ static const u16 sPuruglyTeachableLearnset[] = {
 #if P_FAMILY_STUNKY
 static const u16 sStunkyTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_CRUNCH,
@@ -27831,7 +27847,6 @@ static const u16 sStunkyTeachableLearnset[] = {
 
 static const u16 sSkuntankTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BURNING_JEALOUSY,
@@ -28551,9 +28566,9 @@ static const u16 sHippowdonTeachableLearnset[] = {
 static const u16 sSkorupiTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CROSS_POISON,
     MOVE_CRUNCH,
@@ -28601,10 +28616,10 @@ static const u16 sSkorupiTeachableLearnset[] = {
 static const u16 sDrapionTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
     MOVE_BRUTAL_SWING,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_BULLDOZE,
     MOVE_CROSS_POISON,
@@ -28671,7 +28686,6 @@ static const u16 sDrapionTeachableLearnset[] = {
 static const u16 sCroagunkTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AURA_SPHERE, /* New Change */
     MOVE_BATON_PASS,
@@ -28741,7 +28755,6 @@ static const u16 sCroagunkTeachableLearnset[] = {
 static const u16 sToxicroakTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AURA_SPHERE, /* New Change */
     MOVE_BATON_PASS,
@@ -28821,6 +28834,7 @@ static const u16 sToxicroakTeachableLearnset[] = {
 static const u16 sCarnivineTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BULLET_SEED,
     MOVE_CUT,
     MOVE_ENDURE,
@@ -29264,7 +29278,6 @@ static const u16 sMespritTeachableLearnset[] = {
 static const u16 sAzelfTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_AURA_SPHERE, /* New Change */
     MOVE_BATON_PASS,
     MOVE_CALM_MIND,
@@ -30231,6 +30244,7 @@ static const u16 sServineTeachableLearnset[] = {
 static const u16 sSerperiorTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BREAKING_SWIPE,
+    MOVE_BRUTAL_SWING,
     MOVE_ENDURE,
     MOVE_FACADE,
     MOVE_FRUSTRATION,
@@ -30739,7 +30753,6 @@ static const u16 sStoutlandTeachableLearnset[] = {
 
 #if P_FAMILY_PURRLOIN
 static const u16 sPurrloinTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_CHARM,
@@ -30783,7 +30796,6 @@ static const u16 sPurrloinTeachableLearnset[] = {
 };
 
 static const u16 sLiepardTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BURNING_JEALOUSY,
@@ -31576,7 +31588,6 @@ static const u16 sWoobatTeachableLearnset[] = {
     MOVE_AIR_SLASH,
     MOVE_ALLY_SWITCH,
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_CALM_MIND,
@@ -31631,7 +31642,6 @@ static const u16 sSwoobatTeachableLearnset[] = {
     MOVE_AIR_SLASH,
     MOVE_ALLY_SWITCH,
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_CALM_MIND,
@@ -32218,6 +32228,7 @@ static const u16 sSewaddleTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
     MOVE_ENDURE,
     MOVE_FACADE,
     MOVE_FRUSTRATION,
@@ -32235,6 +32246,7 @@ static const u16 sSwadloonTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
     MOVE_ENDURE,
     MOVE_FACADE,
     MOVE_FRUSTRATION,
@@ -32252,6 +32264,7 @@ static const u16 sLeavannyTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
     MOVE_ENDURE,
     MOVE_FACADE,
     MOVE_FRUSTRATION,
@@ -32270,6 +32283,7 @@ static const u16 sLeavannyTeachableLearnset[] = {
 static const u16 sVenipedeTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_ENDURE,
     MOVE_FACADE,
     MOVE_FRUSTRATION,
@@ -32302,6 +32316,7 @@ static const u16 sVenipedeTeachableLearnset[] = {
 static const u16 sWhirlipedeTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_ENDURE,
     MOVE_FACADE,
     MOVE_FRUSTRATION,
@@ -32333,9 +32348,9 @@ static const u16 sWhirlipedeTeachableLearnset[] = {
 
 static const u16 sScolipedeTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
     MOVE_BULLDOZE,
     MOVE_CROSS_POISON,
     MOVE_DIG,
@@ -32709,7 +32724,6 @@ static const u16 sBasculegionTeachableLearnset[] = {
 
 #if P_FAMILY_SANDILE
 static const u16 sSandileTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
@@ -32762,7 +32776,6 @@ static const u16 sSandileTeachableLearnset[] = {
 
 static const u16 sKrokorokTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
@@ -32822,7 +32835,6 @@ static const u16 sKrokorokTeachableLearnset[] = {
 
 static const u16 sKrookodileTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
@@ -32944,6 +32956,7 @@ static const u16 sDarmanitanTeachableLearnset[] = {
     MOVE_BRICK_BREAK,
     MOVE_BULK_UP,
     MOVE_BULLDOZE,
+    MOVE_BURNING_JEALOUSY,
     MOVE_DIG,
     MOVE_EARTHQUAKE,
     MOVE_ENCORE,
@@ -33073,7 +33086,6 @@ static const u16 sDarmanitanGalarianTeachableLearnset[] = {
 
 #if P_FAMILY_MARACTUS
 static const u16 sMaractusTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BOUNCE,
     MOVE_BULLET_SEED,
@@ -33116,6 +33128,7 @@ static const u16 sMaractusTeachableLearnset[] = {
 #if P_FAMILY_DWEBBLE
 static const u16 sDwebbleTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BULLDOZE,
     MOVE_DIG,
     MOVE_EARTHQUAKE,
@@ -33151,6 +33164,7 @@ static const u16 sDwebbleTeachableLearnset[] = {
 static const u16 sCrustleTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_PRESS,
+    MOVE_BUG_BITE,
     MOVE_BULLDOZE,
     MOVE_DIG,
     MOVE_EARTHQUAKE,
@@ -33194,7 +33208,6 @@ static const u16 sCrustleTeachableLearnset[] = {
 static const u16 sScraggyTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
     MOVE_BULK_UP,
@@ -33253,7 +33266,6 @@ static const u16 sScraggyTeachableLearnset[] = {
 static const u16 sScraftyTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
     MOVE_BULK_UP,
@@ -33459,6 +33471,7 @@ static const u16 sCofagrigusTeachableLearnset[] = {
 static const u16 sYamaskGalarianTeachableLearnset[] = {
     MOVE_ALLY_SWITCH,
     MOVE_ATTRACT,
+    MOVE_BRUTAL_SWING,
     MOVE_CALM_MIND,
     MOVE_DARK_PULSE,
     MOVE_EARTH_POWER,
@@ -33656,7 +33669,6 @@ static const u16 sArchenTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BOUNCE,
     MOVE_BULLDOZE,
@@ -33704,7 +33716,6 @@ static const u16 sArcheopsTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_SLASH,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BOUNCE,
     MOVE_BULLDOZE,
@@ -33836,7 +33847,6 @@ static const u16 sGarbodorTeachableLearnset[] = {
 #if P_FAMILY_ZORUA
 static const u16 sZoruaTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BOUNCE,
     MOVE_BURNING_JEALOUSY,
@@ -33889,7 +33899,6 @@ static const u16 sZoruaTeachableLearnset[] = {
 static const u16 sZoroarkTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BOUNCE,
@@ -33956,6 +33965,7 @@ static const u16 sZoruaHisuianTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_ATTRACT,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
     MOVE_CONFUSE_RAY,
     MOVE_DARK_PULSE,
@@ -34002,6 +34012,7 @@ static const u16 sZoroarkHisuianTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
     MOVE_CONFUSE_RAY,
     MOVE_CRUNCH,
@@ -34749,6 +34760,7 @@ static const u16 sEmolgaTeachableLearnset[] = {
 static const u16 sKarrablastTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DRILL_RUN,
     MOVE_ENCORE,
@@ -34782,6 +34794,7 @@ static const u16 sEscavalierTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
     MOVE_BRUTAL_SWING,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CLOSE_COMBAT,
     MOVE_DRILL_RUN,
@@ -35037,6 +35050,7 @@ static const u16 sJoltikTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
     MOVE_BOUNCE,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CROSS_POISON,
     MOVE_ELECTRO_BALL,
@@ -35076,6 +35090,7 @@ static const u16 sGalvantulaTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
     MOVE_BOUNCE,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CROSS_POISON,
     MOVE_ELECTRO_BALL,
@@ -35120,7 +35135,6 @@ static const u16 sGalvantulaTeachableLearnset[] = {
 #if P_FAMILY_FERROSEED
 static const u16 sFerroseedTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BULLET_SEED,
     MOVE_ENDURE,
@@ -35158,7 +35172,6 @@ static const u16 sFerroseedTeachableLearnset[] = {
 
 static const u16 sFerrothornTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_PRESS,
     MOVE_BRUTAL_SWING,
@@ -35209,7 +35222,6 @@ static const u16 sFerrothornTeachableLearnset[] = {
 
 #if P_FAMILY_KLINK
 static const u16 sKlinkTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ENDURE,
     MOVE_FACADE,
     MOVE_FLASH_CANNON,
@@ -35238,7 +35250,6 @@ static const u16 sKlinkTeachableLearnset[] = {
 
 static const u16 sKlangTeachableLearnset[] = {
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ENDURE,
     MOVE_FACADE,
     MOVE_FLASH_CANNON,
@@ -35267,7 +35278,6 @@ static const u16 sKlangTeachableLearnset[] = {
 
 static const u16 sKlinklangTeachableLearnset[] = {
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ELECTRIC_TERRAIN,
     MOVE_ENDURE,
     MOVE_FACADE,
@@ -35640,7 +35650,6 @@ static const u16 sChandelureTeachableLearnset[] = {
 #if P_FAMILY_AXEW
 static const u16 sAxewTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BREAKING_SWIPE,
     MOVE_BRICK_BREAK,
@@ -35693,7 +35702,6 @@ static const u16 sAxewTeachableLearnset[] = {
 
 static const u16 sFraxureTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BREAKING_SWIPE,
     MOVE_BRICK_BREAK,
@@ -35747,7 +35755,6 @@ static const u16 sFraxureTeachableLearnset[] = {
 
 static const u16 sHaxorusTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
@@ -35813,7 +35820,6 @@ static const u16 sHaxorusTeachableLearnset[] = {
 #if P_FAMILY_CUBCHOO
 static const u16 sCubchooTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AVALANCHE,
     MOVE_BLIZZARD,
@@ -35865,7 +35871,6 @@ static const u16 sCubchooTeachableLearnset[] = {
 
 static const u16 sBearticTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AVALANCHE,
     MOVE_BLIZZARD,
@@ -35976,6 +35981,7 @@ static const u16 sShelmetTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BODY_SLAM,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_ENCORE,
     MOVE_ENDURE,
@@ -36008,6 +36014,7 @@ static const u16 sAccelgorTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BODY_SLAM,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DRAIN_PUNCH,
     MOVE_ENCORE,
@@ -36181,7 +36188,6 @@ static const u16 sMienshaoTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AURA_SPHERE,
     MOVE_BATON_PASS,
@@ -36415,7 +36421,6 @@ static const u16 sGolurkTeachableLearnset[] = {
 static const u16 sPawniardTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
     MOVE_DARK_PULSE,
@@ -36466,7 +36471,6 @@ static const u16 sPawniardTeachableLearnset[] = {
 static const u16 sBisharpTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
     MOVE_CLOSE_COMBAT, /* New Change */
@@ -36576,7 +36580,6 @@ static const u16 sKingambitTeachableLearnset[] = {
 #if P_FAMILY_BOUFFALANT
 static const u16 sBouffalantTeachableLearnset[] = {
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BULLDOZE,
@@ -36633,7 +36636,6 @@ static const u16 sRuffletTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRAVE_BIRD,
@@ -36678,7 +36680,6 @@ static const u16 sBraviaryTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRAVE_BIRD,
@@ -36783,7 +36784,6 @@ static const u16 sBraviaryHisuianTeachableLearnset[] = {
 static const u16 sVullabyTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRAVE_BIRD,
     MOVE_DARK_PULSE,
@@ -36826,7 +36826,6 @@ static const u16 sMandibuzzTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRAVE_BIRD,
     MOVE_DARK_PULSE,
@@ -36874,6 +36873,7 @@ static const u16 sHeatmorTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRUTAL_SWING,
+    MOVE_BUG_BITE,
     MOVE_BURNING_JEALOUSY,
     MOVE_DIG,
     MOVE_DRAIN_PUNCH,
@@ -36922,6 +36922,7 @@ static const u16 sDurantTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
     MOVE_CRUNCH,
     MOVE_DIG,
     MOVE_ENDURE,
@@ -36960,7 +36961,6 @@ static const u16 sDurantTeachableLearnset[] = {
 
 #if P_FAMILY_DEINO
 static const u16 sDeinoTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_CRUNCH,
@@ -37002,7 +37002,6 @@ static const u16 sDeinoTeachableLearnset[] = {
 };
 
 static const u16 sZweilousTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_CRUNCH,
@@ -37047,7 +37046,6 @@ static const u16 sZweilousTeachableLearnset[] = {
 
 static const u16 sHydreigonTeachableLearnset[] = {
     MOVE_ACROBATICS,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
@@ -37127,6 +37125,7 @@ static const u16 sLarvestaTeachableLearnset[] = {
     MOVE_AMNESIA,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CALM_MIND,
     MOVE_ENDURE,
@@ -37173,6 +37172,7 @@ static const u16 sVolcaronaTeachableLearnset[] = {
     MOVE_AMNESIA,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CALM_MIND,
     MOVE_DUAL_WINGBEAT,
@@ -37393,7 +37393,6 @@ static const u16 sTornadusTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
@@ -37452,7 +37451,6 @@ static const u16 sTornadusTeachableLearnset[] = {
 static const u16 sThundurusTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
@@ -37884,9 +37882,9 @@ static const u16 sMeloettaTeachableLearnset[] = {
 #if P_FAMILY_GENESECT
 static const u16 sGenesectTeachableLearnset[] = {
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_BLAZE_KICK,
     MOVE_BLIZZARD,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DARK_PULSE,
     MOVE_ELECTROWEB,
@@ -38105,6 +38103,7 @@ static const u16 sChesnaughtTeachableLearnset[] = {
 static const u16 sFennekinTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
     MOVE_CHARM,
     MOVE_ENCORE,
@@ -38151,6 +38150,7 @@ static const u16 sFennekinTeachableLearnset[] = {
 static const u16 sBraixenTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
     MOVE_CHARM,
     MOVE_ENCORE,
@@ -38203,6 +38203,7 @@ static const u16 sDelphoxTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_AURA_SPHERE, /* New Change */
     MOVE_BLAST_BURN,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
     MOVE_CHARM,
     MOVE_CONFUSE_RAY,
@@ -38649,12 +38650,14 @@ static const u16 sTalonflameTeachableLearnset[] = {
 
 #if P_FAMILY_SCATTERBUG
 static const u16 sScatterbugTeachableLearnset[] = {
+    MOVE_BUG_BITE,
     MOVE_POUNCE,
     MOVE_STRUGGLE_BUG,
     MOVE_UNAVAILABLE,
 };
 
 static const u16 sSpewpaTeachableLearnset[] = {
+    MOVE_BUG_BITE,
     MOVE_IRON_DEFENSE,
     MOVE_POUNCE,
     MOVE_PROTECT,
@@ -38667,6 +38670,7 @@ static const u16 sVivillonTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CONFUSE_RAY,
     MOVE_DRAINING_KISS,
@@ -38753,6 +38757,7 @@ static const u16 sPyroarTeachableLearnset[] = {
     MOVE_BODY_SLAM,
     MOVE_BOUNCE,
     MOVE_BULLDOZE,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CRUNCH,
     MOVE_DARK_PULSE,
     MOVE_DIG,
@@ -39733,7 +39738,6 @@ static const u16 sMalamarTeachableLearnset[] = {
 
 #if P_FAMILY_BINACLE
 static const u16 sBinacleTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BRICK_BREAK,
@@ -39785,7 +39789,6 @@ static const u16 sBinacleTeachableLearnset[] = {
 };
 
 static const u16 sBarbaracleTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BRICK_BREAK,
@@ -40160,7 +40163,6 @@ static const u16 sHelioliskTeachableLearnset[] = {
 
 #if P_FAMILY_TYRUNT
 static const u16 sTyruntTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
@@ -40215,7 +40217,6 @@ static const u16 sTyruntTeachableLearnset[] = {
 };
 
 static const u16 sTyrantrumTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
@@ -40386,7 +40387,6 @@ static const u16 sHawluchaTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BODY_PRESS,
@@ -40631,7 +40631,6 @@ static const u16 sSliggooTeachableLearnset[] = {
 
 static const u16 sGoodraTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_PRESS,
@@ -40883,6 +40882,7 @@ static const u16 sTrevenantTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BRUTAL_SWING,
     MOVE_BULLDOZE,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
     MOVE_DARK_PULSE,
     MOVE_DIG,
@@ -41979,7 +41979,6 @@ static const u16 sTorracatTeachableLearnset[] = {
 
 static const u16 sIncineroarTeachableLearnset[] = {
     MOVE_ACROBATICS,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLAST_BURN,
     MOVE_BLAZE_KICK,
@@ -42346,6 +42345,7 @@ static const u16 sGumshoosTeachableLearnset[] = {
 static const u16 sGrubbinTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_CRUNCH,
     MOVE_DIG,
     MOVE_ELECTROWEB,
@@ -42378,6 +42378,7 @@ static const u16 sGrubbinTeachableLearnset[] = {
 static const u16 sCharjabugTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_CRUNCH,
     MOVE_DIG,
     MOVE_ELECTRO_BALL,
@@ -42414,6 +42415,7 @@ static const u16 sVikavoltTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_SLASH,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CRUNCH,
     MOVE_DIG,
@@ -42462,6 +42464,7 @@ static const u16 sCrabrawlerTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_BULK_UP,
     MOVE_BULLDOZE,
     MOVE_CLOSE_COMBAT,
@@ -42509,6 +42512,7 @@ static const u16 sCrabominableTeachableLearnset[] = {
     MOVE_BODY_PRESS,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
+    MOVE_BRUTAL_SWING,
     MOVE_BULK_UP,
     MOVE_BULLDOZE,
     MOVE_CLOSE_COMBAT,
@@ -42603,6 +42607,7 @@ static const u16 sCutieflyTeachableLearnset[] = {
     MOVE_ALLY_SWITCH,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CALM_MIND,
     MOVE_CHARM,
@@ -42649,6 +42654,7 @@ static const u16 sRibombeeTeachableLearnset[] = {
     MOVE_ALLY_SWITCH,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CALM_MIND,
     MOVE_CHARM,
@@ -42742,7 +42748,6 @@ static const u16 sRockruffTeachableLearnset[] = {
 
 static const u16 sLycanrocMiddayTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
@@ -43133,6 +43138,7 @@ static const u16 sDewpiderTeachableLearnset[] = {
     MOVE_AQUA_RING,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CRUNCH,
     MOVE_ENDURE,
@@ -43169,6 +43175,7 @@ static const u16 sAraquanidTeachableLearnset[] = {
     MOVE_AQUA_RING,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CRUNCH,
     MOVE_DIVE,
@@ -43209,6 +43216,7 @@ static const u16 sAraquanidTeachableLearnset[] = {
 #if P_FAMILY_FOMANTIS
 static const u16 sFomantisTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BULLET_SEED,
     MOVE_ENDURE,
     MOVE_ENERGY_BALL,
@@ -43248,6 +43256,7 @@ static const u16 sFomantisTeachableLearnset[] = {
 static const u16 sLurantisTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BULLET_SEED,
     MOVE_CROSS_POISON,
     MOVE_ENDURE,
@@ -43373,6 +43382,7 @@ static const u16 sSalanditTeachableLearnset[] = {
     MOVE_ACID_SPRAY,
     MOVE_AGILITY,
     MOVE_ATTRACT,
+    MOVE_BURNING_JEALOUSY,
     MOVE_DRAGON_CLAW,
     MOVE_DRAGON_PULSE,
     MOVE_ENDURE,
@@ -43429,6 +43439,7 @@ static const u16 sSalazzleTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BREAKING_SWIPE,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CROSS_POISON,
     MOVE_DRAGON_CLAW,
     MOVE_DRAGON_DANCE,
@@ -43833,7 +43844,6 @@ static const u16 sOranguruTeachableLearnset[] = {
 #if P_FAMILY_PASSIMIAN
 static const u16 sPassimianTeachableLearnset[] = {
     MOVE_ACROBATICS,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BODY_SLAM,
@@ -43892,7 +43902,6 @@ static const u16 sPassimianTeachableLearnset[] = {
 
 #if P_FAMILY_WIMPOD
 static const u16 sWimpodTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BUG_BUZZ,
     MOVE_ENDURE,
@@ -43921,10 +43930,10 @@ static const u16 sWimpodTeachableLearnset[] = {
 };
 
 static const u16 sGolisopodTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_BULK_UP,
     MOVE_CLOSE_COMBAT,
@@ -44335,7 +44344,6 @@ static const u16 sTurtonatorTeachableLearnset[] = {
 #if P_FAMILY_TOGEDEMARU
 static const u16 sTogedemaruTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BOUNCE,
     MOVE_ELECTRIC_TERRAIN,
@@ -44557,7 +44565,6 @@ static const u16 sDrampaTeachableLearnset[] = {
 #if P_FAMILY_DHELMISE
 static const u16 sDhelmiseTeachableLearnset[] = {
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_BODY_PRESS,
     MOVE_BRICK_BREAK,
     MOVE_BRUTAL_SWING,
@@ -44781,7 +44788,6 @@ static const u16 sKommoOTeachableLearnset[] = {
 static const u16 sTapuKokoTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_AURA_SPHERE, /* New Change */
     MOVE_BRAVE_BIRD,
     MOVE_CALM_MIND,
@@ -45190,6 +45196,7 @@ static const u16 sBuzzwoleTeachableLearnset[] = {
     MOVE_BODY_SLAM,
     MOVE_BOUNCE,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BULK_UP,
     MOVE_BULLDOZE,
     MOVE_CLOSE_COMBAT,
@@ -45239,11 +45246,11 @@ static const u16 sBuzzwoleTeachableLearnset[] = {
 #if P_FAMILY_PHEROMOSA
 static const u16 sPheromosaTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_AURA_SPHERE, /* New Change */
     MOVE_BLIZZARD,
     MOVE_BOUNCE,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CLOSE_COMBAT,
     MOVE_COACHING,
@@ -45600,7 +45607,6 @@ static const u16 sMagearnaTeachableLearnset[] = {
 static const u16 sMarshadowTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_AURA_SPHERE,
     MOVE_BLAZE_KICK,
     MOVE_BOUNCE,
@@ -45692,7 +45698,6 @@ static const u16 sNaganadelTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AIR_SLASH,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_BREAKING_SWIPE,
     MOVE_CHARM,
     MOVE_CROSS_POISON,
@@ -45847,7 +45852,6 @@ static const u16 sBlacephalonTeachableLearnset[] = {
 static const u16 sZeraoraTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_AURA_SPHERE,
     MOVE_BLAZE_KICK,
     MOVE_BOUNCE,
@@ -45975,7 +45979,6 @@ static const u16 sMelmetalTeachableLearnset[] = {
 #if P_FAMILY_GROOKEY
 static const u16 sGrookeyTeachableLearnset[] = {
     MOVE_ACROBATICS,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BULLET_SEED,
@@ -46019,7 +46022,6 @@ static const u16 sGrookeyTeachableLearnset[] = {
 
 static const u16 sThwackeyTeachableLearnset[] = {
     MOVE_ACROBATICS,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BULLET_SEED,
@@ -46064,7 +46066,6 @@ static const u16 sThwackeyTeachableLearnset[] = {
 
 static const u16 sRillaboomTeachableLearnset[] = {
     MOVE_ACROBATICS,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_PRESS,
     MOVE_BODY_SLAM,
@@ -46132,11 +46133,11 @@ static const u16 sScorbunnyTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BLAZE_KICK,
     MOVE_BOUNCE,
+    MOVE_BURNING_JEALOUSY,
     MOVE_ELECTRO_BALL,
     MOVE_ENDURE,
     MOVE_FACADE,
@@ -46177,12 +46178,12 @@ static const u16 sRabootTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BLAZE_KICK,
     MOVE_BOUNCE,
     MOVE_BULK_UP,
+    MOVE_BURNING_JEALOUSY,
     MOVE_ELECTRO_BALL,
     MOVE_ENDURE,
     MOVE_FACADE,
@@ -46224,13 +46225,13 @@ static const u16 sCinderaceTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BLAST_BURN,
     MOVE_BLAZE_KICK,
     MOVE_BOUNCE,
     MOVE_BULK_UP,
+    MOVE_BURNING_JEALOUSY,
     MOVE_COACHING,
     MOVE_ELECTRO_BALL,
     MOVE_ENDURE,
@@ -46422,7 +46423,6 @@ static const u16 sInteleonTeachableLearnset[] = {
 #if P_FAMILY_SKWOVET
 static const u16 sSkwovetTeachableLearnset[] = {
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRUTAL_SWING,
@@ -46456,7 +46456,6 @@ static const u16 sSkwovetTeachableLearnset[] = {
 
 static const u16 sGreedentTeachableLearnset[] = {
     MOVE_AMNESIA,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_PRESS,
     MOVE_BODY_SLAM,
@@ -46510,7 +46509,6 @@ static const u16 sRookideeTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRAVE_BIRD,
     MOVE_DUAL_WINGBEAT,
@@ -46547,7 +46545,6 @@ static const u16 sCorvisquireTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRAVE_BIRD,
     MOVE_DUAL_WINGBEAT,
@@ -46586,7 +46583,6 @@ static const u16 sCorviknightTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_PRESS,
     MOVE_BODY_SLAM,
@@ -46740,7 +46736,6 @@ static const u16 sOrbeetleTeachableLearnset[] = {
 #if P_FAMILY_NICKIT
 static const u16 sNickitTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_DIG,
@@ -46773,7 +46768,6 @@ static const u16 sNickitTeachableLearnset[] = {
 static const u16 sThievulTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BURNING_JEALOUSY,
@@ -46947,7 +46941,6 @@ static const u16 sDubwoolTeachableLearnset[] = {
 
 #if P_FAMILY_CHEWTLE
 static const u16 sChewtleTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_CRUNCH,
@@ -46987,7 +46980,6 @@ static const u16 sChewtleTeachableLearnset[] = {
 };
 
 static const u16 sDrednawTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_PRESS,
@@ -47384,6 +47376,7 @@ static const u16 sAppletunTeachableLearnset[] = {
 
 #if P_GEN_9_CROSS_EVOS
 static const u16 sDipplinTeachableLearnset[] = {
+    MOVE_BUG_BITE,
     MOVE_BULLET_SEED,
     MOVE_FACADE,
     MOVE_GIGA_DRAIN,
@@ -47403,6 +47396,7 @@ static const u16 sDipplinTeachableLearnset[] = {
 
 static const u16 sHydrappleTeachableLearnset[] = {
     MOVE_BREAKING_SWIPE,
+    MOVE_BUG_BITE,
     MOVE_BULLET_SEED,
     MOVE_EARTHQUAKE,
     MOVE_FACADE,
@@ -47520,7 +47514,6 @@ static const u16 sCramorantTeachableLearnset[] = {
     MOVE_AIR_SLASH,
     MOVE_AMNESIA,
     MOVE_AQUA_RING,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BRAVE_BIRD,
@@ -47563,7 +47556,6 @@ static const u16 sCramorantTeachableLearnset[] = {
 #if P_FAMILY_ARROKUDA
 static const u16 sArrokudaTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BOUNCE,
     MOVE_BRICK_BREAK,
@@ -47603,7 +47595,6 @@ static const u16 sArrokudaTeachableLearnset[] = {
 
 static const u16 sBarraskewdaTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BOUNCE,
@@ -47794,6 +47785,7 @@ static const u16 sToxtricityLowKeyTeachableLearnset[] = {
 static const u16 sSizzlipedeTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BRUTAL_SWING,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CRUNCH,
     MOVE_ENDURE,
@@ -47823,6 +47815,7 @@ static const u16 sSizzlipedeTeachableLearnset[] = {
 static const u16 sCentiskorchTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BRUTAL_SWING,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CRUNCH,
     MOVE_ENDURE,
@@ -48184,7 +48177,6 @@ static const u16 sHattereneTeachableLearnset[] = {
 
 #if P_FAMILY_IMPIDIMP
 static const u16 sImpidimpTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BURNING_JEALOUSY,
     MOVE_DARK_PULSE,
@@ -48225,7 +48217,6 @@ static const u16 sImpidimpTeachableLearnset[] = {
 };
 
 static const u16 sMorgremTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BURNING_JEALOUSY,
     MOVE_DARK_PULSE,
@@ -48269,7 +48260,6 @@ static const u16 sMorgremTeachableLearnset[] = {
 };
 
 static const u16 sGrimmsnarlTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_PRESS,
     MOVE_BODY_SLAM,
@@ -48407,7 +48397,6 @@ static const u16 sAlcremieTeachableLearnset[] = {
 #if P_FAMILY_FALINKS
 static const u16 sFalinksTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_BODY_PRESS,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
@@ -48455,7 +48444,6 @@ static const u16 sFalinksTeachableLearnset[] = {
 
 #if P_FAMILY_PINCURCHIN
 static const u16 sPincurchinTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_CHARGE_BEAM,
@@ -48503,6 +48491,7 @@ static const u16 sPincurchinTeachableLearnset[] = {
 #if P_FAMILY_SNOM
 static const u16 sSnomTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_ENDURE,
     MOVE_FACADE,
@@ -48529,6 +48518,7 @@ static const u16 sFrosmothTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_AVALANCHE,
     MOVE_BLIZZARD,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CALM_MIND,
     MOVE_DAZZLING_GLEAM,
@@ -48575,7 +48565,6 @@ static const u16 sFrosmothTeachableLearnset[] = {
 
 #if P_FAMILY_STONJOURNER
 static const u16 sStonjournerTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BODY_PRESS,
     MOVE_BODY_SLAM,
@@ -48770,7 +48759,6 @@ static const u16 sIndeedeeFemaleTeachableLearnset[] = {
 #if P_FAMILY_MORPEKO
 static const u16 sMorpekoTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
     MOVE_BULLET_SEED,
@@ -49251,7 +49239,6 @@ static const u16 sDrakloakTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BREAKING_SWIPE,
@@ -49302,7 +49289,6 @@ static const u16 sDragapultTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
     MOVE_BODY_SLAM,
@@ -49361,7 +49347,6 @@ static const u16 sDragapultTeachableLearnset[] = {
 static const u16 sZacianTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_AIR_SLASH,
-    MOVE_ASSURANCE,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
     MOVE_BRUTAL_SWING,
@@ -49485,7 +49470,6 @@ static const u16 sZamazentaTeachableLearnset[] = {
 #if P_FAMILY_ETERNATUS
 static const u16 sEternatusTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_BODY_SLAM,
     MOVE_BRUTAL_SWING,
     MOVE_CONFUSE_RAY,
@@ -49582,7 +49566,6 @@ static const u16 sKubfuTeachableLearnset[] = {
 static const u16 sUrshifuSingleStrikeStyleTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_ATTRACT,
     MOVE_AURA_SPHERE,
     MOVE_BODY_PRESS,
@@ -49711,7 +49694,6 @@ static const u16 sUrshifuRapidStrikeStyleTeachableLearnset[] = {
 static const u16 sZarudeTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AERIAL_ACE,
-    MOVE_ASSURANCE,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
     MOVE_BRUTAL_SWING,
@@ -49781,7 +49763,6 @@ static const u16 sZarudeTeachableLearnset[] = {
 static const u16 sRegielekiTeachableLearnset[] = {
     MOVE_ACROBATICS,
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_BODY_SLAM,
     MOVE_BOUNCE,
     MOVE_CHARGE_BEAM,
@@ -49858,7 +49839,6 @@ static const u16 sRegidragoTeachableLearnset[] = {
 
 #if P_FAMILY_GLASTRIER
 static const u16 sGlastrierTeachableLearnset[] = {
-    MOVE_ASSURANCE,
     MOVE_AVALANCHE,
     MOVE_BLIZZARD,
     MOVE_BODY_PRESS,
@@ -49908,7 +49888,6 @@ static const u16 sGlastrierTeachableLearnset[] = {
 #if P_FAMILY_SPECTRIER
 static const u16 sSpectrierTeachableLearnset[] = {
     MOVE_AGILITY,
-    MOVE_ASSURANCE,
     MOVE_BODY_SLAM,
     MOVE_BULLDOZE,
     MOVE_CALM_MIND,
@@ -50014,7 +49993,6 @@ static const u16 sCalyrexTeachableLearnset[] = {
 static const u16 sCalyrexIceRiderTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_AVALANCHE,
     MOVE_BATON_PASS,
     MOVE_BLIZZARD,
@@ -50096,7 +50074,6 @@ static const u16 sCalyrexIceRiderTeachableLearnset[] = {
 static const u16 sCalyrexShadowRiderTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
-    MOVE_ASSURANCE,
     MOVE_BATON_PASS,
     MOVE_BODY_SLAM,
     MOVE_BULLDOZE,
@@ -50685,6 +50662,7 @@ static const u16 sOinkologneTeachableLearnset[] = {
 static const u16 sTarountulaTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_BULLET_SEED,
     MOVE_ENDURE,
@@ -50720,6 +50698,7 @@ static const u16 sSpidopsTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_BULLET_SEED,
     MOVE_ENDURE,
@@ -50763,6 +50742,7 @@ static const u16 sSpidopsTeachableLearnset[] = {
 static const u16 sNymbleTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_ENDURE,
     MOVE_FACADE,
@@ -50792,6 +50772,7 @@ static const u16 sLokixTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
     MOVE_BOUNCE,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DARK_PULSE,
     MOVE_ENDURE,
@@ -52046,6 +52027,7 @@ static const u16 sCapsakidTeachableLearnset[] = {
 static const u16 sScovillainTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BULLET_SEED,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CRUNCH,
     MOVE_ENDURE,
     MOVE_ENERGY_BALL,
@@ -52087,6 +52069,7 @@ static const u16 sScovillainTeachableLearnset[] = {
 #if P_FAMILY_RELLOR
 static const u16 sRellorTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_DIG,
     MOVE_ENDURE,
@@ -52116,6 +52099,7 @@ static const u16 sRellorTeachableLearnset[] = {
 
 static const u16 sRabscaTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_CALM_MIND,
     MOVE_CONFUSE_RAY,
@@ -53377,6 +53361,7 @@ static const u16 sSlitherWingTeachableLearnset[] = {
     MOVE_BODY_PRESS,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
+    MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
     MOVE_BULK_UP,
     MOVE_CLOSE_COMBAT,
@@ -54083,6 +54068,7 @@ static const u16 sTingLuTeachableLearnset[] = {
 #if P_FAMILY_CHI_YU
 static const u16 sChiYuTeachableLearnset[] = {
     MOVE_BOUNCE,
+    MOVE_BURNING_JEALOUSY,
     MOVE_CONFUSE_RAY,
     MOVE_CRUNCH,
     MOVE_DARK_PULSE,
