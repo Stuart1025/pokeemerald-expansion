@@ -132,6 +132,7 @@ uq4_12_t GetTeraMultiplier(u32 battler, u32 type)
 {
     u32 teraType = GetBattlerTeraType(battler);
     bool32 hasAdaptability = (GetBattlerAbility(battler) == ABILITY_ADAPTABILITY);
+    bool32 hasEvoboost = (GetBattlerAbility(battler) == ABILITY_EVOBOOST);
 
     // Safety check.
     if (GetActiveGimmick(battler) != GIMMICK_TERA)
@@ -156,7 +157,7 @@ uq4_12_t GetTeraMultiplier(u32 battler, u32 type)
     // Base and Tera type.
     if (type == teraType && IS_BATTLER_OF_BASE_TYPE(battler, type))
     {
-        if (hasAdaptability)
+        if (hasAdaptability || hasEvoboost)
             return UQ_4_12(2.25);
         else
             return UQ_4_12(2.0);
@@ -165,7 +166,7 @@ uq4_12_t GetTeraMultiplier(u32 battler, u32 type)
     else if ((type == teraType && !IS_BATTLER_OF_BASE_TYPE(battler, type))
              || (type != teraType && IS_BATTLER_OF_BASE_TYPE(battler, type)))
     {
-        if (hasAdaptability)
+        if (hasAdaptability || hasEvoboost)
             return UQ_4_12(2.0);
         else
             return UQ_4_12(1.5);
