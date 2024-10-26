@@ -1131,6 +1131,8 @@ static const u16 sKangaskhanEggMoveLearnset[] = {
     MOVE_UPROAR,
     MOVE_CIRCLE_THROW,
     MOVE_WISH,
+    MOVE_YAWN,
+    MOVE_SING,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_KANGASKHAN
