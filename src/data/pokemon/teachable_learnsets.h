@@ -12371,6 +12371,7 @@ static const u16 sPorygonTeachableLearnset[] = {
     MOVE_TRI_ATTACK,
     MOVE_TRICK,
     MOVE_TRICK_ROOM,
+    MOVE_VOLT_SWITCH, /* New Change */
     MOVE_WONDER_ROOM,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -12425,6 +12426,7 @@ static const u16 sPorygon2TeachableLearnset[] = {
     MOVE_TRI_ATTACK,
     MOVE_TRICK,
     MOVE_TRICK_ROOM,
+    MOVE_VOLT_SWITCH, /* New Change */
     MOVE_WONDER_ROOM,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
@@ -12481,6 +12483,7 @@ static const u16 sPorygonZTeachableLearnset[] = {
     MOVE_TRI_ATTACK,
     MOVE_TRICK,
     MOVE_TRICK_ROOM,
+    MOVE_VOLT_SWITCH, /* New Change */
     MOVE_WONDER_ROOM,
     MOVE_ZEN_HEADBUTT,
     MOVE_UNAVAILABLE,
