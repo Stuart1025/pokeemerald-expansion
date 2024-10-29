@@ -5959,6 +5959,7 @@ static const u16 sPonytaTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ALLY_SWITCH,
     MOVE_ATTRACT,
+    MOVE_BLAZE_KICK, /* New Change */
     MOVE_BODY_SLAM,
     MOVE_BOUNCE,
     MOVE_CHARM,
@@ -6006,6 +6007,7 @@ static const u16 sRapidashTeachableLearnset[] = {
     MOVE_ALLY_SWITCH,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
+    MOVE_BLAZE_KICK, /* New Change */
     MOVE_BODY_SLAM,
     MOVE_BOUNCE,
     MOVE_CHARM,
@@ -11897,6 +11899,7 @@ static const u16 sFlareonTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_AURA_SPHERE, /* New Change */
     MOVE_BATON_PASS,
+    MOVE_BLAZE_KICK, /* New Change */
     MOVE_BODY_SLAM,
     MOVE_BURNING_JEALOUSY,
     MOVE_CALM_MIND,
@@ -33230,6 +33233,7 @@ static const u16 sZebstrikaTeachableLearnset[] = {
     MOVE_AGILITY,
     MOVE_ATTRACT,
     MOVE_BATON_PASS,
+    MOVE_BLAZE_KICK, /* New Change */
     MOVE_BOUNCE,
     MOVE_CLOSE_COMBAT, /* New Change */
     MOVE_ENDURE,
