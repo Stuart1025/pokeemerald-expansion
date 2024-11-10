@@ -13814,9 +13814,9 @@ static const struct LevelUpMove sWhirlipedeLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sScolipedeLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 0, MOVE_MEGAHORN),
-    LEVEL_UP_MOVE( 1, MOVE_MEGAHORN),
+    LEVEL_UP_MOVE( 0, MOVE_COIL),
     LEVEL_UP_MOVE( 1, MOVE_COIL),
+    LEVEL_UP_MOVE( 1, MOVE_DOUBLE_EDGE),
     LEVEL_UP_MOVE( 1, MOVE_IRON_DEFENSE),
     LEVEL_UP_MOVE( 1, MOVE_BATON_PASS),
     LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
@@ -13831,7 +13831,7 @@ static const struct LevelUpMove sScolipedeLevelUpLearnset[] = {
     LEVEL_UP_MOVE(42, MOVE_AGILITY),
     LEVEL_UP_MOVE(50, MOVE_TOXIC),
     LEVEL_UP_MOVE(58, MOVE_VENOM_DRENCH),
-    LEVEL_UP_MOVE(66, MOVE_DOUBLE_EDGE),
+    LEVEL_UP_MOVE(66, MOVE_MEGAHORN),
     LEVEL_UP_END
 };
 #endif //P_FAMILY_VENIPEDE
