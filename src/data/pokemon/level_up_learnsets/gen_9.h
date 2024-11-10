@@ -17542,8 +17542,8 @@ static const struct LevelUpMove sSliggooLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sGoodraLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 0, MOVE_AQUA_TAIL),
-    LEVEL_UP_MOVE( 1, MOVE_AQUA_TAIL),
+    LEVEL_UP_MOVE( 0, MOVE_SLUDGE_BOMB),
+    LEVEL_UP_MOVE( 1, MOVE_SLUDGE_BOMB),
     LEVEL_UP_MOVE( 1, MOVE_TEARFUL_LOOK),
     LEVEL_UP_MOVE( 1, MOVE_FEINT),
     LEVEL_UP_MOVE( 1, MOVE_POISON_TAIL),
