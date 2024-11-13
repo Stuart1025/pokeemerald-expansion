@@ -1209,6 +1209,7 @@ static const u16 sPinsirEggMoveLearnset[] = {
     MOVE_ME_FIRST,
     MOVE_BUG_BITE,
     MOVE_SUPERPOWER,
+    MOVE_FIRST_IMPRESSION,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_PINSIR
