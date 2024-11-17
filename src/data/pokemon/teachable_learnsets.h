@@ -4653,6 +4653,7 @@ static const u16 sPoliwagTeachableLearnset[] = {
     MOVE_HYDRO_PUMP,
     MOVE_ICE_BEAM,
     MOVE_ICY_WIND,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_LIQUIDATION,
     MOVE_LOW_KICK,
     MOVE_MUD_SHOT,
@@ -4704,6 +4705,7 @@ static const u16 sPoliwhirlTeachableLearnset[] = {
     MOVE_ICE_BEAM,
     MOVE_ICE_PUNCH,
     MOVE_ICY_WIND,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_LIQUIDATION,
     MOVE_LOW_KICK,
     MOVE_LOW_SWEEP,
@@ -4844,6 +4846,7 @@ static const u16 sPolitoedTeachableLearnset[] = {
     MOVE_ICE_BEAM,
     MOVE_ICE_PUNCH,
     MOVE_ICY_WIND,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_LIQUIDATION,
     MOVE_LOW_KICK,
     MOVE_LOW_SWEEP,
@@ -9403,6 +9406,7 @@ static const u16 sChanseyTeachableLearnset[] = {
     MOVE_ICE_PUNCH,
     MOVE_ICY_WIND,
     MOVE_IRON_TAIL,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_LAST_RESORT,
     MOVE_LIGHT_SCREEN,
     MOVE_METRONOME,
@@ -9491,6 +9495,7 @@ static const u16 sBlisseyTeachableLearnset[] = {
     MOVE_ICE_PUNCH,
     MOVE_ICY_WIND,
     MOVE_IRON_TAIL,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_LAST_RESORT,
     MOVE_LIGHT_SCREEN,
     MOVE_METRONOME,
@@ -10105,6 +10110,7 @@ static const u16 sMimeJrTeachableLearnset[] = {
     MOVE_HELPING_HAND,
     MOVE_INFESTATION,
     MOVE_ICY_WIND,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_LIGHT_SCREEN,
     MOVE_MAGIC_COAT,
     MOVE_MAGIC_ROOM,
@@ -10182,6 +10188,7 @@ static const u16 sMrMimeTeachableLearnset[] = {
     MOVE_ICY_WIND,
     MOVE_INFESTATION,
     MOVE_IRON_DEFENSE,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_LIGHT_SCREEN,
     MOVE_MAGIC_COAT,
     MOVE_MAGIC_ROOM,
@@ -10267,6 +10274,7 @@ static const u16 sMrMimeGalarianTeachableLearnset[] = {
     MOVE_ICY_WIND,
     MOVE_INFESTATION,
     MOVE_IRON_DEFENSE,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_LIGHT_SCREEN,
     MOVE_MAGIC_COAT,
     MOVE_MAGIC_ROOM,
@@ -10348,6 +10356,7 @@ static const u16 sMrRimeTeachableLearnset[] = {
     MOVE_ICY_WIND,
     MOVE_INFESTATION,
     MOVE_IRON_DEFENSE,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_LIGHT_SCREEN,
     MOVE_MAGIC_COAT,
     MOVE_MAGIC_ROOM,
@@ -10681,6 +10690,7 @@ static const u16 sJynxTeachableLearnset[] = {
     MOVE_ICE_PUNCH,
     MOVE_ICICLE_SPEAR,
     MOVE_ICY_WIND,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_LIGHT_SCREEN,
     MOVE_MAGIC_COAT,
     MOVE_MAGIC_ROOM,
@@ -22930,6 +22940,7 @@ static const u16 sSkittyTeachableLearnset[] = {
     MOVE_ICE_BEAM,
     MOVE_ICY_WIND,
     MOVE_IRON_TAIL,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_NASTY_PLOT,
     MOVE_PAYBACK,
     MOVE_PLAY_ROUGH,
@@ -22983,6 +22994,7 @@ static const u16 sDelcattyTeachableLearnset[] = {
     MOVE_ICE_BEAM,
     MOVE_ICY_WIND,
     MOVE_IRON_TAIL,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_NASTY_PLOT,
     MOVE_PAYBACK,
     MOVE_PLAY_ROUGH,
@@ -30809,6 +30821,7 @@ static const u16 sGlameowTeachableLearnset[] = {
     MOVE_HONE_CLAWS,
     MOVE_HYPER_VOICE,
     MOVE_IRON_TAIL,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_LAST_RESORT,
     MOVE_NASTY_PLOT,
     MOVE_NIGHT_SLASH,
@@ -30859,6 +30872,7 @@ static const u16 sPuruglyTeachableLearnset[] = {
     MOVE_HYPER_BEAM,
     MOVE_HYPER_VOICE,
     MOVE_IRON_TAIL,
+    MOVE_KNOCK_OFF, /* New Change */
     MOVE_LAST_RESORT,
     MOVE_NASTY_PLOT,
     MOVE_NIGHT_SLASH,
