@@ -56692,7 +56692,7 @@ static const u16 sPawmotTeachableLearnset[] = {
     MOVE_ICE_PUNCH,
     MOVE_LOW_KICK,
     MOVE_LOW_SWEEP,
-    MOVE_METRONOME,
+    MOVE_METAL_CLAW,
     MOVE_PLAY_ROUGH,
     MOVE_PROTECT,
     MOVE_RAIN_DANCE,
