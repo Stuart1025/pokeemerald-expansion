@@ -4532,7 +4532,7 @@ static const u16 sVullabyEggMoveLearnset[] = {
     MOVE_SCARY_FACE,
     MOVE_KNOCK_OFF,
     MOVE_FAKE_TEARS,
-    MOVE_FOUL_PLAY,
+    MOVE_WHIRLWIND,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_VULLABY
