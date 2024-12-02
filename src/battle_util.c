@@ -4251,6 +4251,10 @@ u32 CanAbilityAbsorbMove(u32 battlerAtk, u32 battlerDef, u32 abilityDef, u32 mov
         if (moveType == TYPE_FIRE && (B_FLASH_FIRE_FROZEN >= GEN_5 || !(gBattleMons[battlerDef].status1 & STATUS1_FREEZE)))
             effect = MOVE_ABSORBED_BY_BOOST_FLASH_FIRE;
         break;
+    case ABILITY_BUG_CATCHER:
+        if (moveType == TYPE_BUG)
+            effect = MOVE_ABSORBED_BY_STAT_INCREASE_ABILITY;
+        break;
     }
 
     return effect;
@@ -5425,6 +5429,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     break;
                 case ABILITY_SAP_SIPPER:
                 case ABILITY_WIND_RIDER:
+                case ABILITY_BUG_CATCHER:
                     statId = STAT_ATK;
                     break;
                 case ABILITY_WELL_BAKED_BODY:
