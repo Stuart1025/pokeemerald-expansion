@@ -35419,6 +35419,7 @@ static const u16 sExcadrillTeachableLearnset[] = {
     MOVE_HIGH_HORSEPOWER,
     MOVE_HONE_CLAWS,
     MOVE_HYPER_BEAM,
+    MOVE_ICE_SPINNER, /* New Change */
     MOVE_IRON_DEFENSE,
     MOVE_IRON_HEAD,
     MOVE_METAL_CLAW,
