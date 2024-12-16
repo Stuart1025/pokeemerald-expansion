@@ -686,7 +686,6 @@ static const struct LevelUpMove sSandslashLevelUpLearnset[] = {
 
 #if P_ALOLAN_FORMS
 static const struct LevelUpMove sSandshrewAlolaLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_DEFENSE_CURL),
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
     LEVEL_UP_MOVE( 1, MOVE_DEFENSE_CURL),
     LEVEL_UP_MOVE( 3, MOVE_ICE_SHARD),
