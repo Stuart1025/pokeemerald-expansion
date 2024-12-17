@@ -2317,8 +2317,8 @@ static const struct LevelUpMove sPonytaGalarLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sRapidashGalarLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 0, MOVE_PSYCHO_CUT),
-    LEVEL_UP_MOVE( 1, MOVE_PSYCHO_CUT),
+    LEVEL_UP_MOVE( 0, MOVE_EXTREME_SPEED),
+    LEVEL_UP_MOVE( 1, MOVE_EXTREME_SPEED),
     LEVEL_UP_MOVE( 1, MOVE_MEGAHORN),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
@@ -2337,7 +2337,7 @@ static const struct LevelUpMove sRapidashGalarLevelUpLearnset[] = {
     LEVEL_UP_MOVE(47, MOVE_PLAY_ROUGH),
     LEVEL_UP_MOVE(52, MOVE_JUMP_KICK),
     LEVEL_UP_MOVE(57, MOVE_PSYCHO_CUT),
-    LEVEL_UP_MOVE(62, MOVE_HORN_DRILL),
+    LEVEL_UP_MOVE(62, MOVE_HEALING_WISH),
     LEVEL_UP_END
 };
 #endif //P_GALARIAN_FORMS
