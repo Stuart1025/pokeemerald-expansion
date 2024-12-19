@@ -5298,7 +5298,7 @@ static const u16 sWoolooEggMoveLearnset[] = {
 static const u16 sChewtleEggMoveLearnset[] = {
     MOVE_SKULL_BASH,
     MOVE_GASTRO_ACID,
-    MOVE_DRAGON_TAIL,
+    MOVE_AQUA_JET,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_CHEWTLE
@@ -5325,10 +5325,10 @@ static const u16 sRolycolyEggMoveLearnset[] = {
 
 #if P_FAMILY_APPLIN
 static const u16 sApplinEggMoveLearnset[] = {
-    MOVE_SUCKER_PUNCH,
-    MOVE_ROLLOUT,
     MOVE_DEFENSE_CURL,
     MOVE_RECYCLE,
+    MOVE_LEECH_SEED,
+    MOVE_STRENGTH_SAP,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_APPLIN
