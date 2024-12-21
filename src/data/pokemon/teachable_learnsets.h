@@ -29919,7 +29919,7 @@ static const u16 sBurmyTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sWormadamPlantCloakTeachableLearnset[] = {
+static const u16 sWormadamPlantTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,

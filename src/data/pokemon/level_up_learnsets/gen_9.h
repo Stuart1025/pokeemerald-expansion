@@ -11435,9 +11435,9 @@ static const struct LevelUpMove sBurmyLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const struct LevelUpMove sWormadamPlantCloakLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 0, MOVE_MAGICAL_LEAF),
-    LEVEL_UP_MOVE( 1, MOVE_MAGICAL_LEAF),
+static const struct LevelUpMove sWormadamPlantLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 0, MOVE_QUIVER_DANCE),
+    LEVEL_UP_MOVE( 1, MOVE_QUIVER_DANCE),
     LEVEL_UP_MOVE( 1, MOVE_SUCKER_PUNCH),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_STRING_SHOT),
