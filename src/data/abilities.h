@@ -2429,12 +2429,6 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Frostbite on contact."),
         .aiRating = 4,
     },
-    [ABILITY_EVOBOOST] =
-    {
-        .name = _("Evoboost"),
-        .description = COMPOUND_STRING("Boosts same type attacks."),
-        .aiRating = 8,
-    },
     [ABILITY_RECOMBINANT] =
     {
         .name = _("Recombinant"),
