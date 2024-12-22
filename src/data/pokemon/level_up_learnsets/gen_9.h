@@ -16667,8 +16667,8 @@ static const struct LevelUpMove sFletchinderLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sTalonflameLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 0, MOVE_FLARE_BLITZ),
-    LEVEL_UP_MOVE( 1, MOVE_FLARE_BLITZ),
+    LEVEL_UP_MOVE( 0, MOVE_TEMPER_FLARE),
+    LEVEL_UP_MOVE( 1, MOVE_TEMPER_FLARE),
     LEVEL_UP_MOVE( 1, MOVE_FLAME_CHARGE),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
@@ -16686,6 +16686,7 @@ static const struct LevelUpMove sTalonflameLevelUpLearnset[] = {
     LEVEL_UP_MOVE(48, MOVE_FLY),
     LEVEL_UP_MOVE(53, MOVE_SWORDS_DANCE),
     LEVEL_UP_MOVE(58, MOVE_BRAVE_BIRD),
+    LEVEL_UP_MOVE(63, MOVE_FLARE_BLITZ),
     LEVEL_UP_END
 };
 #endif //P_FAMILY_FLETCHLING

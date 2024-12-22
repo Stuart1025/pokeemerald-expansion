@@ -5506,11 +5506,8 @@ static const u16 sDuraludonEggMoveLearnset[] = {
 #if P_FAMILY_DREEPY
 static const u16 sDreepyEggMoveLearnset[] = {
     MOVE_GRUDGE,
-    MOVE_CONFUSE_RAY,
-    MOVE_DOUBLE_TEAM,
     MOVE_DISABLE,
-    MOVE_DRAGON_TAIL,
-    MOVE_SUCKER_PUNCH,
+    MOVE_SHADOW_SNEAK,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_DREEPY
