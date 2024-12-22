@@ -16981,7 +16981,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Telekinetic force that sets\n"
             "wall, lowering Sp. Atk damage."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 80 : 90,
+        .power = 90,
         .type = TYPE_PSYCHIC,
         .accuracy = 100,
         .pp = 15,
@@ -17005,7 +17005,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Acting badly, attacks. Sets\n"
             "wall, lowering Attack damage."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 80 : 90,
+        .power = 90,
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 15,
@@ -17029,7 +17029,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Giant stalk scatters seeds\n"
             "that drain HP every turn."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 100 : 90,
+        .power = 90,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 15,
@@ -17052,9 +17052,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .name = COMPOUND_STRING("Freezy Frost"),
         .description = COMPOUND_STRING(
             "Crystal from cold haze hits.\n"
-            "Eliminates all stat changes."),
+            "Always causes frostbite."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 100 : 90,
+        .power = 90,
         .type = TYPE_ICE,
         .accuracy = 100,
         .pp = 15,
@@ -17064,7 +17064,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
         .metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_HAZE,
+            .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
             .chance = 100,
             .sheerForceBoost = SHEER_FORCE_NO_BOOST,
         }),
