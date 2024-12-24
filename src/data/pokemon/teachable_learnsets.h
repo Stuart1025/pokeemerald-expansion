@@ -8809,6 +8809,7 @@ static const u16 sLickitungTeachableLearnset[] = {
     MOVE_HELPING_HAND,
     MOVE_HYDRO_PUMP,
     MOVE_HYPER_BEAM,
+    MOVE_HYPER_VOICE, /* New Change */
     MOVE_ICE_BEAM,
     MOVE_ICE_PUNCH,
     MOVE_ICY_WIND,
@@ -8886,6 +8887,7 @@ static const u16 sLickilickyTeachableLearnset[] = {
     MOVE_HELPING_HAND,
     MOVE_HYDRO_PUMP,
     MOVE_HYPER_BEAM,
+    MOVE_HYPER_VOICE, /* New Change */
     MOVE_ICE_BEAM,
     MOVE_ICE_PUNCH,
     MOVE_ICY_WIND,
