@@ -10873,6 +10873,7 @@ static const u16 sElectivireTeachableLearnset[] = {
     MOVE_DARKEST_LARIAT,
     MOVE_DIG,
     MOVE_DOUBLE_EDGE,
+    MOVE_DRAIN_PUNCH, /* New Change */
     MOVE_EARTHQUAKE,
     MOVE_ELECTRIC_TERRAIN,
     MOVE_ELECTRO_BALL,
@@ -23591,6 +23592,7 @@ static const u16 sManectricTeachableLearnset[] = {
     MOVE_FLAMETHROWER,
     MOVE_FRUSTRATION,
     MOVE_GIGA_IMPACT,
+    MOVE_GRASS_KNOT, /* New Change */
     MOVE_HYPER_BEAM,
     MOVE_HYPER_VOICE,
     MOVE_ICE_FANG,
