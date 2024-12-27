@@ -98,36 +98,36 @@ static const struct WindowTemplate sWindowTemplate_StarterLabel =
 
 static const u8 sPokeballCoords[STARTER_MON_COUNT] =
 {
-    // {60, 64},
+    {60, 64},
     {120, 88},
-    // {180, 64},
+    {180, 64},
 };
 
 static const u8 sStarterLabelCoords[STARTER_MON_COUNT] =
 {
-    // {0, 9},
+    {0, 9},
     {16, 10},
-    // {8, 4},
+    {8, 4},
 };
 
 static const u16 sStarterMon[STARTER_MON_COUNT] =
 {
-    // SPECIES_TREECKO,
-    SPECIES_EEVEE,
-    // SPECIES_MUDKIP,
+    SPECIES_TREECKO,
+    SPECIES_TORCHIC,
+    SPECIES_MUDKIP,
 };
 
 static const struct BgTemplate sBgTemplates[1] =
 {
-    // {
-    //     .bg = 0,
-    //     .charBaseIndex = 2,
-    //     .mapBaseIndex = 31,
-    //     .screenSize = 0,
-    //     .paletteMode = 0,
-    //     .priority = 0,
-    //     .baseTile = 0
-    // },
+    {
+        .bg = 0,
+        .charBaseIndex = 2,
+        .mapBaseIndex = 31,
+        .screenSize = 0,
+        .paletteMode = 0,
+        .priority = 0,
+        .baseTile = 0
+    },
     {
         .bg = 2,
         .charBaseIndex = 0,
@@ -137,15 +137,15 @@ static const struct BgTemplate sBgTemplates[1] =
         .priority = 3,
         .baseTile = 0
     },
-    // {
-    //     .bg = 3,
-    //     .charBaseIndex = 0,
-    //     .mapBaseIndex = 6,
-    //     .screenSize = 0,
-    //     .paletteMode = 0,
-    //     .priority = 1,
-    //     .baseTile = 0
-    // },
+    {
+        .bg = 3,
+        .charBaseIndex = 0,
+        .mapBaseIndex = 6,
+        .screenSize = 0,
+        .paletteMode = 0,
+        .priority = 1,
+        .baseTile = 0
+    },
 };
 
 static const u8 sTextColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY};
