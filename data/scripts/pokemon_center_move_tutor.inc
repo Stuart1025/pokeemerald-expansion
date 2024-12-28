@@ -1,27 +1,28 @@
 PKMN_Center_Move_Tutor::
-	Lockall
+	lockall
 	message PKMN_Center_Move_Tutor_Text_HowCanHelp
 	waitmessage
-	multichoice 0, 0, MULTI_PKMN_CENTER_MOVE_TUTOR, 0
+	setvar VAR_0x8004, SCROLL_MULTI_POKE_CENTER_TUTOR
+	special ShowScrollableMultichoice
+	waitstate
 	switch VAR_RESULT
 	case 0, PKMN_Center_MoveReminder_EventScript
-	case 1, PKMN_Center_Move_Tutor_MoveDeleter
+	case 1, PKMN_Center_MoveDeleter_EventScript
 	case 2, PKMN_Center_Move_Tutor_MoveTutorIntro
-	case 3, PKMN_Center_Move_Tutor_NameRater
+	case 3, PKMN_Center_NameRater_EventScript
 	case 4, PKMN_Center_Move_Tutor_General_Exit
 	case MULTI_B_PRESSED, PKMN_Center_Move_Tutor_General_Exit
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Move Reminder @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 PKMN_Center_MoveReminder_EventScript::
-	lockall
 	msgbox PKMN_Center_MoveReminder_Text_WantMeToTeachMove, MSGBOX_YESNO
 	switch VAR_RESULT
 	case NO, PKMN_Center_Move_Tutor_General_Exit
 	goto PKMN_Center_MoveReminder_EventScriptChooseMon
 	end
 
-PKMN_Center_MoveReminder_EventScriptChooseMon:: @ 82013D6
+PKMN_Center_MoveReminder_EventScriptChooseMon::
 	msgbox PKMN_Center_MoveReminder_Text_TutorWhichMon, MSGBOX_DEFAULT
 	special ChooseMonForMoveRelearner
 	waitstate
@@ -35,7 +36,7 @@ PKMN_Center_MoveReminder_EventScriptChooseMon:: @ 82013D6
 	goto PKMN_Center_MoveReminder_EventScriptChooseMove
 	end
 
-PKMN_Center_MoveReminder_EventScriptChooseMove:: @ 820140C
+PKMN_Center_MoveReminder_EventScriptChooseMove::
 	msgbox PKMN_Center_MoveReminder_Text_TeachWhichMove, MSGBOX_DEFAULT
 	special TeachMoveRelearnerMove
 	waitstate
@@ -44,12 +45,12 @@ PKMN_Center_MoveReminder_EventScriptChooseMove:: @ 820140C
 	goto PKMN_Center_MoveReminder_EventScriptRememberAnotherMove
 	end
 
-PKMN_Center_MoveReminder_EventScriptNoMoveToTeachMon:: @ 8201436
+PKMN_Center_MoveReminder_EventScriptNoMoveToTeachMon::
 	msgbox PKMN_Center_MoveReminder_Text_DontHaveMoveToTeachPokemon, MSGBOX_DEFAULT
 	goto PKMN_Center_MoveReminder_EventScriptChooseMon
 	end
 
-PKMN_Center_MoveReminder_EventScriptCantTeachEgg:: @ 8201444
+PKMN_Center_MoveReminder_EventScriptCantTeachEgg::
 	msgbox PKMN_Center_MoveReminder_Text_CantTeachEgg, MSGBOX_DEFAULT
 	goto PKMN_Center_MoveReminder_EventScriptChooseMon
 	end
@@ -62,7 +63,65 @@ PKMN_Center_MoveReminder_EventScriptRememberAnotherMove::
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Move Deleter @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-PKMN_Center_Move_Tutor_MoveDeleter::
+PKMN_Center_MoveDeleter_EventScript::
+	msgbox PKMN_Center_MoveDeleter_Text_ICanMakeMonForgetMove, MSGBOX_YESNO
+	switch VAR_RESULT
+	case YES, PKMN_Center_MoveDeleter_EventScript_ChooseMonAndMoveToForget
+	case NO, PKMN_Center_Move_Tutor_General_Exit
+	releaseall
+	end
+
+PKMN_Center_MoveDeleter_EventScript_ChooseMonAndMoveToForget::
+	msgbox PKMN_Center_MoveDeleter_Text_WhichMonShouldForget, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	compare VAR_0x8004, 255
+	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
+	special IsSelectedMonEgg
+	compare VAR_RESULT, TRUE
+	goto_if_eq PKMN_Center_MoveDeleter_EventScript_EggCantForgetMoves
+	special GetNumMovesSelectedMonHas
+	compare VAR_RESULT, 1
+	goto_if_eq PKMN_Center_MoveDeleter_EventScript_MonOnlyKnowsOneMove
+	msgbox PKMN_Center_MoveDeleter_Text_WhichMoveShouldBeForgotten, MSGBOX_DEFAULT
+	fadescreen FADE_TO_BLACK
+	special MoveDeleterChooseMoveToForget
+	fadescreen FADE_FROM_BLACK
+	compare VAR_0x8005, MAX_MON_MOVES
+	goto_if_eq PKMN_Center_MoveDeleter_EventScript_ChooseMonAndMoveToForget
+	special BufferMoveDeleterNicknameAndMove
+	msgbox PKMN_Center_MoveDeleter_Text_MonsMoveShouldBeForgotten, MSGBOX_YESNO
+	switch VAR_RESULT
+	case YES, PKMN_Center_MoveDeleter_EventScript_TryForgetMove
+	case NO, PKMN_Center_Move_Tutor_General_Exit
+	releaseall
+	end
+
+PKMN_Center_MoveDeleter_EventScript_TryForgetMove::
+	special IsLastMonThatKnowsSurf
+	compare VAR_RESULT, TRUE
+	goto_if_eq PKMN_Center_MoveDeleter_EventScript_LastMonWithSurf
+	special MoveDeleterForgetMove
+	playfanfare MUS_MOVE_DELETED
+	waitfanfare
+	msgbox PKMN_Center_MoveDeleter_Text_MonHasForgottenMove, MSGBOX_DEFAULT
+	releaseall
+	end
+
+PKMN_Center_MoveDeleter_EventScript_MonOnlyKnowsOneMove::
+	special BufferMoveDeleterNicknameAndMove
+	msgbox PKMN_Center_MoveDeleter_Text_MonOnlyKnowsOneMove, MSGBOX_DEFAULT
+	releaseall
+	end
+
+PKMN_Center_MoveDeleter_EventScript_EggCantForgetMoves::
+	msgbox PKMN_Center_MoveDeleter_Text_EggCantForgetMoves, MSGBOX_DEFAULT
+	releaseall
+	end
+
+PKMN_Center_MoveDeleter_EventScript_LastMonWithSurf::
+	special BufferMoveDeleterNicknameAndMove
+	msgbox PKMN_Center_MoveDeleter_Text_CantForgetSurf, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -95,8 +154,8 @@ PKMN_Center_Move_Tutor_MoveTutorMenu::
 	case 5, PKMN_Center_Move_Tutor_MoveList6
 	case 6, PKMN_Center_Move_Tutor_MoveList7
 	case 7, PKMN_Center_Move_Tutor_MoveList8
-	case 8, PKMN_Center_Move_Tutor_CloseDescriptionWindowReturn
-	case MULTI_B_PRESSED, PKMN_Center_Move_Tutor_CloseDescriptionWindowReturn
+	case 8, PKMN_Center_Move_Tutor_ExitReturn
+	case MULTI_B_PRESSED, PKMN_Center_Move_Tutor_ExitReturn
 	releaseall
 	end
 	
@@ -151,7 +210,7 @@ PKMN_Center_Move_Tutor_MoveList7::
 
 PKMN_Center_Move_Tutor_MoveList8::
 	setvar VAR_TEMP_C, SCROLL_MULTI_PC_TUTOR_SET_8
-	setvar VAR_TEMP_E, 6
+	setvar VAR_TEMP_E, 7
 	setvar VAR_0x8004, SCROLL_MULTI_PC_TUTOR_SET_8
 	setvar VAR_0x8006, 0
 	goto PKMN_Center_Move_Tutor_ChooseMoveSet8
@@ -161,20 +220,8 @@ PKMN_Center_Move_Tutor_ChooseMove::
 	special ShowScrollableMultichoice
 	waitstate
 	copyvar VAR_TEMP_D, VAR_RESULT
-	compare VAR_RESULT 17
-	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
-	compare VAR_RESULT MULTI_B_PRESSED
-	goto_if_eq PKMN_Center_Move_Tutor_CloseDescriptionWindow
-	goto PKMN_Center_Move_Tutor_ConfirmMoveSelection
-	end
-	
-PKMN_Center_Move_Tutor_ChooseMoveSet8::
-    msgbox PKMN_Center_Move_Tutor_Text_WhichMove, MSGBOX_DEFAULT
-	special ShowScrollableMultichoice
-	waitstate
-	copyvar VAR_TEMP_D, VAR_RESULT
-	compare VAR_RESULT 16
-	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
+	compare VAR_RESULT, VAR_TEMP_F @ VAR_TEMP_F is set to the ID of the "Exit" option
+	goto_if_eq PKMN_Center_Move_Tutor_Exit
 	compare VAR_RESULT MULTI_B_PRESSED
 	goto_if_eq PKMN_Center_Move_Tutor_CloseDescriptionWindow
 	goto PKMN_Center_Move_Tutor_ConfirmMoveSelection
@@ -203,7 +250,7 @@ PKMN_Center_Move_Tutor_TeachTutorMove::
 	goto_if_eq PKMN_Center_Move_Tutor_CloseDescriptionWindow
 	msgbox PKMN_Center_Move_Tutor_Text_TeachAnotherMove, MSGBOX_YESNO
     compare VAR_RESULT, NO
-	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
+	goto_if_eq PKMN_Center_Move_Tutor_Exit
     goto PKMN_Center_Move_Tutor_CloseDescriptionWindow
 	end
 
@@ -211,20 +258,57 @@ PKMN_Center_Move_Tutor_CloseDescriptionWindow::
     special CloseBattleFrontierTutorWindow
     goto PKMN_Center_Move_Tutor_MoveTutorMenu
 
+PKMN_Center_Move_Tutor_CloseDescriptionWindowReturn::
+    special CloseBattleFrontierTutorWindow
+    goto PKMN_Center_Move_Tutor
+
+PKMN_Center_Move_Tutor_ExitReturn::
+    goto PKMN_Center_Move_Tutor
+
 PKMN_Center_Move_Tutor_Exit::
-    @ special CloseBattleFrontierTutorWindow
+	special CloseBattleFrontierTutorWindow
     msgbox PKMN_Center_Move_Tutor_Text_SeeYou, MSGBOX_DEFAULT
 	releaseall
 	end
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Name Rater @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-PKMN_Center_Move_Tutor_NameRater::
+PKMN_Center_NameRater_EventScript::
+	msgbox PKMN_Center_NameRater_Text_CritiqueWhichMonNickname, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	compare VAR_0x8004, 255
+	goto_if_ne PKMN_Center_NameRater_EventScript_RateMonNickname
+	compare VAR_0x8004, 255
+	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
+	end
+
+PKMN_Center_NameRater_EventScript_RateMonNickname::
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	compare VAR_RESULT, SPECIES_EGG
+	goto_if_eq PKMN_Center_NameRater_EventScript_CantRateEgg
+	special BufferMonNickname
+	msgbox PKMN_Center_NameRater_Text_WhatShallNewNameBe, MSGBOX_DEFAULT
+	call Common_EventScript_NameReceivedPartyMon
+	specialvar VAR_RESULT, TryPutNameRaterShowOnTheAir
+	special BufferMonNickname
+	compare VAR_RESULT, TRUE
+	goto_if_eq PKMN_Center_NameRater_EventScript_NewNameDifferent
+	msgbox PKMN_Center_NameRater_Text_NameNoDifferentYetSuperior, MSGBOX_DEFAULT
 	releaseall
+	end
 
+PKMN_Center_NameRater_EventScript_CantRateEgg::
+	msgbox PKMN_Center_NameRater_Text_ThatIsMerelyAnEgg, MSGBOX_DEFAULT
+	releaseall
+	end
+
+PKMN_Center_NameRater_EventScript_NewNameDifferent::
+	msgbox PKMN_Center_NameRater_Text_MonShallBeKnownAsName, MSGBOX_DEFAULT
+	releaseall
+	end
 
 PKMN_Center_Move_Tutor_General_Exit::
-    @ special CloseBattleFrontierTutorWindow
     msgbox PKMN_Center_Move_Tutor_Text_SeeYou, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -294,3 +378,55 @@ PKMN_Center_MoveReminder_Text_CantTeachEgg:
 PKMN_Center_MoveReminder_Text_RememberAnotherMove:
 	.string "Would you like a Pokémon to remember\n"
 	.string "another move?$"
+
+PKMN_Center_MoveDeleter_Text_ICanMakeMonForgetMove:
+	.string "Would you like one of your Pokémon\n"
+	.string "to forget a move?$"
+
+PKMN_Center_MoveDeleter_Text_WhichMonShouldForget:
+	.string "Which Pokémon should forget a move?$"
+
+PKMN_Center_MoveDeleter_Text_WhichMoveShouldBeForgotten:
+	.string "Which move should be forgotten?$"
+
+PKMN_Center_MoveDeleter_Text_MonOnlyKnowsOneMove:
+	.string "{STR_VAR_1} knows only one move,\n"
+	.string "so it can't be forgotten.$"
+
+PKMN_Center_MoveDeleter_Text_MonsMoveShouldBeForgotten:
+	.string "Hm! {STR_VAR_1}'s {STR_VAR_2}?\n"
+	.string "That move should be forgotten?$"
+
+PKMN_Center_MoveDeleter_Text_MonHasForgottenMove:
+	.string "It worked to perfection!\p"
+	.string "{STR_VAR_1} has forgotten\n"
+	.string "{STR_VAR_2} completely.$"
+
+PKMN_Center_MoveDeleter_Text_EggCantForgetMoves:
+	.string "What?\n"
+	.string "No Egg should know any moves.$"
+
+PKMN_Center_MoveDeleter_Text_CantForgetSurf:
+	.string "Hm!\p"
+	.string "Your {STR_VAR_1} doesn't seem willing\n"
+	.string "to forget Surf.$"
+
+PKMN_Center_NameRater_Text_CritiqueWhichMonNickname:
+	.string "Which Pokémon's nickname should\n"
+	.string "be changed?$"
+
+PKMN_Center_NameRater_Text_WhatShallNewNameBe:
+	.string "What would you like {STR_VAR_1}'s\n"
+	.string "new nickname to be?$"
+
+PKMN_Center_NameRater_Text_MonShallBeKnownAsName:
+	.string "Done! From now on, this Pokémon\n"
+	.string "shall be known as {STR_VAR_1}!$"
+
+PKMN_Center_NameRater_Text_NameNoDifferentYetSuperior:
+	.string "Okay! {STR_VAR_1}'s nickname\n"
+	.string "will stay as it is.$"
+
+PKMN_Center_NameRater_Text_ThatIsMerelyAnEgg:
+	.string "Now, now.\n"
+	.string "That is merely an Egg!$"
