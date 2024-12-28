@@ -14200,8 +14200,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Parabolic Charge"),
         .description = COMPOUND_STRING(
-            "Damages adjacent Pokémon\n"
-            "and heals up by half of it."),
+            "An attack that steals half\n"
+            "the damage inflicted."),
         .effect = EFFECT_ABSORB,
         .power = 75, // Power: 65 -> 75
         .type = TYPE_ELECTRIC,

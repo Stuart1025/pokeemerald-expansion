@@ -4,6 +4,7 @@
 #include "field_effect.h"
 #include "field_specials.h"
 #include "item.h"
+#include "list_menu.h"
 #include "menu.h"
 #include "palette.h"
 #include "script.h"
@@ -13,10 +14,6 @@
 #include "strings.h"
 #include "task.h"
 #include "text.h"
-#include "list_menu.h"
-#include "malloc.h"
-#include "util.h"
-#include "item_icon.h"
 #include "constants/field_specials.h"
 #include "constants/items.h"
 #include "constants/script_menu.h"
@@ -24,92 +21,23 @@
 
 #include "data/script_menu.h"
 
-struct DynamicListMenuEventArgs
-{
-    struct ListMenuTemplate *list;
-    u16 selectedItem;
-    u8 windowId;
-};
-
-typedef void (*DynamicListCallback)(struct DynamicListMenuEventArgs *eventArgs);
-
-struct DynamicListMenuEventCollection
-{
-    DynamicListCallback OnInit;
-    DynamicListCallback OnSelectionChanged;
-    DynamicListCallback OnDestroy;
-};
-
 static EWRAM_DATA u8 sProcessInputDelay = 0;
-static EWRAM_DATA u8 sDynamicMenuEventId = 0;
-static EWRAM_DATA struct DynamicMultichoiceStack *sDynamicMultiChoiceStack = NULL;
-static EWRAM_DATA u16 *sDynamicMenuEventScratchPad = NULL;
 
 static u8 sLilycoveSSTidalSelections[SSTIDAL_SELECTION_COUNT];
+static u8 sPKMNCenterMoveTutorLists[PKMNCENTER_MOVE_TUTOR_SELECTION_COUNT];
 
-static void FreeListMenuItems(struct ListMenuItem *items, u32 count);
-static void Task_HandleScrollingMultichoiceInput(u8 taskId);
 static void Task_HandleMultichoiceInput(u8 taskId);
 static void Task_HandleYesNoInput(u8 taskId);
 static void Task_HandleMultichoiceGridInput(u8 taskId);
-static void DrawMultichoiceMenuDynamic(u8 left, u8 top, u8 argc, struct ListMenuItem *items, bool8 ignoreBPress, u32 initialRow, u8 maxBeforeScroll, u32 callbackSet);
 static void DrawMultichoiceMenu(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 cursorPos);
 static void InitMultichoiceCheckWrap(bool8 ignoreBPress, u8 count, u8 windowId, u8 multichoiceId);
 static void DrawLinkServicesMultichoiceMenu(u8 multichoiceId);
 static void CreatePCMultichoice(void);
 static void CreateLilycoveSSTidalMultichoice(void);
+static void CreatePKMNCenterMoveListMultichoice(void);
 static bool8 IsPicboxClosed(void);
 static void CreateStartMenuForPokenavTutorial(void);
 static void InitMultichoiceNoWrap(bool8 ignoreBPress, u8 unusedCount, u8 windowId, u8 multichoiceId);
-static void MultichoiceDynamicEventDebug_OnInit(struct DynamicListMenuEventArgs *eventArgs);
-static void MultichoiceDynamicEventDebug_OnSelectionChanged(struct DynamicListMenuEventArgs *eventArgs);
-static void MultichoiceDynamicEventDebug_OnDestroy(struct DynamicListMenuEventArgs *eventArgs);
-static void MultichoiceDynamicEventShowItem_OnInit(struct DynamicListMenuEventArgs *eventArgs);
-static void MultichoiceDynamicEventShowItem_OnSelectionChanged(struct DynamicListMenuEventArgs *eventArgs);
-static void MultichoiceDynamicEventShowItem_OnDestroy(struct DynamicListMenuEventArgs *eventArgs);
-
-static const struct DynamicListMenuEventCollection sDynamicListMenuEventCollections[] =
-{
-    [DYN_MULTICHOICE_CB_DEBUG] =
-    {
-        .OnInit = MultichoiceDynamicEventDebug_OnInit,
-        .OnSelectionChanged = MultichoiceDynamicEventDebug_OnSelectionChanged,
-        .OnDestroy = MultichoiceDynamicEventDebug_OnDestroy
-    },
-    [DYN_MULTICHOICE_CB_SHOW_ITEM] =
-    {
-        .OnInit = MultichoiceDynamicEventShowItem_OnInit,
-        .OnSelectionChanged = MultichoiceDynamicEventShowItem_OnSelectionChanged,
-        .OnDestroy = MultichoiceDynamicEventShowItem_OnDestroy
-    }
-};
-
-static const struct ListMenuTemplate sScriptableListMenuTemplate =
-{
-    .item_X = 8,
-    .upText_Y = 1,
-    .cursorPal = 2,
-    .fillValue = 1,
-    .cursorShadowPal = 3,
-    .lettersSpacing = 1,
-    .scrollMultiple = LIST_NO_MULTIPLE_SCROLL,
-    .fontId = FONT_NORMAL,
-};
-
-bool8 ScriptMenu_MultichoiceDynamic(u8 left, u8 top, u8 argc, struct ListMenuItem *items, bool8 ignoreBPress, u8 maxBeforeScroll, u32 initialRow, u32 callbackSet)
-{
-    if (FuncIsActiveTask(Task_HandleMultichoiceInput) == TRUE)
-    {
-        FreeListMenuItems(items, argc);
-        return FALSE;
-    }
-    else
-    {
-        gSpecialVar_Result = 0xFF;
-        DrawMultichoiceMenuDynamic(left, top, argc, items, ignoreBPress, initialRow, maxBeforeScroll, callbackSet);
-        return TRUE;
-    }
-}
 
 bool8 ScriptMenu_Multichoice(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress)
 {
@@ -139,86 +67,8 @@ bool8 ScriptMenu_MultichoiceWithDefault(u8 left, u8 top, u8 multichoiceId, bool8
     }
 }
 
-static void MultichoiceDynamicEventDebug_OnInit(struct DynamicListMenuEventArgs *eventArgs)
-{
-    DebugPrintf("OnInit: %d", eventArgs->windowId);
-}
-
-static void MultichoiceDynamicEventDebug_OnSelectionChanged(struct DynamicListMenuEventArgs *eventArgs)
-{
-    DebugPrintf("OnSelectionChanged: %d", eventArgs->selectedItem);
-}
-
-static void MultichoiceDynamicEventDebug_OnDestroy(struct DynamicListMenuEventArgs *eventArgs)
-{
-    DebugPrintf("OnDestroy: %d", eventArgs->windowId);
-}
-
-#define sAuxWindowId sDynamicMenuEventScratchPad[0]
-#define sItemSpriteId sDynamicMenuEventScratchPad[1]
-#define TAG_CB_ITEM_ICON 3000
-
-static void MultichoiceDynamicEventShowItem_OnInit(struct DynamicListMenuEventArgs *eventArgs)
-{
-    struct WindowTemplate *template = &gWindows[eventArgs->windowId].window;
-    u32 baseBlock = template->baseBlock + template->width * template->height;
-    struct WindowTemplate auxTemplate = CreateWindowTemplate(0, template->tilemapLeft + template->width + 2, template->tilemapTop, 4, 4, 15, baseBlock);
-    u32 auxWindowId = AddWindow(&auxTemplate);
-    SetStandardWindowBorderStyle(auxWindowId, FALSE);
-    FillWindowPixelBuffer(auxWindowId, 0x11);
-    CopyWindowToVram(auxWindowId, COPYWIN_FULL);
-    sAuxWindowId = auxWindowId;
-    sItemSpriteId = MAX_SPRITES;
-}
-
-static void MultichoiceDynamicEventShowItem_OnSelectionChanged(struct DynamicListMenuEventArgs *eventArgs)
-{
-    struct WindowTemplate *template = &gWindows[eventArgs->windowId].window;
-    u32 x = template->tilemapLeft * 8 + template->width * 8 + 36;
-    u32 y = template->tilemapTop * 8 + 20;
-
-    if (sItemSpriteId != MAX_SPRITES)
-    {
-        FreeSpriteTilesByTag(TAG_CB_ITEM_ICON);
-        FreeSpritePaletteByTag(TAG_CB_ITEM_ICON);
-        DestroySprite(&gSprites[sItemSpriteId]);
-    }
-
-    sItemSpriteId = AddItemIconSprite(TAG_CB_ITEM_ICON, TAG_CB_ITEM_ICON, eventArgs->selectedItem);
-    gSprites[sItemSpriteId].oam.priority = 0;
-    gSprites[sItemSpriteId].x = x;
-    gSprites[sItemSpriteId].y = y;
-}
-
-static void MultichoiceDynamicEventShowItem_OnDestroy(struct DynamicListMenuEventArgs *eventArgs)
-{
-    ClearStdWindowAndFrame(sAuxWindowId, TRUE);
-    RemoveWindow(sAuxWindowId);
-
-    if (sItemSpriteId != MAX_SPRITES)
-    {
-        FreeSpriteTilesByTag(TAG_CB_ITEM_ICON);
-        FreeSpritePaletteByTag(TAG_CB_ITEM_ICON);
-        DestroySprite(&gSprites[sItemSpriteId]);
-    }
-}
-
-#undef sAuxWindowId
-#undef sItemSpriteId
-#undef TAG_CB_ITEM_ICON
-
-static void FreeListMenuItems(struct ListMenuItem *items, u32 count)
-{
-    u32 i;
-    for (i = 0; i < count; ++i)
-    {
-        // All items were dynamically allocated, so items[i].name is not actually constant.
-        Free((void *)items[i].name);
-    }
-    Free(items);
-}
-
-static u16 UNUSED GetLengthWithExpandedPlayerName(const u8 *str)
+// Unused
+static u16 GetLengthWithExpandedPlayerName(const u8 *str)
 {
     u16 length = 0;
 
@@ -243,185 +93,12 @@ static u16 UNUSED GetLengthWithExpandedPlayerName(const u8 *str)
     return length;
 }
 
-void MultichoiceDynamic_InitStack(u32 capacity)
-{
-    AGB_ASSERT(sDynamicMultiChoiceStack == NULL);
-    sDynamicMultiChoiceStack = AllocZeroed(sizeof(*sDynamicMultiChoiceStack));
-    AGB_ASSERT(sDynamicMultiChoiceStack != NULL);
-    sDynamicMultiChoiceStack->capacity = capacity;
-    sDynamicMultiChoiceStack->top = -1;
-    sDynamicMultiChoiceStack->elements = AllocZeroed(capacity * sizeof(struct ListMenuItem));
-}
-
-void MultichoiceDynamic_ReallocStack(u32 newCapacity)
-{
-    struct ListMenuItem *newElements;
-    AGB_ASSERT(sDynamicMultiChoiceStack != NULL);
-    AGB_ASSERT(sDynamicMultiChoiceStack->capacity < newCapacity);
-    newElements = AllocZeroed(newCapacity * sizeof(struct ListMenuItem));
-    AGB_ASSERT(newElements != NULL);
-    memcpy(newElements, sDynamicMultiChoiceStack->elements, sDynamicMultiChoiceStack->capacity * sizeof(struct ListMenuItem));
-    Free(sDynamicMultiChoiceStack->elements);
-    sDynamicMultiChoiceStack->elements = newElements;
-    sDynamicMultiChoiceStack->capacity = newCapacity;
-}
-
-bool32 MultichoiceDynamic_StackFull(void)
-{
-    AGB_ASSERT(sDynamicMultiChoiceStack != NULL);
-    return sDynamicMultiChoiceStack->top == sDynamicMultiChoiceStack->capacity - 1;
-}
-
-bool32 MultichoiceDynamic_StackEmpty(void)
-{
-    AGB_ASSERT(sDynamicMultiChoiceStack != NULL);
-    return sDynamicMultiChoiceStack->top == -1;
-}
-
-u32 MultichoiceDynamic_StackSize(void)
-{
-    AGB_ASSERT(sDynamicMultiChoiceStack != NULL);
-    return sDynamicMultiChoiceStack->top + 1;
-}
-
-void MultichoiceDynamic_PushElement(struct ListMenuItem item)
-{
-    if (sDynamicMultiChoiceStack == NULL)
-        MultichoiceDynamic_InitStack(MULTICHOICE_DYNAMIC_STACK_SIZE);
-    if (MultichoiceDynamic_StackFull())
-        MultichoiceDynamic_ReallocStack(sDynamicMultiChoiceStack->capacity + MULTICHOICE_DYNAMIC_STACK_INC);
-    sDynamicMultiChoiceStack->elements[++sDynamicMultiChoiceStack->top] = item;
-}
-
-struct ListMenuItem *MultichoiceDynamic_PopElement(void)
-{
-    if (sDynamicMultiChoiceStack == NULL)
-        return NULL;
-    if (MultichoiceDynamic_StackEmpty())
-        return NULL;
-    return &sDynamicMultiChoiceStack->elements[sDynamicMultiChoiceStack->top--];
-}
-
-struct ListMenuItem *MultichoiceDynamic_PeekElement(void)
-{
-    if (sDynamicMultiChoiceStack == NULL)
-        return NULL;
-    if (MultichoiceDynamic_StackEmpty())
-        return NULL;
-    return &sDynamicMultiChoiceStack->elements[sDynamicMultiChoiceStack->top];
-}
-
-struct ListMenuItem *MultichoiceDynamic_PeekElementAt(u32 index)
-{
-    if (sDynamicMultiChoiceStack == NULL)
-        return NULL;
-    if (sDynamicMultiChoiceStack->top < index)
-        return NULL;
-    return &sDynamicMultiChoiceStack->elements[index];
-}
-
-void MultichoiceDynamic_DestroyStack(void)
-{
-    TRY_FREE_AND_SET_NULL(sDynamicMultiChoiceStack->elements);
-    TRY_FREE_AND_SET_NULL(sDynamicMultiChoiceStack);
-}
-
-static void MultichoiceDynamic_MoveCursor(s32 itemIndex, bool8 onInit, struct ListMenu *list)
-{
-    u8 taskId;
-    if (!onInit)
-        PlaySE(SE_SELECT);
-    taskId = FindTaskIdByFunc(Task_HandleScrollingMultichoiceInput);
-    if (taskId != TASK_NONE)
-    {
-        ListMenuGetScrollAndRow(gTasks[taskId].data[0], &gScrollableMultichoice_ScrollOffset, NULL);
-        if (sDynamicMenuEventId != DYN_MULTICHOICE_CB_NONE && sDynamicListMenuEventCollections[sDynamicMenuEventId].OnSelectionChanged && !onInit)
-        {
-            struct DynamicListMenuEventArgs eventArgs = {.selectedItem = itemIndex, .windowId = list->template.windowId, .list = &list->template};
-            sDynamicListMenuEventCollections[sDynamicMenuEventId].OnSelectionChanged(&eventArgs);
-        }
-    }
-}
-
-static void DrawMultichoiceMenuDynamic(u8 left, u8 top, u8 argc, struct ListMenuItem *items, bool8 ignoreBPress, u32 initialRow, u8 maxBeforeScroll, u32 callbackSet)
-{
-    u32 i;
-    u8 windowId;
-    s32 width = 0;
-    u8 newWidth;
-    u8 taskId;
-    u32 windowHeight;
-    struct ListMenu *list;
-
-    for (i = 0; i < argc; ++i)
-    {
-        width = DisplayTextAndGetWidth(items[i].name, width);
-    }
-    LoadMessageBoxAndBorderGfx();
-    windowHeight = (argc < maxBeforeScroll) ? argc * 2 : maxBeforeScroll * 2;
-    newWidth = ConvertPixelWidthToTileWidth(width);
-    left = ScriptMenu_AdjustLeftCoordFromWidth(left, newWidth);
-    windowId = CreateWindowFromRect(left, top, newWidth, windowHeight);
-    SetStandardWindowBorderStyle(windowId, FALSE);
-    CopyWindowToVram(windowId, COPYWIN_FULL);
-
-    // I don't like this being global either, but I could not come up with another solution that
-    // does not invade the whole ListMenu infrastructure.
-    sDynamicMenuEventId = callbackSet;
-    sDynamicMenuEventScratchPad = AllocZeroed(100 * sizeof(u16));
-    if (sDynamicMenuEventId != DYN_MULTICHOICE_CB_NONE && sDynamicListMenuEventCollections[sDynamicMenuEventId].OnInit)
-    {
-        struct DynamicListMenuEventArgs eventArgs = {.selectedItem = initialRow, .windowId = windowId, .list = NULL};
-        sDynamicListMenuEventCollections[sDynamicMenuEventId].OnInit(&eventArgs);
-    }
-
-    gMultiuseListMenuTemplate = sScriptableListMenuTemplate;
-    gMultiuseListMenuTemplate.windowId = windowId;
-    gMultiuseListMenuTemplate.items = items;
-    gMultiuseListMenuTemplate.totalItems = argc;
-    gMultiuseListMenuTemplate.maxShowed = maxBeforeScroll;
-    gMultiuseListMenuTemplate.moveCursorFunc = MultichoiceDynamic_MoveCursor;
-
-    taskId = CreateTask(Task_HandleScrollingMultichoiceInput, 80);
-    gTasks[taskId].data[0] = ListMenuInit(&gMultiuseListMenuTemplate, 0, 0);
-    gTasks[taskId].data[1] = ignoreBPress;
-    gTasks[taskId].data[2] = windowId;
-    gTasks[taskId].data[5] = argc;
-    gTasks[taskId].data[7] = maxBeforeScroll;
-    StoreWordInTwoHalfwords((u16*) &gTasks[taskId].data[3], (u32) items);
-    list = (void *) gTasks[gTasks[taskId].data[0]].data;
-    ListMenuChangeSelectionFull(list, TRUE, FALSE, initialRow, TRUE);
-
-    if (sDynamicMenuEventId != DYN_MULTICHOICE_CB_NONE && sDynamicListMenuEventCollections[sDynamicMenuEventId].OnSelectionChanged)
-    {
-        struct DynamicListMenuEventArgs eventArgs = {.selectedItem = items[initialRow].id, .windowId = windowId, .list = &gMultiuseListMenuTemplate};
-        sDynamicListMenuEventCollections[sDynamicMenuEventId].OnSelectionChanged(&eventArgs);
-    }
-    ListMenuGetScrollAndRow(gTasks[taskId].data[0], &gScrollableMultichoice_ScrollOffset, NULL);
-    if (argc > maxBeforeScroll)
-    {
-        // Create Scrolling Arrows
-        struct ScrollArrowsTemplate template;
-        template.firstX = (newWidth / 2) * 8 + 12 + (left) * 8;
-        template.firstY = top * 8 + 5;
-        template.secondX = template.firstX;
-        template.secondY = top * 8 + windowHeight * 8 + 12;
-        template.fullyUpThreshold = 0;
-        template.fullyDownThreshold = argc - maxBeforeScroll;
-        template.firstArrowType = SCROLL_ARROW_UP;
-        template.secondArrowType = SCROLL_ARROW_DOWN;
-        template.tileTag = 2000;
-        template.palTag = 100,
-        template.palNum = 0;
-
-        gTasks[taskId].data[6] = AddScrollIndicatorArrowPair(&template, &gScrollableMultichoice_ScrollOffset);
-    }
-}
-
-void DrawMultichoiceMenuInternal(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 cursorPos, const struct MenuAction *actions, int count)
+static void DrawMultichoiceMenu(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 cursorPos)
 {
     int i;
     u8 windowId;
+    u8 count = sMultichoiceLists[multichoiceId].count;
+    const struct MenuAction *actions = sMultichoiceLists[multichoiceId].list;
     int width = 0;
     u8 newWidth;
 
@@ -433,16 +110,11 @@ void DrawMultichoiceMenuInternal(u8 left, u8 top, u8 multichoiceId, bool8 ignore
     newWidth = ConvertPixelWidthToTileWidth(width);
     left = ScriptMenu_AdjustLeftCoordFromWidth(left, newWidth);
     windowId = CreateWindowFromRect(left, top, newWidth, count * 2);
-    SetStandardWindowBorderStyle(windowId, FALSE);
+    SetStandardWindowBorderStyle(windowId, 0);
     PrintMenuTable(windowId, count, actions);
-    InitMenuInUpperLeftCornerNormal(windowId, count, cursorPos);
-    ScheduleBgCopyTilemapToVram(0);
+    InitMenuInUpperLeftCornerPlaySoundWhenAPressed(windowId, count, cursorPos);
+    schedule_bg_copy_tilemap_to_vram(0);
     InitMultichoiceCheckWrap(ignoreBPress, count, windowId, multichoiceId);
-}
-
-static void DrawMultichoiceMenu(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 cursorPos)
-{
-    DrawMultichoiceMenuInternal(left, top, multichoiceId, ignoreBPress, cursorPos, sMultichoiceLists[multichoiceId].list, sMultichoiceLists[multichoiceId].count);
 }
 
 #define tLeft           data[0]
@@ -483,59 +155,6 @@ static void InitMultichoiceCheckWrap(bool8 ignoreBPress, u8 count, u8 windowId, 
     DrawLinkServicesMultichoiceMenu(multichoiceId);
 }
 
-static void Task_HandleScrollingMultichoiceInput(u8 taskId)
-{
-    bool32 done = FALSE;
-    s32 input = ListMenu_ProcessInput(gTasks[taskId].data[0]);
-
-    switch (input)
-    {
-    case LIST_HEADER:
-    case LIST_NOTHING_CHOSEN:
-        break;
-    case LIST_CANCEL:
-        if (!gTasks[taskId].data[1])
-        {
-            gSpecialVar_Result = MULTI_B_PRESSED;
-            done = TRUE;
-        }
-        break;
-    default:
-        gSpecialVar_Result = input;
-        done = TRUE;
-        break;
-    }
-
-    if (done)
-    {
-        struct ListMenuItem *items;
-
-        PlaySE(SE_SELECT);
-
-        if (sDynamicMenuEventId != DYN_MULTICHOICE_CB_NONE && sDynamicListMenuEventCollections[sDynamicMenuEventId].OnDestroy)
-        {
-            struct DynamicListMenuEventArgs eventArgs = {.selectedItem = input, .windowId = gTasks[taskId].data[2], .list = NULL};
-            sDynamicListMenuEventCollections[sDynamicMenuEventId].OnDestroy(&eventArgs);
-        }
-
-        sDynamicMenuEventId = DYN_MULTICHOICE_CB_NONE;
-
-        if (gTasks[taskId].data[5] > gTasks[taskId].data[7])
-        {
-            RemoveScrollIndicatorArrowPair(gTasks[taskId].data[6]);
-        }
-
-        LoadWordFromTwoHalfwords((u16*) &gTasks[taskId].data[3], (u32* )(&items));
-        FreeListMenuItems(items, gTasks[taskId].data[5]);
-        TRY_FREE_AND_SET_NULL(sDynamicMenuEventScratchPad);
-        DestroyListMenuTask(gTasks[taskId].data[0], NULL, NULL);
-        ClearStdWindowAndFrame(gTasks[taskId].data[2], TRUE);
-        RemoveWindow(gTasks[taskId].data[2]);
-        ScriptContext_Enable();
-        DestroyTask(taskId);
-    }
-}
-
 static void Task_HandleMultichoiceInput(u8 taskId)
 {
     s8 selection;
@@ -554,7 +173,7 @@ static void Task_HandleMultichoiceInput(u8 taskId)
             else
                 selection = Menu_ProcessInput();
 
-            if (JOY_NEW(DPAD_UP | DPAD_DOWN))
+            if (gMain.newKeys & (DPAD_UP | DPAD_DOWN))
             {
                 DrawLinkServicesMultichoiceMenu(tMultichoiceId);
             }
@@ -574,7 +193,7 @@ static void Task_HandleMultichoiceInput(u8 taskId)
                 }
                 ClearToTransparentAndRemoveWindow(tWindowId);
                 DestroyTask(taskId);
-                ScriptContext_Enable();
+                EnableBothScriptContexts();
             }
         }
     }
@@ -582,6 +201,8 @@ static void Task_HandleMultichoiceInput(u8 taskId)
 
 bool8 ScriptMenu_YesNo(u8 left, u8 top)
 {
+    u8 taskId;
+
     if (FuncIsActiveTask(Task_HandleYesNoInput) == TRUE)
     {
         return FALSE;
@@ -590,7 +211,7 @@ bool8 ScriptMenu_YesNo(u8 left, u8 top)
     {
         gSpecialVar_Result = 0xFF;
         DisplayYesNoMenuDefaultYes();
-        CreateTask(Task_HandleYesNoInput, 0x50);
+        taskId = CreateTask(Task_HandleYesNoInput, 0x50);
         return TRUE;
     }
 }
@@ -627,7 +248,7 @@ static void Task_HandleYesNoInput(u8 taskId)
     }
 
     DestroyTask(taskId);
-    ScriptContext_Enable();
+    EnableBothScriptContexts();
 }
 
 bool8 ScriptMenu_MultichoiceGrid(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 columnCount)
@@ -659,10 +280,10 @@ bool8 ScriptMenu_MultichoiceGrid(u8 left, u8 top, u8 multichoiceId, bool8 ignore
 
         gTasks[taskId].tIgnoreBPress = ignoreBPress;
         gTasks[taskId].tWindowId = CreateWindowFromRect(left, top, columnCount * newWidth, rowCount * 2);
-        SetStandardWindowBorderStyle(gTasks[taskId].tWindowId, FALSE);
+        SetStandardWindowBorderStyle(gTasks[taskId].tWindowId, 0);
         PrintMenuGridTable(gTasks[taskId].tWindowId, newWidth * 8, columnCount, rowCount, sMultichoiceLists[multichoiceId].list);
-        InitMenuActionGrid(gTasks[taskId].tWindowId, newWidth * 8, columnCount, rowCount, 0);
-        CopyWindowToVram(gTasks[taskId].tWindowId, COPYWIN_FULL);
+        sub_8199944(gTasks[taskId].tWindowId, newWidth * 8, columnCount, rowCount, 0);
+        CopyWindowToVram(gTasks[taskId].tWindowId, 3);
         return TRUE;
     }
 }
@@ -670,7 +291,7 @@ bool8 ScriptMenu_MultichoiceGrid(u8 left, u8 top, u8 multichoiceId, bool8 ignore
 static void Task_HandleMultichoiceGridInput(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    s8 selection = Menu_ProcessGridInput();
+    s8 selection = Menu_ProcessInputGridLayout();
 
     switch (selection)
     {
@@ -689,7 +310,7 @@ static void Task_HandleMultichoiceGridInput(u8 taskId)
 
     ClearToTransparentAndRemoveWindow(tWindowId);
     DestroyTask(taskId);
-    ScriptContext_Enable();
+    EnableBothScriptContexts();
 }
 
 #undef tWindowId
@@ -710,7 +331,7 @@ bool16 ScriptMenu_CreatePCMultichoice(void)
 
 static void CreatePCMultichoice(void)
 {
-    u8 x = 8;
+    u8 y = 8;
     u32 pixelWidth = 0;
     u8 width;
     u8 numChoices;
@@ -734,35 +355,35 @@ static void CreatePCMultichoice(void)
     {
         numChoices = 4;
         windowId = CreateWindowFromRect(0, 0, width, 8);
-        SetStandardWindowBorderStyle(windowId, FALSE);
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_HallOfFame, x, 33, TEXT_SKIP_DRAW, NULL);
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_LogOff, x, 49, TEXT_SKIP_DRAW, NULL);
+        SetStandardWindowBorderStyle(windowId, 0);
+        AddTextPrinterParameterized(windowId, 1, gText_HallOfFame, y, 33, TEXT_SPEED_FF, NULL);
+        AddTextPrinterParameterized(windowId, 1, gText_LogOff, y, 49, TEXT_SPEED_FF, NULL);
     }
     else
     {
         numChoices = 3;
         windowId = CreateWindowFromRect(0, 0, width, 6);
-        SetStandardWindowBorderStyle(windowId, FALSE);
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_LogOff, x, 33, TEXT_SKIP_DRAW, NULL);
+        SetStandardWindowBorderStyle(windowId, 0);
+        AddTextPrinterParameterized(windowId, 1, gText_LogOff, y, 33, TEXT_SPEED_FF, NULL);
     }
 
     // Change PC name if player has met Lanette
     if (FlagGet(FLAG_SYS_PC_LANETTE))
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_LanettesPC, x, 1, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(windowId, 1, gText_LanettesPC, y, 1, TEXT_SPEED_FF, NULL);
     else
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_SomeonesPC, x, 1, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(windowId, 1, gText_SomeonesPC, y, 1, TEXT_SPEED_FF, NULL);
 
     StringExpandPlaceholders(gStringVar4, gText_PlayersPC);
-    PrintPlayerNameOnWindow(windowId, gStringVar4, x, 17);
-    InitMenuInUpperLeftCornerNormal(windowId, numChoices, 0);
-    CopyWindowToVram(windowId, COPYWIN_FULL);
+    PrintPlayerNameOnWindow(windowId, gStringVar4, y, 17);
+    InitMenuInUpperLeftCornerPlaySoundWhenAPressed(windowId, numChoices, 0);
+    CopyWindowToVram(windowId, 3);
     InitMultichoiceCheckWrap(FALSE, numChoices, windowId, MULTI_PC);
 }
 
 void ScriptMenu_DisplayPCStartupPrompt(void)
 {
-    LoadMessageBoxAndFrameGfx(0, TRUE);
-    AddTextPrinterParameterized2(0, FONT_NORMAL, gText_WhichPCShouldBeAccessed, 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+    sub_819786C(0, TRUE);
+    AddTextPrinterParameterized2(0, 1, gText_WhichPCShouldBeAccessed, 0, NULL, 2, 1, 3);
 }
 
 bool8 ScriptMenu_CreateLilycoveSSTidalMultichoice(void)
@@ -796,7 +417,7 @@ static void CreateLilycoveSSTidalMultichoice(void)
         sLilycoveSSTidalSelections[i] = 0xFF;
     }
 
-    GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_WIDTH);
+    GetFontAttribute(1, FONTATTR_MAX_LETTER_WIDTH);
 
     if (gSpecialVar_0x8004 == 0)
     {
@@ -810,7 +431,7 @@ static void CreateLilycoveSSTidalMultichoice(void)
         }
     }
 
-    if (CheckBagHasItem(ITEM_EON_TICKET, 1) == TRUE && FlagGet(FLAG_ENABLE_SHIP_SOUTHERN_ISLAND) == TRUE)
+    if (CheckBagHasItem(ITEM_EON_TICKET, 1) == TRUE && FlagGet(FLAG_SYS_HAS_EON_TICKET) == TRUE)
     {
         if (gSpecialVar_0x8004 == 0)
         {
@@ -818,11 +439,11 @@ static void CreateLilycoveSSTidalMultichoice(void)
             selectionCount++;
         }
 
-        if (gSpecialVar_0x8004 == 1 && FlagGet(FLAG_SHOWN_EON_TICKET) == FALSE)
+        if (gSpecialVar_0x8004 == 1 && FlagGet(FLAG_HAS_EON_TICKET) == FALSE)
         {
             sLilycoveSSTidalSelections[selectionCount] = SSTIDAL_SELECTION_SOUTHERN_ISLAND;
             selectionCount++;
-            FlagSet(FLAG_SHOWN_EON_TICKET);
+            FlagSet(FLAG_HAS_EON_TICKET);
         }
     }
 
@@ -834,11 +455,11 @@ static void CreateLilycoveSSTidalMultichoice(void)
             selectionCount++;
         }
 
-        if (gSpecialVar_0x8004 == 1 && FlagGet(FLAG_SHOWN_MYSTIC_TICKET) == FALSE)
+        if (gSpecialVar_0x8004 == 1 && FlagGet(FLAG_HAS_MYSTIC_TICKET) == FALSE)
         {
             sLilycoveSSTidalSelections[selectionCount] = SSTIDAL_SELECTION_NAVEL_ROCK;
             selectionCount++;
-            FlagSet(FLAG_SHOWN_MYSTIC_TICKET);
+            FlagSet(FLAG_HAS_MYSTIC_TICKET);
         }
     }
 
@@ -850,11 +471,11 @@ static void CreateLilycoveSSTidalMultichoice(void)
             selectionCount++;
         }
 
-        if (gSpecialVar_0x8004 == 1 && FlagGet(FLAG_SHOWN_AURORA_TICKET) == FALSE)
+        if (gSpecialVar_0x8004 == 1 && FlagGet(FLAG_HAS_AURORA_TICKET) == FALSE)
         {
             sLilycoveSSTidalSelections[selectionCount] = SSTIDAL_SELECTION_BIRTH_ISLAND;
             selectionCount++;
-            FlagSet(FLAG_SHOWN_AURORA_TICKET);
+            FlagSet(FLAG_HAS_AURORA_TICKET);
         }
     }
 
@@ -866,11 +487,11 @@ static void CreateLilycoveSSTidalMultichoice(void)
             selectionCount++;
         }
 
-        if (gSpecialVar_0x8004 == 1 && FlagGet(FLAG_SHOWN_OLD_SEA_MAP) == FALSE)
+        if (gSpecialVar_0x8004 == 1 && FlagGet(FLAG_HAS_OLD_SEA_MAP) == FALSE)
         {
             sLilycoveSSTidalSelections[selectionCount] = SSTIDAL_SELECTION_FARAWAY_ISLAND;
             selectionCount++;
-            FlagSet(FLAG_SHOWN_OLD_SEA_MAP);
+            FlagSet(FLAG_HAS_OLD_SEA_MAP);
         }
     }
 
@@ -903,19 +524,19 @@ static void CreateLilycoveSSTidalMultichoice(void)
 
         width = ConvertPixelWidthToTileWidth(pixelWidth);
         windowId = CreateWindowFromRect(MAX_MULTICHOICE_WIDTH - width, (6 - count) * 2, width, count * 2);
-        SetStandardWindowBorderStyle(windowId, FALSE);
+        SetStandardWindowBorderStyle(windowId, 0);
 
         for (selectionCount = 0, i = 0; i < SSTIDAL_SELECTION_COUNT; i++)
         {
             if (sLilycoveSSTidalSelections[i] != 0xFF)
             {
-                AddTextPrinterParameterized(windowId, FONT_NORMAL, sLilycoveSSTidalDestinations[sLilycoveSSTidalSelections[i]], 8, selectionCount * 16 + 1, TEXT_SKIP_DRAW, NULL);
+                AddTextPrinterParameterized(windowId, 1, sLilycoveSSTidalDestinations[sLilycoveSSTidalSelections[i]], 8, selectionCount * 16 + 1, TEXT_SPEED_FF, NULL);
                 selectionCount++;
             }
         }
 
-        InitMenuInUpperLeftCornerNormal(windowId, count, count - 1);
-        CopyWindowToVram(windowId, COPYWIN_FULL);
+        InitMenuInUpperLeftCornerPlaySoundWhenAPressed(windowId, count, count - 1);
+        CopyWindowToVram(windowId, 3);
         InitMultichoiceCheckWrap(FALSE, count, windowId, MULTI_SSTIDAL_LILYCOVE);
     }
 }
@@ -925,6 +546,98 @@ void GetLilycoveSSTidalSelection(void)
     if (gSpecialVar_Result != MULTI_B_PRESSED)
     {
         gSpecialVar_Result = sLilycoveSSTidalSelections[gSpecialVar_Result];
+    }
+}
+
+bool8 ScriptMenu_CreatePKMNCenterMoveTutorMultichoice(void)
+{
+    if (FuncIsActiveTask(Task_HandleMultichoiceInput) == TRUE)
+    {
+        return FALSE;
+    }
+    else
+    {
+        gSpecialVar_Result = 0xFF;
+        CreatePKMNCenterMoveListMultichoice();
+        return TRUE;
+    }
+}
+
+// Used to add more move tutor options as the player earns more badges
+static void CreatePKMNCenterMoveListMultichoice(void)
+{
+    u8 selectionCount = 0;
+    u8 count;
+    u32 pixelWidth;
+    u8 width;
+    u8 windowId;
+    u32 i = 0;
+    u32 j;
+
+    for (i = 0; i < PKMNCENTER_MOVE_TUTOR_SELECTION_COUNT; i++)
+    {
+        sPKMNCenterMoveTutorLists[i] = 0xFF;
+    }
+
+    GetFontAttribute(1, FONTATTR_MAX_LETTER_WIDTH);
+
+    // Add one option to menu for each obtained badge
+
+    for (i = 0; i < 7; i++)
+    {
+        if (!FlagGet(FLAG_BADGE01_GET + i))
+        {
+            sPKMNCenterMoveTutorLists[selectionCount] = i;
+            selectionCount++;
+        }
+    } 
+
+    sPKMNCenterMoveTutorLists[selectionCount] = PKMNCENTER_MOVE_TUTOR_SELECTION_EXIT;
+    selectionCount++;
+
+    count = selectionCount;
+    if (count == PKMNCENTER_MOVE_TUTOR_SELECTION_COUNT)
+    {
+        gSpecialVar_0x8004 = SCROLL_MULTI_PC_TUTOR_SET_SELECT;
+        ShowScrollableMultichoice();
+    }
+    else
+    {
+        pixelWidth = 0;
+
+        for (j = 0; j < PKMNCENTER_MOVE_TUTOR_SELECTION_COUNT; j++)
+        {
+            u8 selection = sPKMNCenterMoveTutorLists[j];
+            if (selection != 0xFF)
+            {
+                pixelWidth = DisplayTextAndGetWidth(sPKMNCenterTutorListOptions[selection], pixelWidth);
+            }
+        }
+
+        width = ConvertPixelWidthToTileWidth(pixelWidth);
+        windowId = CreateWindowFromRect(MAX_MULTICHOICE_WIDTH - width, (6 - count) * 2, width, count * 2);
+        SetStandardWindowBorderStyle(windowId, 0);
+
+        for (selectionCount = 0, i = 0; i < PKMNCENTER_MOVE_TUTOR_SELECTION_COUNT; i++)
+        {
+            if (sPKMNCenterMoveTutorLists[i] != 0xFF)
+            {
+                AddTextPrinterParameterized(windowId, 1, sPKMNCenterTutorListOptions[sPKMNCenterMoveTutorLists[i]], 8, selectionCount * 16 + 1, TEXT_SPEED_FF, NULL);
+                selectionCount++;
+            }
+        }
+
+        InitMenuInUpperLeftCornerPlaySoundWhenAPressed(windowId, count, count - 1);
+        CopyWindowToVram(windowId, 3);
+        InitMultichoiceCheckWrap(FALSE, count, windowId, MULTI_PKMN_CENTER_TUTOR_SETS);
+    }
+}
+
+void GetPKMNCenterMoveListMultichoice(void)
+{
+    if (gSpecialVar_Result != MULTI_B_PRESSED)
+    {
+        gSpecialVar_Result = sPKMNCenterMoveTutorLists[gSpecialVar_Result];
     }
 }
 
@@ -945,7 +658,6 @@ static void Task_PokemonPicWindow(u8 taskId)
         task->tState++;
         break;
     case 1:
-        // Wait until state is advanced by ScriptMenu_HidePokemonPic
         break;
     case 2:
         FreeResourcesAndDestroySprite(&gSprites[task->tMonSpriteId], task->tMonSpriteId);
@@ -963,7 +675,7 @@ bool8 ScriptMenu_ShowPokemonPic(u16 species, u8 x, u8 y)
     u8 taskId;
     u8 spriteId;
 
-    if (FindTaskIdByFunc(Task_PokemonPicWindow) != TASK_NONE)
+    if (FindTaskIdByFunc(Task_PokemonPicWindow) != 0xFF)
     {
         return FALSE;
     }
@@ -977,17 +689,17 @@ bool8 ScriptMenu_ShowPokemonPic(u16 species, u8 x, u8 y)
         gTasks[taskId].tMonSpriteId = spriteId;
         gSprites[spriteId].callback = SpriteCallbackDummy;
         gSprites[spriteId].oam.priority = 0;
-        SetStandardWindowBorderStyle(gTasks[taskId].tWindowId, TRUE);
-        ScheduleBgCopyTilemapToVram(0);
+        SetStandardWindowBorderStyle(gTasks[taskId].tWindowId, 1);
+        schedule_bg_copy_tilemap_to_vram(0);
         return TRUE;
     }
 }
 
-bool8 (*ScriptMenu_HidePokemonPic(void))(void)
+bool8 (*ScriptMenu_GetPicboxWaitFunc(void))(void)
 {
     u8 taskId = FindTaskIdByFunc(Task_PokemonPicWindow);
 
-    if (taskId == TASK_NONE)
+    if (taskId == 0xFF)
         return NULL;
     gTasks[taskId].tState++;
     return IsPicboxClosed;
@@ -995,7 +707,7 @@ bool8 (*ScriptMenu_HidePokemonPic(void))(void)
 
 static bool8 IsPicboxClosed(void)
 {
-    if (FindTaskIdByFunc(Task_PokemonPicWindow) == TASK_NONE)
+    if (FindTaskIdByFunc(Task_PokemonPicWindow) == 0xFF)
         return TRUE;
     else
         return FALSE;
@@ -1028,27 +740,27 @@ static void DrawLinkServicesMultichoiceMenu(u8 multichoiceId)
     {
     case MULTI_WIRELESS_NO_BERRY:
         FillWindowPixelBuffer(0, PIXEL_FILL(1));
-        AddTextPrinterParameterized2(0, FONT_NORMAL, sWirelessOptionsNoBerryCrush[Menu_GetCursorPos()], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+        AddTextPrinterParameterized2(0, 1, sWirelessOptionsNoBerryCrush[Menu_GetCursorPos()], 0, NULL, 2, 1, 3);
         break;
     case MULTI_CABLE_CLUB_WITH_RECORD_MIX:
         FillWindowPixelBuffer(0, PIXEL_FILL(1));
-        AddTextPrinterParameterized2(0, FONT_NORMAL, sCableClubOptions_WithRecordMix[Menu_GetCursorPos()], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+        AddTextPrinterParameterized2(0, 1, sCableClubOptions_WithRecordMix[Menu_GetCursorPos()], 0, NULL, 2, 1, 3);
         break;
     case MULTI_WIRELESS_NO_RECORD:
         FillWindowPixelBuffer(0, PIXEL_FILL(1));
-        AddTextPrinterParameterized2(0, FONT_NORMAL, sWirelessOptions_NoRecordMix[Menu_GetCursorPos()], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+        AddTextPrinterParameterized2(0, 1, sWirelessOptions_NoRecordMix[Menu_GetCursorPos()], 0, NULL, 2, 1, 3);
         break;
     case MULTI_WIRELESS_ALL_SERVICES:
         FillWindowPixelBuffer(0, PIXEL_FILL(1));
-        AddTextPrinterParameterized2(0, FONT_NORMAL, sWirelessOptions_AllServices[Menu_GetCursorPos()], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+        AddTextPrinterParameterized2(0, 1, sWirelessOptions_AllServices[Menu_GetCursorPos()], 0, NULL, 2, 1, 3);
         break;
     case MULTI_WIRELESS_NO_RECORD_BERRY:
         FillWindowPixelBuffer(0, PIXEL_FILL(1));
-        AddTextPrinterParameterized2(0, FONT_NORMAL, sWirelessOptions_NoRecordMixBerryCrush[Menu_GetCursorPos()], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+        AddTextPrinterParameterized2(0, 1, sWirelessOptions_NoRecordMixBerryCrush[Menu_GetCursorPos()], 0, NULL, 2, 1, 3);
         break;
     case MULTI_CABLE_CLUB_NO_RECORD_MIX:
         FillWindowPixelBuffer(0, PIXEL_FILL(1));
-        AddTextPrinterParameterized2(0, FONT_NORMAL, sCableClubOptions_NoRecordMix[Menu_GetCursorPos()], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+        AddTextPrinterParameterized2(0, 1, sCableClubOptions_NoRecordMix[Menu_GetCursorPos()], 0, NULL, 2, 1, 3);
         break;
     }
 }
@@ -1070,18 +782,18 @@ bool16 ScriptMenu_CreateStartMenuForPokenavTutorial(void)
 static void CreateStartMenuForPokenavTutorial(void)
 {
     u8 windowId = CreateWindowFromRect(21, 0, 7, 18);
-    SetStandardWindowBorderStyle(windowId, FALSE);
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_MenuOptionPokedex, 8, 9, TEXT_SKIP_DRAW, NULL);
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_MenuOptionPokemon, 8, 25, TEXT_SKIP_DRAW, NULL);
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_MenuOptionBag, 8, 41, TEXT_SKIP_DRAW, NULL);
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_MenuOptionPokenav, 8, 57, TEXT_SKIP_DRAW, NULL);
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gSaveBlock2Ptr->playerName, 8, 73, TEXT_SKIP_DRAW, NULL);
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_MenuOptionSave, 8, 89, TEXT_SKIP_DRAW, NULL);
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_MenuOptionOption, 8, 105, TEXT_SKIP_DRAW, NULL);
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_MenuOptionExit, 8, 121, TEXT_SKIP_DRAW, NULL);
-    InitMenuNormal(windowId, FONT_NORMAL, 0, 9, 16, ARRAY_COUNT(MultichoiceList_ForcedStartMenu), 0);
+    SetStandardWindowBorderStyle(windowId, 0);
+    AddTextPrinterParameterized(windowId, 1, gText_MenuOptionPokedex, 8, 9, TEXT_SPEED_FF, NULL);
+    AddTextPrinterParameterized(windowId, 1, gText_MenuOptionPokemon, 8, 25, TEXT_SPEED_FF, NULL);
+    AddTextPrinterParameterized(windowId, 1, gText_MenuOptionBag, 8, 41, TEXT_SPEED_FF, NULL);
+    AddTextPrinterParameterized(windowId, 1, gText_MenuOptionPokenav, 8, 57, TEXT_SPEED_FF, NULL);
+    AddTextPrinterParameterized(windowId, 1, gSaveBlock2Ptr->playerName, 8, 73, TEXT_SPEED_FF, NULL);
+    AddTextPrinterParameterized(windowId, 1, gText_MenuOptionSave, 8, 89, TEXT_SPEED_FF, NULL);
+    AddTextPrinterParameterized(windowId, 1, gText_MenuOptionOption, 8, 105, TEXT_SPEED_FF, NULL);
+    AddTextPrinterParameterized(windowId, 1, gText_MenuOptionExit, 8, 121, TEXT_SPEED_FF, NULL);
+    sub_81983AC(windowId, 1, 0, 9, 16, ARRAY_COUNT(MultichoiceList_ForcedStartMenu), 0);
     InitMultichoiceNoWrap(FALSE, ARRAY_COUNT(MultichoiceList_ForcedStartMenu), windowId, MULTI_FORCED_START_MENU);
-    CopyWindowToVram(windowId, COPYWIN_FULL);
+    CopyWindowToVram(windowId, 3);
 }
 
 #define tWindowId       data[6]
@@ -1110,7 +822,7 @@ static int DisplayTextAndGetWidthInternal(const u8 *str)
 {
     u8 temp[64];
     StringExpandPlaceholders(temp, str);
-    return GetStringWidth(FONT_NORMAL, temp, 0);
+    return GetStringWidth(1, temp, 0);
 }
 
 int DisplayTextAndGetWidth(const u8 *str, int prevWidth)
@@ -1145,4 +857,333 @@ int ScriptMenu_AdjustLeftCoordFromWidth(int left, int width)
     }
 
     return adjustedLeft;
+}
+
+// Text displayed as options.
+// Dewford tutors
+static const u8 sText_Fury_Cutter[] = _("Fury Cutter");
+static const u8 sText_Rollout[] = _("Rollout");
+static const u8 sText_Seismic_Toss[] = _("Seismic Toss");
+static const u8 sText_Covet[] = _("Covet");
+static const u8 sText_Vacuum_Wave[] = _("Vacuum Wave");
+static const u8 sText_Shock_Wave[] = _("Shock Wave");
+static const u8 sText_Bug_Bite[] = _("Bug Bite");
+static const u8 sText_Air_Cutter[] = _("Air Cutter");
+static const u8 sText_Swift[] = _("Swift");
+static const u8 sText_Snatch[] = _("Snatch");
+static const u8 sText_Mimic[] = _("Mimic");
+static const u8 sText_Mud_slap[] = _("Mud-slap");
+static const u8 sText_Metronome[] = _("Metronome");
+static const u8 sText_Ominous_Wind[] = _("Ominous Wind");
+static const u8 sText_Super_Fang[] = _("Super Fang");
+static const u8 sText_Uproar[] = _("Uproar");
+static const u8 sText_Gastro_Acid[] = _("Gastro Acid");
+static const u8 sText_Hone_Claws[] = _("Hone Claws");
+// Verdanturf tutors
+static const u8 sText_Counter[] = _("Counter");
+static const u8 sText_Signal_Beam[] = _("Signal Beam");
+static const u8 sText_Defog[] = _("Defog");
+static const u8 sText_Magic_Coat[] = _("Magic Coat");
+static const u8 sText_Gravity[] = _("Gravity");
+static const u8 sText_Seed_Bomb[] = _("Seed Bomb");
+static const u8 sText_Dynamic_Punch[] = _("DynamicPunch");
+static const u8 sText_Synthesis[] = _("Synthesis");
+static const u8 sText_Pain_Split[] = _("Pain Split");
+static const u8 sText_Role_Play[] = _("Role Play");
+static const u8 sText_Endeavor[] = _("Endeavor");
+static const u8 sText_Worry_Seed[] = _("Worry Seed");
+static const u8 sText_Psych_Up[] = _("Psych Up");
+static const u8 sText_Icy_Wind[] = _("Icy Wind");
+static const u8 sText_Electroweb[] = _("Electroweb");
+static const u8 sText_Low_Kick[] = _("Low Kick");
+static const u8 sText_Trick[] = _("Trick");
+// Lavaridge tutors
+static const u8 sText_Thunder_Punch[] = _("ThunderPunch");
+static const u8 sText_Fire_Punch[] = _("Fire Punch");
+static const u8 sText_Ice_Punch[] = _("Ice Punch");
+static const u8 sText_Iron_Defense[] = _("Iron Defense");
+static const u8 sText_Magnet_Rise[] = _("Magnet Rise");
+static const u8 sText_Tailwind[] = _("Tailwind");
+static const u8 sText_Zen_Headbutt[] = _("Zen Headbutt");
+static const u8 sText_Dual_Chop[] = _("Dual Chop");
+static const u8 sText_Body_Slam[] = _("Body Slam");
+static const u8 sText_Brine[] = _("Brine");
+static const u8 sText_Swagger[] = _("Swagger");
+static const u8 sText_Iron_Head[] = _("Iron Head");
+static const u8 sText_Soft_Boiled[] = _("Soft-Boiled");
+static const u8 sText_Drill_Run[] = _("Drill Run");
+static const u8 sText_Aqua_Tail[] = _("Aqua Tail");
+static const u8 sText_Heal_Bell[] = _("Heal Bell");
+static const u8 sText_Bounce[] = _("Bounce");
+// Pacifidlog tutors
+static const u8 sText_Last_Resort[] = _("Last Resort");
+static const u8 sText_Sky_Attack[] = _("Sky Attack");
+static const u8 sText_Foul_Play[] = _("Foul Play");
+static const u8 sText_Double_Edge[] = _("Double-Edge");
+static const u8 sText_Knock_Off[] = _("Knock Off");
+static const u8 sText_Superpower[] = _("Superpower");
+static const u8 sText_Helping_Hand[] = _("Helping Hand");
+static const u8 sText_Heat_Wave[] = _("Heat Wave");
+static const u8 sText_Liquidation[] = _("Liquidation");
+static const u8 sText_Hyper_Voice[] = _("Hyper Voice");
+static const u8 sText_Earth_Power[] = _("Earth Power");
+static const u8 sText_Gunk_Shot[] = _("Gunk Shot");
+static const u8 sText_Aura_Sphere[] = _("Aura Sphere");
+static const u8 sText_Throat_Chop[] = _("Throat Chop");
+static const u8 sText_Outrage[] = _("Outrage");
+static const u8 sText_Power_Gem[] = _("Power Gem");
+static const u8 sText_Hurricane[] = _("Hurricane");
+// IVs for the Hyper Training NPC
+static const u8 sText_31[] = _("31");
+static const u8 sText_30[] = _("30");
+static const u8 sText_29[] = _("29");
+static const u8 sText_28[] = _("28");
+static const u8 sText_27[] = _("27");
+static const u8 sText_26[] = _("26");
+static const u8 sText_25[] = _("25");
+static const u8 sText_24[] = _("24");
+static const u8 sText_23[] = _("23");
+static const u8 sText_22[] = _("22");
+static const u8 sText_21[] = _("21");
+static const u8 sText_20[] = _("20");
+static const u8 sText_19[] = _("19");
+static const u8 sText_18[] = _("18");
+static const u8 sText_17[] = _("17");
+static const u8 sText_16[] = _("16");
+static const u8 sText_15[] = _("15");
+static const u8 sText_14[] = _("14");
+static const u8 sText_13[] = _("13");
+static const u8 sText_12[] = _("12");
+static const u8 sText_11[] = _("11");
+static const u8 sText_10[] = _("10");
+static const u8 sText_9[] = _("9");
+static const u8 sText_8[] = _("8");
+static const u8 sText_7[] = _("7");
+static const u8 sText_6[] = _("6");
+static const u8 sText_5[] = _("5");
+static const u8 sText_4[] = _("4");
+static const u8 sText_3[] = _("3");
+static const u8 sText_2[] = _("2");
+static const u8 sText_1[] = _("1");
+static const u8 sText_0[] = _("0");
+
+// Sets of multichoices.
+static const struct ListMenuItem sTutor1[] =
+{
+	{sText_Fury_Cutter,	 0},
+	{sText_Rollout,  	 1},
+	{sText_Seismic_Toss, 2},
+	{sText_Covet,	 	 3},
+	{sText_Vacuum_Wave,  4},
+	{sText_Shock_Wave, 	 5},
+	{sText_Bug_Bite,	 6},
+	{sText_Air_Cutter, 	 7},
+	{sText_Swift,   	 8},
+	{sText_Snatch,  	 9},
+	{sText_Mimic, 		10},
+	{sText_Mud_slap,	11},	
+	{sText_Metronome, 	12},
+	{sText_Ominous_Wind,13},
+	{sText_Super_Fang,	14},
+	{sText_Uproar,		15},
+	{sText_Gastro_Acid,	16},
+	{sText_Hone_Claws,	17},
+};
+
+static const struct ListMenuItem sTutor2[] =
+{
+	{sText_Counter,		 0},
+	{sText_Signal_Beam,  1},
+	{sText_Defog, 	 	 2},
+	{sText_Magic_Coat,	 3},
+	{sText_Gravity,  	 4},
+	{sText_Seed_Bomb, 	 5},
+	{sText_Dynamic_Punch,6},
+	{sText_Synthesis, 	 7},
+	{sText_Pain_Split,   8},
+	{sText_Role_Play,  	 9},
+	{sText_Endeavor, 	10},
+	{sText_Worry_Seed,	11},	
+	{sText_Psych_Up, 	12},
+	{sText_Icy_Wind, 	13},
+	{sText_Electroweb,	14},
+	{sText_Low_Kick,	15},
+	{sText_Trick,		16},
+};
+static const struct ListMenuItem sTutor3[] =
+{
+	{sText_Thunder_Punch,0},
+	{sText_Fire_Punch, 	 1},
+	{sText_Ice_Punch, 	 2},
+	{sText_Iron_Defense, 3},
+	{sText_Magnet_Rise,  4},
+	{sText_Tailwind, 	 5},
+	{sText_Zen_Headbutt, 6},
+	{sText_Dual_Chop, 	 7},
+	{sText_Body_Slam,    8},
+	{sText_Brine,  		 9},
+	{sText_Swagger, 	10},
+	{sText_Iron_Head,	11},	
+	{sText_Soft_Boiled, 12},
+	{sText_Drill_Run, 	13},
+	{sText_Aqua_Tail,	14},
+	{sText_Heal_Bell,	15},
+	{sText_Bounce,		16},
+};
+
+static const struct ListMenuItem sTutor4[] =
+{
+	{sText_Last_Resort,	 0},
+	{sText_Sky_Attack, 	 1},
+	{sText_Foul_Play, 	 2},
+	{sText_Double_Edge,  3},
+	{sText_Knock_Off, 	 4},
+	{sText_Superpower, 	 5},
+	{sText_Helping_Hand, 6},
+	{sText_Heat_Wave, 	 7},
+	{sText_Liquidation,  8},
+	{sText_Hyper_Voice,  9},
+	{sText_Earth_Power, 10},
+	{sText_Gunk_Shot,	11},	
+	{sText_Aura_Sphere, 12},
+	{sText_Throat_Chop, 13},
+	{sText_Outrage,		14},
+	{sText_Power_Gem,	15},
+	{sText_Hurricane,	16},
+};
+
+static const struct ListMenuItem sHyperTraining[] =
+{
+    {sText_31, 	 0},
+    {sText_30,    1},
+    {sText_29,    2},
+    {sText_28,    3},
+    {sText_27,    4},
+    {sText_26,    5},
+    {sText_25,    6},
+    {sText_24, 	  7},
+    {sText_23,    8},
+    {sText_22, 	  9},
+    {sText_21, 	 10},
+    {sText_20,   11},
+	{sText_19, 	 12},
+    {sText_18, 	 13},
+	{sText_17,	 14},
+    {sText_16,	 15},
+    {sText_15,	 16},
+    {sText_14,	 17},
+    {sText_13,   18},
+    {sText_12,   19},
+    {sText_11,	 20},
+    {sText_10,   21},
+    {sText_9,    22},
+    {sText_8,    23},
+    {sText_7, 	 24},
+    {sText_6,    25},
+    {sText_5, 	 26},
+    {sText_4, 	 27},
+    {sText_3,    28},
+    {sText_2, 	 29},
+    {sText_1, 	 30},
+    {sText_0,	 31},	
+};
+
+// Table of your multichoice sets.
+struct
+{
+    const struct ListMenuItem *set;
+    int count;
+} static const sScrollingSets[] =
+{
+    {sTutor1, ARRAY_COUNT(sTutor1)}, //0
+    {sTutor2, ARRAY_COUNT(sTutor2)}, //1
+	{sTutor3, ARRAY_COUNT(sTutor3)}, //2
+    {sTutor4, ARRAY_COUNT(sTutor4)}, //3
+    {sHyperTraining, ARRAY_COUNT(sHyperTraining)}, //4
+};
+
+
+static void Task_ScrollingMultichoiceInput(u8 taskId);
+
+static const struct ListMenuTemplate sMultichoiceListTemplate =
+{
+    .header_X = 0,
+    .item_X = 8,
+    .cursor_X = 0,
+    .upText_Y = 1,
+    .cursorPal = 2,
+    .fillValue = 1,
+    .cursorShadowPal = 3,
+    .lettersSpacing = 1,
+    .itemVerticalPadding = 0,
+    .scrollMultiple = LIST_NO_MULTIPLE_SCROLL,
+    .fontId = 1,
+    .cursorKind = 0
+};
+
+// 0x8004 = set id
+// 0x8005 = window X
+// 0x8006 = window y
+// 0x8007 = showed at once
+// 0x8008 = Allow B press
+void ScriptMenu_ScrollingMultichoice(void)
+{
+    int i, windowId, taskId, width = 0;
+    int setId = gSpecialVar_0x8004;
+    int left = gSpecialVar_0x8005;
+    int top = gSpecialVar_0x8006;
+    int maxShowed = gSpecialVar_0x8007;
+
+    for (i = 0; i < sScrollingSets[setId].count; i++)
+        width = DisplayTextAndGetWidth(sScrollingSets[setId].set[i].name, width);
+
+    width = ConvertPixelWidthToTileWidth(width);
+    left = ScriptMenu_AdjustLeftCoordFromWidth(left, width);
+    windowId = CreateWindowFromRect(left, top, width, maxShowed * 2);
+    SetStandardWindowBorderStyle(windowId, 0);
+    CopyWindowToVram(windowId, 3);
+
+    gMultiuseListMenuTemplate = sMultichoiceListTemplate;
+    gMultiuseListMenuTemplate.windowId = windowId;
+    gMultiuseListMenuTemplate.items = sScrollingSets[setId].set;
+    gMultiuseListMenuTemplate.totalItems = sScrollingSets[setId].count;
+    gMultiuseListMenuTemplate.maxShowed = maxShowed;
+
+    taskId = CreateTask(Task_ScrollingMultichoiceInput, 0);
+    gTasks[taskId].data[0] = ListMenuInit(&gMultiuseListMenuTemplate, 0, 0);
+    gTasks[taskId].data[1] = gSpecialVar_0x8008;
+    gTasks[taskId].data[2] = windowId;
+}
+
+static void Task_ScrollingMultichoiceInput(u8 taskId)
+{
+    bool32 done = FALSE;
+    s32 input = ListMenu_ProcessInput(gTasks[taskId].data[0]);
+
+    switch (input)
+    {
+    case LIST_HEADER:
+    case LIST_NOTHING_CHOSEN:
+        break;
+    case LIST_CANCEL:
+        if (gTasks[taskId].data[1])
+        {
+            gSpecialVar_Result = 0x7F;
+            done = TRUE;
+        }
+        break;
+    default:
+        gSpecialVar_Result = input;
+        done = TRUE;
+        break;
+    }
+
+    if (done)
+    {
+        DestroyListMenuTask(gTasks[taskId].data[0], NULL, NULL);
+        ClearStdWindowAndFrame(gTasks[taskId].data[2], TRUE);
+        RemoveWindow(gTasks[taskId].data[2]);
+        EnableBothScriptContexts();
+        DestroyTask(taskId);
+    }
 }

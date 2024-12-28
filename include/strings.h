@@ -3060,4 +3060,20 @@ extern const u8 PokemonCenterMoveTutor_Text_LeafStormDesc[];
 extern const u8 PokemonCenterMoveTutor_Text_SkyAttackDesc[];
 extern const u8 PokemonCenterMoveTutor_Text_LastResortDesc[];
 
+// Options used to select a set of tutor moves
+extern const u8 gText_TutorMoveSet1[];
+extern const u8 gText_TutorMoveSet2[];
+extern const u8 gText_TutorMoveSet3[];
+extern const u8 gText_TutorMoveSet4[];
+extern const u8 gText_TutorMoveSet5[];
+extern const u8 gText_TutorMoveSet6[];
+extern const u8 gText_TutorMoveSet7[];
+extern const u8 gText_TutorMoveSet8[];
+
+// Pokemon Center move tutor/name rater
+extern const u8 gText_RememberAMove[];
+extern const u8 gText_ForgetAMove[];
+extern const u8 gText_LearnANewMove[];
+extern const u8 gText_RateANickname[];
+
 #endif // GUARD_STRINGS_H

@@ -1751,3 +1751,19 @@ const u8 gText_BraveBird[] = _("Brave Bird");
 const u8 gText_LeafStorm[] = _("Leaf Storm");
 const u8 gText_SkyAttack[] = _("Sky Attack");
 const u8 gText_LastResort[] = _("Last Resort");
+
+// Multichoice strings when selecting a set of tutor moves to choose from
+const u8 gText_TutorMoveSet1[] = _("Tutor Moves Set 1");
+const u8 gText_TutorMoveSet2[] = _("Tutor Moves Set 2");
+const u8 gText_TutorMoveSet3[] = _("Tutor Moves Set 3");
+const u8 gText_TutorMoveSet4[] = _("Tutor Moves Set 4");
+const u8 gText_TutorMoveSet5[] = _("Tutor Moves Set 5");
+const u8 gText_TutorMoveSet6[] = _("Tutor Moves Set 6");
+const u8 gText_TutorMoveSet7[] = _("Tutor Moves Set 7");
+const u8 gText_TutorMoveSet8[] = _("Tutor Moves Set 8");
+
+// Pokemon center move tutor/name rater menu
+const u8 gText_RememberAMove[] = _("Remember a move");
+const u8 gText_ForgetAMove[] = _("Forget a move");
+const u8 gText_LearnANewMove[] = _("Learn a new move");
+const u8 gText_RateANickname[] = _("Rate a nickname");
