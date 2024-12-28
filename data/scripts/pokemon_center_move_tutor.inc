@@ -184,8 +184,7 @@ PKMN_Center_Move_Tutor_Text_HowCanHelp:
 
 PKMN_Center_Move_Tutor_Text_Explanation:
 	.string "I can teach your Pokémon moves\n"
-	.string "that they can't learn anywhere\l"
-	.string "else.\p"
+	.string "they can't learn anywhere else.\p"
 	.string "There's no charge, but you'll\n"
 	.string "only have access to some\l"
 	.string "moves to start with.\p"
