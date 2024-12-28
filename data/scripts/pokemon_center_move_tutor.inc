@@ -4,16 +4,63 @@ PKMN_Center_Move_Tutor::
 	waitmessage
 	multichoice 0, 0, MULTI_PKMN_CENTER_MOVE_TUTOR, 0
 	switch VAR_RESULT
-	case 0, PKMN_Center_Move_Tutor_MoveReminder
+	case 0, PKMN_Center_MoveReminder_EventScript
 	case 1, PKMN_Center_Move_Tutor_MoveDeleter
 	case 2, PKMN_Center_Move_Tutor_MoveTutorIntro
 	case 3, PKMN_Center_Move_Tutor_NameRater
-	case 4, PKMN_Center_Move_Tutor_Exit
-	case MULTI_B_PRESSED, PKMN_Center_Move_Tutor_Exit
+	case 4, PKMN_Center_Move_Tutor_General_Exit
+	case MULTI_B_PRESSED, PKMN_Center_Move_Tutor_General_Exit
 
-PKMN_Center_Move_Tutor_MoveReminder::
-	releaseall
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Move Reminder @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+PKMN_Center_MoveReminder_EventScript::
+	lockall
+	msgbox PKMN_Center_MoveReminder_Text_WantMeToTeachMove, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, PKMN_Center_Move_Tutor_General_Exit
+	goto PKMN_Center_MoveReminder_EventScriptChooseMon
 	end
+
+PKMN_Center_MoveReminder_EventScriptChooseMon:: @ 82013D6
+	msgbox PKMN_Center_MoveReminder_Text_TutorWhichMon, MSGBOX_DEFAULT
+	special ChooseMonForMoveRelearner
+	waitstate
+	compare VAR_0x8004, 255
+	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
+	special IsSelectedMonEgg
+	compare VAR_RESULT, TRUE
+	goto_if_eq PKMN_Center_MoveReminder_EventScriptCantTeachEgg
+	compare VAR_0x8005, 0
+	goto_if_eq PKMN_Center_MoveReminder_EventScriptNoMoveToTeachMon
+	goto PKMN_Center_MoveReminder_EventScriptChooseMove
+	end
+
+PKMN_Center_MoveReminder_EventScriptChooseMove:: @ 820140C
+	msgbox PKMN_Center_MoveReminder_Text_TeachWhichMove, MSGBOX_DEFAULT
+	special TeachMoveRelearnerMove
+	waitstate
+	compare VAR_0x8004, 0
+	goto_if_eq PKMN_Center_MoveReminder_EventScriptChooseMon
+	goto PKMN_Center_MoveReminder_EventScriptRememberAnotherMove
+	end
+
+PKMN_Center_MoveReminder_EventScriptNoMoveToTeachMon:: @ 8201436
+	msgbox PKMN_Center_MoveReminder_Text_DontHaveMoveToTeachPokemon, MSGBOX_DEFAULT
+	goto PKMN_Center_MoveReminder_EventScriptChooseMon
+	end
+
+PKMN_Center_MoveReminder_EventScriptCantTeachEgg:: @ 8201444
+	msgbox PKMN_Center_MoveReminder_Text_CantTeachEgg, MSGBOX_DEFAULT
+	goto PKMN_Center_MoveReminder_EventScriptChooseMon
+	end
+	
+PKMN_Center_MoveReminder_EventScriptRememberAnotherMove::
+	msgbox PKMN_Center_MoveReminder_Text_RememberAnotherMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
+	goto PKMN_Center_MoveReminder_EventScriptChooseMon
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Move Deleter @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 PKMN_Center_Move_Tutor_MoveDeleter::
 	releaseall
@@ -115,7 +162,7 @@ PKMN_Center_Move_Tutor_ChooseMove::
 	waitstate
 	copyvar VAR_TEMP_D, VAR_RESULT
 	compare VAR_RESULT 17
-	goto_if_eq PKMN_Center_Move_Tutor_Exit
+	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
 	compare VAR_RESULT MULTI_B_PRESSED
 	goto_if_eq PKMN_Center_Move_Tutor_CloseDescriptionWindow
 	goto PKMN_Center_Move_Tutor_ConfirmMoveSelection
@@ -127,7 +174,7 @@ PKMN_Center_Move_Tutor_ChooseMoveSet8::
 	waitstate
 	copyvar VAR_TEMP_D, VAR_RESULT
 	compare VAR_RESULT 16
-	goto_if_eq PKMN_Center_Move_Tutor_Exit
+	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
 	compare VAR_RESULT MULTI_B_PRESSED
 	goto_if_eq PKMN_Center_Move_Tutor_CloseDescriptionWindow
 	goto PKMN_Center_Move_Tutor_ConfirmMoveSelection
@@ -156,7 +203,7 @@ PKMN_Center_Move_Tutor_TeachTutorMove::
 	goto_if_eq PKMN_Center_Move_Tutor_CloseDescriptionWindow
 	msgbox PKMN_Center_Move_Tutor_Text_TeachAnotherMove, MSGBOX_YESNO
     compare VAR_RESULT, NO
-	goto_if_eq PKMN_Center_Move_Tutor_Exit
+	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
     goto PKMN_Center_Move_Tutor_CloseDescriptionWindow
 	end
 
@@ -164,15 +211,20 @@ PKMN_Center_Move_Tutor_CloseDescriptionWindow::
     special CloseBattleFrontierTutorWindow
     goto PKMN_Center_Move_Tutor_MoveTutorMenu
 
-PKMN_Center_Move_Tutor_CloseDescriptionWindowReturn::
-    special CloseBattleFrontierTutorWindow
-    goto PKMN_Center_Move_Tutor
+PKMN_Center_Move_Tutor_Exit::
+    @ special CloseBattleFrontierTutorWindow
+    msgbox PKMN_Center_Move_Tutor_Text_SeeYou, MSGBOX_DEFAULT
+	releaseall
+	end
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+PKMN_Center_Move_Tutor_NameRater::
+	releaseall
 
-PKMN_Center_Move_Tutor_Exit::
-	special CloseBattleFrontierTutorWindow
+
+PKMN_Center_Move_Tutor_General_Exit::
+    @ special CloseBattleFrontierTutorWindow
     msgbox PKMN_Center_Move_Tutor_Text_SeeYou, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -219,3 +271,26 @@ PKMN_Center_Move_Tutor_Text_TeachAnotherMove:
 
 PKMN_Center_Move_Tutor_Text_SeeYou:
 	.string "See you later, then!$"
+
+PKMN_Center_MoveReminder_Text_WantMeToTeachMove:
+	.string "Would you like a Pokémon to remember\n"
+	.string "a move it has forgotten?$"
+
+PKMN_Center_MoveReminder_Text_TutorWhichMon:
+	.string "Which Pokémon should remember a move?$"
+
+PKMN_Center_MoveReminder_Text_TeachWhichMove:
+	.string "Which move would you like it to\n"
+	.string "remember?$"
+
+PKMN_Center_MoveReminder_Text_DontHaveMoveToTeachPokemon:
+	.string "I'm sorry, that Pokémon doesn't have\n"
+	.string "any moves it can remember.$"
+
+PKMN_Center_MoveReminder_Text_CantTeachEgg:
+	.string "I'm sorry, an Egg can't remember any\n"
+	.string "moves.$"
+
+PKMN_Center_MoveReminder_Text_RememberAnotherMove:
+	.string "Would you like a Pokémon to remember\n"
+	.string "another move?$"
