@@ -2407,27 +2407,18 @@ void ShowScrollableMultichoice(void)
         task->tTaskId = taskId;
         break;
     case SCROLL_MULTI_PC_TUTOR_SET_1:
+    case SCROLL_MULTI_PC_TUTOR_SET_2:
     case SCROLL_MULTI_PC_TUTOR_SET_3:
     case SCROLL_MULTI_PC_TUTOR_SET_4:
+    case SCROLL_MULTI_PC_TUTOR_SET_5:
     case SCROLL_MULTI_PC_TUTOR_SET_6:
     case SCROLL_MULTI_PC_TUTOR_SET_7:
+    case SCROLL_MULTI_PC_TUTOR_SET_8:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
         task->tNumItems = 22;
         task->tLeft = 17;
         task->tTop = 1;
-        task->tWidth = 14;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_PC_TUTOR_SET_2:
-    case SCROLL_MULTI_PC_TUTOR_SET_5:
-    case SCROLL_MULTI_PC_TUTOR_SET_8:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 21;
-        task->tLeft = 17;
-        task->tTop = 1;
-        task->tWidth = 14;
+        task->tWidth = 18;
         task->tHeight = 12;
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
@@ -2636,6 +2627,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_MetalClaw,
         gText_Covet,
         gText_Electroweb,
+        gText_Amnesia,
         gText_NightShade,
         gText_BrutalSwing,
         gText_ScaryFace,
@@ -2707,6 +2699,8 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_TerrainPulse,
         gText_WeatherBall,
         gText_PollenPuff,
+        gText_Avalanche,
+        gText_PetalBlizzard,
         gText_Agility,
         gText_Encore,
         gText_GrassyTerrain,
@@ -2788,6 +2782,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_LeafStorm,
         gText_SkyAttack,
         gText_LastResort,
+        gText_Coaching,
         gText_Exit
     },
 };
@@ -3323,6 +3318,7 @@ static const u16 sPokemonCenter_TutorMoves2[] =
     MOVE_METAL_CLAW,
 	MOVE_COVET,
 	MOVE_ELECTROWEB,
+    MOVE_AMNESIA,
     MOVE_NIGHT_SHADE,
     MOVE_BRUTAL_SWING,
     MOVE_SCARY_FACE,
@@ -3393,6 +3389,7 @@ static const u16 sPokemonCenter_TutorMoves5[] =
     MOVE_TERRAIN_PULSE,
 	MOVE_WEATHER_BALL,
     MOVE_POLLEN_PUFF,
+    MOVE_AVALANCHE,
     MOVE_PETAL_BLIZZARD,
     MOVE_AGILITY,    
 	MOVE_ENCORE,
@@ -3474,7 +3471,8 @@ static const u16 sPokemonCenter_TutorMoves8[] =
 	MOVE_BRAVE_BIRD,
 	MOVE_LEAF_STORM,
 	MOVE_SKY_ATTACK,
-	MOVE_LAST_RESORT
+	MOVE_LAST_RESORT,
+    MOVE_COACHING
 };
 
 void BufferBattleFrontierTutorMoveName(void)
@@ -3614,6 +3612,7 @@ static void ShowBattleFrontierTutorMoveDescription(u8 menu, u16 selection)
         PokemonCenterMoveTutor_Text_MetalClawDesc,
         PokemonCenterMoveTutor_Text_CovetDesc,
         PokemonCenterMoveTutor_Text_ElectroWebDesc,
+        PokemonCenterMoveTutor_Text_AmnesiaDesc,
         PokemonCenterMoveTutor_Text_NightShadeDesc,
         PokemonCenterMoveTutor_Text_BrutalSwingDesc,
         PokemonCenterMoveTutor_Text_ScaryFaceDesc,
@@ -3687,6 +3686,7 @@ static void ShowBattleFrontierTutorMoveDescription(u8 menu, u16 selection)
         PokemonCenterMoveTutor_Text_TerrainPulseDesc,
         PokemonCenterMoveTutor_Text_WeatherBallDesc,
         PokemonCenterMoveTutor_Text_PollenPuffDesc,
+        PokemonCenterMoveTutor_Text_AvalancheDesc,
         PokemonCenterMoveTutor_Text_PetalBlizzardDesc,
         PokemonCenterMoveTutor_Text_AgilityDesc,
         PokemonCenterMoveTutor_Text_EncoreDesc,
@@ -3772,6 +3772,7 @@ static void ShowBattleFrontierTutorMoveDescription(u8 menu, u16 selection)
         PokemonCenterMoveTutor_Text_LeafStormDesc,
         PokemonCenterMoveTutor_Text_SkyAttackDesc,
         PokemonCenterMoveTutor_Text_LastResortDesc,
+        PokemonCenterMoveTutor_Text_CoachingDesc,
         gText_Exit,
 	};
 
