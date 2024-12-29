@@ -339,7 +339,7 @@ PKMN_Center_Move_Tutor_Text_WhichSetofMoves:
 	.string "like to choose from?$"
 
 PKMN_Center_Move_Tutor_Text_WhichMove:
-	.string "Which move would should I\n"
+	.string "Which move should I\n"
 	.string "teach to your Pokémon?$"
 	
 PKMN_Center_Move_Tutor_Text_IsThisRightMove:
