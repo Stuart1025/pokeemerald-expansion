@@ -1501,7 +1501,7 @@ enum {
     HOENN_DEX_SINISTCHA,
     HOENN_DEX_TYPE_NULL,
     HOENN_DEX_SILVALLY,
-
+};
 
 
 //     HOENN_DEX_TREECKO,
@@ -1742,9 +1742,8 @@ enum {
 //     HOENN_DEX_RAYQUAZA,
 //     HOENN_DEX_JIRACHI,
 //     HOENN_DEX_DEOXYS,
-};
 
-#define HOENN_DEX_COUNT (HOENN_DEX_DEOXYS + 1)
+#define HOENN_DEX_COUNT (HOENN_DEX_SILVALLY + 1)
 
 #define DECAGRAMS_IN_POUND             4536
 #define CM_PER_INCH                    2.54
