@@ -2418,7 +2418,7 @@ void ShowScrollableMultichoice(void)
         task->tNumItems = 22;
         task->tLeft = 17;
         task->tTop = 1;
-        task->tWidth = 18;
+        task->tWidth = 14;
         task->tHeight = 12;
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
