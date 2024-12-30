@@ -26080,6 +26080,7 @@ static const u16 sDusknoirTeachableLearnset[] = {
     MOVE_BLIZZARD,
     MOVE_BODY_SLAM,
     MOVE_BRICK_BREAK,
+    MOVE_BULK_UP, /* New Change */
     MOVE_BULLDOZE,
     MOVE_CALM_MIND,
     MOVE_CHARGE_BEAM,
