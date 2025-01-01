@@ -27842,8 +27842,9 @@ static const u16 sJirachiTeachableLearnset[] = {
     MOVE_METEOR_BEAM,
     MOVE_METEOR_MASH,
     MOVE_METRONOME,
-    MOVE_MUD_SLAP,
     MOVE_MOONBLAST,
+    MOVE_MUD_SLAP,
+    MOVE_MYSTICAL_FIRE, /* New Change */
     MOVE_PLAY_ROUGH,
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
@@ -57488,6 +57489,7 @@ static const u16 sTinkatinkTeachableLearnset[] = {
     MOVE_METAL_CLAW,
     MOVE_METAL_SOUND,
     MOVE_METRONOME,
+    MOVE_MOONBLAST, /* New Change */
     MOVE_PLAY_ROUGH,
     MOVE_POUNCE,
     MOVE_PROTECT,
@@ -57531,6 +57533,7 @@ static const u16 sTinkatuffTeachableLearnset[] = {
     MOVE_METAL_CLAW,
     MOVE_METAL_SOUND,
     MOVE_METRONOME,
+    MOVE_MOONBLAST, /* New Change */
     MOVE_PLAY_ROUGH,
     MOVE_POUNCE,
     MOVE_PROTECT,
@@ -57576,6 +57579,7 @@ static const u16 sTinkatonTeachableLearnset[] = {
     MOVE_METAL_CLAW,
     MOVE_METAL_SOUND,
     MOVE_METRONOME,
+    MOVE_MOONBLAST, /* New Change */
     MOVE_PLAY_ROUGH,
     MOVE_POUNCE,
     MOVE_PROTECT,
