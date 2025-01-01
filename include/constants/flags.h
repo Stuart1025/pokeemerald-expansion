@@ -45,7 +45,7 @@
 
 #define FLAG_UNUSED_0x020    0x20 // EXP Share Flag
 #define FLAG_TALKED_TO_MOVE_TUTOR    0x21 // Unused Flag
-#define FLAG_WATERFALL       0x22
+#define FLAG_UNUSED_0x022    0x22 // Unused Flag
 #define FLAG_UNUSED_0x023    0x23 // Unused Flag
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
