@@ -57300,6 +57300,7 @@ static const u16 sScovillainTeachableLearnset[] = {
     MOVE_BULLET_SEED,
     MOVE_BURNING_JEALOUSY,
     MOVE_CRUNCH,
+    MOVE_EARTH_POWER, /* New Change */
     MOVE_ENDEAVOR,
     MOVE_ENDURE,
     MOVE_ENERGY_BALL,
@@ -57325,6 +57326,7 @@ static const u16 sScovillainTeachableLearnset[] = {
     MOVE_ROLLOUT,
     MOVE_SANDSTORM,
     MOVE_SCARY_FACE,
+    MOVE_SCORCHING_SANDS, /* New Change */
     MOVE_SEED_BOMB,
     MOVE_SLEEP_TALK,
     MOVE_SOLAR_BEAM,
