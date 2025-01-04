@@ -57560,6 +57560,7 @@ static const u16 sRabscaTeachableLearnset[] = {
     MOVE_SUBSTITUTE,
     MOVE_SUNNY_DAY,
     MOVE_SWAGGER,
+    MOVE_TELEPORT, /* New Change */
     MOVE_THIEF,
     MOVE_TRICK,
     MOVE_TRICK_ROOM,

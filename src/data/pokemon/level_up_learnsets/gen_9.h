@@ -4965,7 +4965,7 @@ static const struct LevelUpMove sArticunoGalarLevelUpLearnset[] = {
     LEVEL_UP_MOVE(55, MOVE_FREEZING_GLARE),
     LEVEL_UP_MOVE(60, MOVE_DREAM_EATER),
     LEVEL_UP_MOVE(65, MOVE_AEROBLAST),
-    LEVEL_UP_MOVE(70, MOVE_DOUBLE_TEAM),
+    LEVEL_UP_MOVE(70, MOVE_MIRROR_COAT),
     LEVEL_UP_MOVE(75, MOVE_HURRICANE),
     LEVEL_UP_MOVE(80, MOVE_FUTURE_SIGHT),
     LEVEL_UP_MOVE(85, MOVE_TRICK_ROOM),
@@ -12533,7 +12533,7 @@ static const struct LevelUpMove sGiratinaLevelUpLearnset[] = {
 #if P_FAMILY_CRESSELIA
 static const struct LevelUpMove sCresseliaLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_DISARMING_VOICE),
-    LEVEL_UP_MOVE( 1, MOVE_DOUBLE_TEAM),
+    LEVEL_UP_MOVE( 1, MOVE_HEAL_PULSE),
     LEVEL_UP_MOVE( 6, MOVE_MIST),
     LEVEL_UP_MOVE(12, MOVE_DRAINING_KISS),
     LEVEL_UP_MOVE(18, MOVE_AURORA_BEAM),
@@ -17849,7 +17849,7 @@ static const struct LevelUpMove sXerneasLevelUpLearnset[] = {
 #if P_FAMILY_YVELTAL
 static const struct LevelUpMove sYveltalLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_GUST),
-    LEVEL_UP_MOVE( 1, MOVE_DOUBLE_TEAM),
+    LEVEL_UP_MOVE( 1, MOVE_DEFOG),
     LEVEL_UP_MOVE( 5, MOVE_TAUNT),
     LEVEL_UP_MOVE(10, MOVE_SNARL),
     LEVEL_UP_MOVE(15, MOVE_DISABLE),
@@ -23580,7 +23580,6 @@ static const struct LevelUpMove sRoaringMoonLevelUpLearnset[] = {
 static const struct LevelUpMove sIronValiantLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ELECTRIC_TERRAIN),
     LEVEL_UP_MOVE( 1, MOVE_DISABLE),
-    LEVEL_UP_MOVE( 1, MOVE_DOUBLE_TEAM),
     LEVEL_UP_MOVE( 1, MOVE_SHADOW_SNEAK),
     LEVEL_UP_MOVE( 1, MOVE_FURY_CUTTER),
     LEVEL_UP_MOVE( 7, MOVE_HYPNOSIS),
