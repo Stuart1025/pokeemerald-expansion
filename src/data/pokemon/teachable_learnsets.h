@@ -57445,6 +57445,7 @@ static const u16 sScovillainTeachableLearnset[] = {
     MOVE_HYPER_BEAM,
     MOVE_LASH_OUT,
     MOVE_LEAF_STORM,
+    MOVE_LOW_KICK, /* New Change */
     MOVE_MAGICAL_LEAF,
     MOVE_OVERHEAT,
     MOVE_PROTECT,
