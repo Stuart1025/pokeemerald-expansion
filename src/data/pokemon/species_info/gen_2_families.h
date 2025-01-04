@@ -4398,10 +4398,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     {
         .baseHP        = 90,
         .baseAttack    = 120,
-        .baseDefense   = 85,
+        .baseDefense   = 75,
         .baseSpeed     = 75,
         .baseSpAttack  = 50,
-        .baseSpDefense = 85,
+        .baseSpDefense = 75,
     #if P_UPDATED_TYPES >= GEN_6
         .types = MON_TYPES(TYPE_FAIRY),
     #else
@@ -6427,7 +6427,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     {
         .baseHP        = 45,
         .baseAttack    = 60,
-        .baseDefense   = 50,
+        .baseDefense   = 30,
         .baseSpeed     = 65,
         .baseSpAttack  = 80,
         .baseSpDefense = 50,
@@ -6489,11 +6489,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_HOUNDOOM] =
     {
         .baseHP        = 75,
-        .baseAttack    = 100,
-        .baseDefense   = 65,
-        .baseSpeed     = 115,
+        .baseAttack    = 90,
+        .baseDefense   = 50,
+        .baseSpeed     = 95,
         .baseSpAttack  = 110,
-        .baseSpDefense = 65,
+        .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_DARK, TYPE_FIRE),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 204,
