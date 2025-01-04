@@ -495,189 +495,198 @@ PokemonCenterMoveTutor_Text_SeismicTossDesc::
 	.string "identical to the\n"
 	.string "user's level.$"
 
-PokemonCenterMoveTutor_Text_CovetDesc::
-	.string "Cutely begs to\n"
-	.string "steal the foe's\n"
-	.string "held item.$"
+PokemonCenterMoveTutor_Text_FireSpinDesc::
+	.string "Traps the foe in a\n"
+	.string "ring of fire for 4\n"
+	.string "to 5 turns.$"
+
+PokemonCenterMoveTutor_Text_WhirlpoolDesc::
+	.string "Traps the foe in a\n"
+	.string "whirlpool for 4 to 5\n"
+	.string "turns.$"
+
+PokemonCenterMoveTutor_Text_SandTombDesc::
+	.string "Traps the foe in\n"
+	.string "quicksand for 4 to\n"
+	.string "5 turns.$"
+
+PokemonCenterMoveTutor_Text_PoisonTailDesc::
+	.string "Has a high\n"
+	.string "critical-hit ratio.\n"
+	.string "May also poison.$"
+
+PokemonCenterMoveTutor_Text_KnockOffDesc::
+	.string "Knocks down the\n"
+	.string "foe's held item to\n"
+	.string "prevent its use.$"
 
 PokemonCenterMoveTutor_Text_VacuumWaveDesc::
 	.string "A wave of pure\n"
 	.string "vacuum that al-\n"
 	.string "ways goes first.$"
 
-PokemonCenterMoveTutor_Text_ShockWaveDesc::
-	.string "A rapid jolt of\n"
-	.string "electricity that\n"
-	.string "can't be avoided.$"
+PokemonCenterMoveTutor_Text_PounceDesc::
+	.string "The user pounces\n"
+	.string "on the foe,\n"
+	.string "lowering its Speed.$"
 
-PokemonCenterMoveTutor_Text_BugBiteDesc::
-	.string "Steals and eats\n"
-	.string "the target's held\n"
-	.string "Berry.$"
+PokemonCenterMoveTutor_Text_EchoedVoiceDesc::
+	.string "Does more damage\n"
+	.string "every turn it is\n"
+	.string "used.$"
 
-PokemonCenterMoveTutor_Text_AirCutterDesc::
-	.string "Hits both foes.\n"
-	.string "High critical hit\n"
-	.string "ratio.$"
+PokemonCenterMoveTutor_Text_AcidSprayDesc::
+	.string "Sprays a melting\n"
+	.string "acid that sharply\n"
+	.string "reduces Sp. Def.$"
 
-PokemonCenterMoveTutor_Text_SwiftDesc::
-	.string "Sprays star-\n"
-	.string "shaped rays\n"
-	.string "that never miss.$"
+PokemonCenterMoveTutor_Text_RapidSpinDesc::
+	.string "Spins the body at\n"
+	.string "high speed to\n"
+	.string "strike the foe.$"
 
-PokemonCenterMoveTutor_Text_SnatchDesc::
-	.string "Steals effects\n"
-	.string "of the target's\n"
-	.string "next move.$"
+PokemonCenterMoveTutor_Text_DrainingKissDesc::
+	.string "A kiss that steals\n"
+	.string "over half the\n"
+	.string "damage inflicted.$"
 
-PokemonCenterMoveTutor_Text_MimicDesc::
-	.string "Copies a move\n"
-	.string "used by the foe\n"
-	.string "for one battle.$"
+PokemonCenterMoveTutor_Text_StruggleBugDesc::
+	.string "Resisting, the user\n"
+	.string "attacks the foe.\n"
+	.string "Lowers Sp. Atk.$"
 
+PokemonCenterMoveTutor_Text_StoredPowerDesc::
+	.string "Ups damage the\n"
+	.string "more the user's\n"
+	.string "stats are raised.$"
+
+PokemonCenterMoveTutor_Text_PowerUpPunchDesc::
+	.string "A hard punch that\n"
+	.string "raises the user's\n"
+	.string "Attack.$"
+
+PokemonCenterMoveTutor_Text_TeleportDesc::
+	.string "A psychic move for\n"
+	.string "fleeing from\n"
+	.string "battle instantly.$"
+
+PokemonCenterMoveTutor_Text_CharmDesc::
+	.string "Charms the foe and\n"
+	.string "sharply lowers its\n"
+	.string "Attack.$"
 
 PokemonCenterMoveTutor_Text_MetronomeDesc::
 	.string "Waggles a finger\n"
 	.string "to use any move\n"
 	.string "at random.$"
 
-PokemonCenterMoveTutor_Text_OminousWindDesc::
-	.string "A repulsive gust\n"
-	.string "of wind that may\n"
-	.string "raise all stats.$"
-
-PokemonCenterMoveTutor_Text_SuperFangDesc::
-	.string "Bites with sharp\n"
-	.string "fangs and halves\n"
-	.string "the foe's HP.$"
-
-PokemonCenterMoveTutor_Text_HoneClawsDesc::
-	.string "Sharpens claws\n"
-	.string "to boost Attack\n"
-	.string "and accuracy.$"
-
-PokemonCenterMoveTutor_Text_PsychUpDesc::
-	.string "Copies the foe's\n"
-	.string "effect(s) and\n"
-	.string "gives to the user.$"
-
 @ Set 2
-PokemonCenterMoveTutor_Text_CounterDesc::
-	.string "Retaliates any\n"
-	.string "physical hit with\n"
-	.string "double the power.$"
+PokemonCenterMoveTutor_Text_SwiftDesc::
+	.string "Sprays star-\n"
+	.string "shaped rays\n"
+	.string "that never miss.$"
 
-PokemonCenterMoveTutor_Text_EndeavorDesc::
-	.string "Cuts the target's\n"
-	.string "HP to equal the\n"
-	.string "user's HP.$"
+PokemonCenterMoveTutor_Text_IncinerateDesc::
+	.string "Burns berries,\n"
+	.string "preventing their\n"
+	.string "use.$"
 
-PokemonCenterMoveTutor_Text_WorrySeedDesc::
-	.string "Makes target's\n"
-	.string "ability Insomnia,\n"
-	.string "preventing sleep.$"
+PokemonCenterMoveTutor_Text_WaterPulseDesc::
+	.string "A pulsing blast of\n"
+	.string "water that may\n"
+	.string "confuse the foe.$"
 
-PokemonCenterMoveTutor_Text_DefenseCurlDesc::
-	.string "Curls up to con-\n"
-	.string "ceal weak spots\n"
-	.string "and raise Defense.$"
+PokemonCenterMoveTutor_Text_ShockWaveDesc::
+	.string "A rapid jolt of\n"
+	.string "electricity that\n"
+	.string "can't be avoided.$"
 
-PokemonCenterMoveTutor_Text_DefogDesc::
-	.string "Blows away spikes,\n"
-	.string "screens, etc. Also\n"
-	.string "lowers evasion.$"
-
-PokemonCenterMoveTutor_Text_MagicCoatDesc::
-	.string "Reflects Leech\n"
-	.string "Seed and status\n"
-	.string "effects.$"
-
-PokemonCenterMoveTutor_Text_UproarDesc::
-	.string "Causes an uproar\n"
-	.string "for three turns,\n"
-	.string "preventing sleep.$"
-
-PokemonCenterMoveTutor_Text_HexDesc::
-	.string "Doubles damage if\n"
-	.string "the target has a\n"
-	.string "status condition.$"
-
-PokemonCenterMoveTutor_Text_GastroAcidDesc::
-	.string "Hurls stomach\n"
-	.string "acid to nullify\n"
-	.string "target's Ability.$"
-
-PokemonCenterMoveTutor_Text_SynthesisDesc::
-	.string "Restores HP. The\n"
-	.string "amount varies\n"
-	.string "with the weather.$"
-
-PokemonCenterMoveTutor_Text_PainSplitDesc::
-	.string "Adds the user and\n"
-	.string "target's HP, then\n"
-	.string "shares it equally.$"
-
-PokemonCenterMoveTutor_Text_LowKickDesc::
-	.string "A kick that does\n"
-	.string "more damage to\n"
-	.string "heavier targets.$"
-
-PokemonCenterMoveTutor_Text_IronDefenseDesc::
-	.string "Body surface is\n"
-	.string "hardened, sharply\n"
-	.string "raising Defense.$"
-
-PokemonCenterMoveTutor_Text_MagnetRiseDesc::
-	.string "Levitates using\n"
-	.string "electromagnetism\n"
-	.string "for five turns.$"
-
-PokemonCenterMoveTutor_Text_SwaggerDesc::
-	.string "Confuses target,\n"
-	.string "but sharply raises\n"
-	.string "its Attack stat.$"
-
-PokemonCenterMoveTutor_Text_PinMissileDesc::
-	.string "Fires sharp pins\n"
-	.string "that strike 2 to 5\n"
-	.string "times.$"
-
-PokemonCenterMoveTutor_Text_MudShotDesc::
-	.string "Hurls mud at the\n"
-	.string "target, reducing\n"
-	.string "its Speed stat.$"
-
-@ Set 3
-PokemonCenterMoveTutor_Text_SignalBeamDesc::
-	.string "A sinister beam\n"
-	.string "that may also\n"
-	.string "cause confusion.$"
-
-PokemonCenterMoveTutor_Text_GravityDesc::
-	.string "For 5 turns flight\n"
-	.string "is impossible and\n"
-	.string "accuracy rises.$"
-
-PokemonCenterMoveTutor_Text_SeedBombDesc::
-	.string "A barrage of hard-\n"
-	.string "shelled seeds is\n"
-	.string "rained on the foe.$"
-
-PokemonCenterMoveTutor_Text_PsychoCutDesc::
-	.string "Has an increased\n"
-	.string "critical-hit\n"
-	.string "ratio.$"
+PokemonCenterMoveTutor_Text_MagicalLeafDesc::
+	.string "Attacks with\n"
+	.string "strange leaves\n"
+	.string "that can't miss.$"
 
 PokemonCenterMoveTutor_Text_IcyWindDesc::
 	.string "A chilling attack\n"
 	.string "that lowers the\n"
 	.string "foe's Speed.$"
 
+PokemonCenterMoveTutor_Text_RevengeDesc::
+	.string "Doubles damage\n"
+	.string "if user was hurt\n"
+	.string "by foe this turn.$"
+
+PokemonCenterMoveTutor_Text_RevengeDesc::
+	.string "Does double damage\n"
+	.string "if the foe is\n"
+	.string "poisoned.$"
+
+PokemonCenterMoveTutor_Text_MudShotDesc::
+	.string "Hurls mud at the\n"
+	.string "foe and lowers its\n"
+	.string "Speed.$"
+
+PokemonCenterMoveTutor_Text_AirCutterDesc::
+	.string "Hits both foes.\n"
+	.string "High critical hit\n"
+	.string "ratio.$"
+
+PokemonCenterMoveTutor_Text_BugBiteDesc::
+	.string "Steals and eats\n"
+	.string "the target's held\n"
+	.string "Berry.$"
+
+PokemonCenterMoveTutor_Text_HexDesc::
+	.string "Doubles damage if\n"
+	.string "the target has a\n"
+	.string "status condition.$"
+
+PokemonCenterMoveTutor_Text_BreakingSwipeDesc::
+	.string "Swings its tail to\n"
+	.string "attack. Lowers the\n"
+	.string "Atk of those hit.$"
+
+PokemonCenterMoveTutor_Text_MetalClawDesc::
+	.string "Rakes the foe with\n"
+	.string "steel claws. May\n"
+	.string "raise Attack.$"
+
+PokemonCenterMoveTutor_Text_CovetDesc::
+	.string "Cutely begs to\n"
+	.string "steal the foe's\n"
+	.string "held item.$"
+
 PokemonCenterMoveTutor_Text_ElectroWebDesc::
 	.string "An electric net\n"
 	.string "captures foes.\n"
 	.string "Lowers Speed.$"
 
+PokemonCenterMoveTutor_Text_AmnesiaDesc::
+	.string "Forgets something\n"
+	.string "and sharply raises\n"
+	.string "Sp. Def.$"
+
+PokemonCenterMoveTutor_Text_NightShadeDesc::
+	.string "Inflicts damage\n"
+	.string "identical to the\n"
+	.string "user's level.$"
+
+PokemonCenterMoveTutor_Text_BrutalSwingDesc::
+	.string "Violently swings\n"
+	.string "around to hurt\n"
+	.string "everyone nearby.$"
+
+PokemonCenterMoveTutor_Text_ScaryFaceDesc::
+	.string "A scary face\n"
+	.string "frightens. Sharply\n"
+	.string "lowers Speed.$"
+
+PokemonCenterMoveTutor_Text_HelpingHandDesc::
+	.string "Boosts the power\n"
+	.string "of an ally's\n"
+	.string "attack in battle.$"
+
+@ Set 3
 PokemonCenterMoveTutor_Text_ThunderFangDesc::
 	.string "An electrified\n"
 	.string "bite that may\n"
@@ -693,45 +702,90 @@ PokemonCenterMoveTutor_Text_IceFangDesc::
 	.string "that may\n"
 	.string "freeze the foe.$"
 
-PokemonCenterMoveTutor_Text_BrineDesc::
-	.string "Power is doubled\n"
-	.string "if foe's HP is\n"
-	.string "half or less.$"
+PokemonCenterMoveTutor_Text_MysticalFireDesc::
+	.string "Breathes special,\n"
+	.string "hot fire. May\n"
+	.string "lower Sp. Atk.$"
 
-PokemonCenterMoveTutor_Text_RazorShellDesc::
-	.string "High critical-hit\n"
-	.string "ratio. May also\n"
-	.string "lower Defense.$"
+PokemonCenterMoveTutor_Text_FlipTurnDesc::
+	.string "Attacks and\n"
+	.string "switches with a\n"
+	.string "party Pokémon.$"
 
-PokemonCenterMoveTutor_Text_RevengeDesc::
-	.string "Doubles damage\n"
-	.string "if user was hurt\n"
-	.string "by foe this turn.$"
+PokemonCenterMoveTutor_Text_PsychicNoiseDesc::
+	.string "Unpleasant sound\n"
+	.string "waves damage and\n"
+	.string "prevent healing.$"
 
-PokemonCenterMoveTutor_Text_DrainingKissDesc::
-	.string "A kiss that steals\n"
-	.string "half the damage\n"
-	.string "inflicted.$"
+PokemonCenterMoveTutor_Text_LowKickDesc::
+	.string "A kick that does\n"
+	.string "more damage to\n"
+	.string "heavier targets.$"
 
-PokemonCenterMoveTutor_Text_LeafBladeDesc::
-	.string "Has an increased\n"
-	.string "critical-hit\n"
-	.string "ratio.$"
+PokemonCenterMoveTutor_Text_ElectroBallDesc::
+	.string "Hurls an orb that\n"
+	.string "does more damage\n"
+	.string "to slower foes.$"
 
-PokemonCenterMoveTutor_Text_RockBlastDesc::
-	.string "Hurls boulders at\n"
-	.string "the foe 2 to 5\n"
-	.string "times in a row.$"
+PokemonCenterMoveTutor_Text_LashOutDesc::
+	.string "If stats lowered\n"
+	.string "during this turn,\n"
+	.string "power is doubled.$"
 
-PokemonCenterMoveTutor_Text_SoftBoiledDesc::
-	.string "Recovers up to\n"
-	.string "half the user's\n"
-	.string "maximum HP.$"
+PokemonCenterMoveTutor_Text_SignalBeamDesc::
+	.string "A sinister beam\n"
+	.string "that may also\n"
+	.string "cause confusion.$"
 
-PokemonCenterMoveTutor_Text_AuroraBeamDesc::
-	.string "Fires a rainbow-\n"
-	.string "colored beam that\n"
-	.string "may lower Attack.$"
+PokemonCenterMoveTutor_Text_StompingTantrumDesc::
+	.string "Stomps around\n"
+	.string "angrily. Stronger\n"
+	.string "after a failure.$"
+
+PokemonCenterMoveTutor_Text_TemperFlareDesc::
+	.string "A desperation\n"
+	.string "attack. Stronger\n"
+	.string "after a failure.$"
+
+PokemonCenterMoveTutor_Text_SuperFangDesc::
+	.string "Bites with sharp\n"
+	.string "fangs and halves\n"
+	.string "the foe's HP.$"
+
+PokemonCenterMoveTutor_Text_BurningJealousyDesc::
+	.string "Burns foes that\n"
+	.string "had their stats\n"
+	.string "raised this turn.$"
+
+PokemonCenterMoveTutor_Text_FlingDesc::
+	.string "Flings item at foe.\n"
+	.string "Effect and power\n"
+	.string "depend on item.$"
+
+PokemonCenterMoveTutor_Text_MagicCoatDesc::
+	.string "Reflects Leech\n"
+	.string "Seed and status\n"
+	.string "effects.$"
+
+PokemonCenterMoveTutor_Text_ConfuseRayDesc::
+	.string "Exposes foe to a\n"
+	.string "sinister ray that\n"
+	.string "confuses it.$"
+
+PokemonCenterMoveTutor_Text_MetalSoundDesc::
+	.string "Emits a horrible\n"
+	.string "sound that sharply\n"
+	.string "lowers Sp. Def.$"
+
+PokemonCenterMoveTutor_Text_TrickDesc::
+	.string "Tricks the foe\n"
+	.string "into trading\n"
+	.string "held items.$"
+
+PokemonCenterMoveTutor_Text_MagnetRiseDesc::
+	.string "Levitates using\n"
+	.string "electromagnetism\n"
+	.string "for five turns.$"
 
 @ Set 4
 PokemonCenterMoveTutor_Text_ThunderPunchDesc::
@@ -749,222 +803,176 @@ PokemonCenterMoveTutor_Text_IcePunchDesc::
 	.string "that may\n"
 	.string "freeze the foe.$"
 
-PokemonCenterMoveTutor_Text_TailwindDesc::
-	.string "A turbulent wind\n"
-	.string "ups allies' Speed\n"
-	.string "for 4 turns.$"
+PokemonCenterMoveTutor_Text_AuraSphereDesc::
+	.string "A blast of aura\n"
+	.string "power that cannot\n"
+	.string "be avoided.$"
 
-PokemonCenterMoveTutor_Text_ZenHeadbuttDesc::
-	.string "Focuses willpower,\n"
-	.string "rams the foe. May\n"
-	.string "cause flinching.$"
-
-PokemonCenterMoveTutor_Text_BodySlamDesc::
-	.string "A full-body slam\n"
-	.string "that may cause\n"
-	.string "paralysis.$"
-
-PokemonCenterMoveTutor_Text_IcicleSpearDesc::
-	.string "Sharp icicles are\n"
-	.string "fired at the foe.\n"
-	.string "Hits 2 to 5 times.$"
-
-PokemonCenterMoveTutor_Text_DualChopDesc::
-	.string "Attacks with\n"
-	.string "brutal strikes.\n"
-	.string "Hits 2 times.$"
-
-PokemonCenterMoveTutor_Text_ReversalDesc::
-	.string "Inflicts more\n"
-	.string "damage if the\n"
-	.string "user's HP is down.$"
-
-PokemonCenterMoveTutor_Text_BugBuzzDesc::
-	.string "Creates a harmful\n"
-	.string "sound wave. May\n"
-	.string "lower Sp. Def.$"
-
-PokemonCenterMoveTutor_Text_LastResortDesc::
-	.string "User must use its\n"
-	.string "other known moves\n"
-	.string "before this one.$"
-
-PokemonCenterMoveTutor_Text_RolePlayDesc::
-	.string "Mimics the target\n"
-	.string "and copies its\n"
-	.string "Ability.$"
+PokemonCenterMoveTutor_Text_IronHeadDesc::
+	.string "Slams the foe with\n"
+	.string "a steel-hard head.\n"
+	.string "Foe may flinch.$"
 
 PokemonCenterMoveTutor_Text_DrillRunDesc::
 	.string "Spins, slams the\n"
 	.string "foe. High critical\n"
 	.string "-hit ratio.$"
 
-PokemonCenterMoveTutor_Text_BlazeKickDesc::
-	.string "High critical-hit\n"
-	.string "ratio. May also\n"
-	.string "burn the target.$"
+PokemonCenterMoveTutor_Text_LungeDesc::
+	.string "Lunges at the foe\n"
+	.string "to lower its Attack\n"
+	.string "stat.$"
 
-PokemonCenterMoveTutor_Text_CrossPoisonDesc::
-	.string "High critical-hit\n"
-	.string "ratio. May also\n"
-	.string "poison the target.$"
-
-PokemonCenterMoveTutor_Text_WeatherBallDesc::
-	.string "The move's type\n"
-	.string "and power change\n"
-	.string "with the weather.$"
-
-PokemonCenterMoveTutor_Text_AirSlashDesc::
-	.string "Cuts with a blade\n"
-	.string "of air. May also\n"
+PokemonCenterMoveTutor_Text_ZenHeadbuttDesc::
+	.string "Focuses willpower,\n"
+	.string "rams the foe. May\n"
 	.string "cause flinching.$"
 
-@ Set 5
-PokemonCenterMoveTutor_Text_IronHeadDesc::
-	.string "Slams the foe with\n"
-	.string "a steel-hard head.\n"
-	.string "Foe may flinch.$"
-
-PokemonCenterMoveTutor_Text_AquaTailDesc::
-	.string "User swings its\n"
-	.string "tail as if it were\n"
-	.string "a wave in a storm.$"
-
-PokemonCenterMoveTutor_Text_PowerGemDesc::
-	.string "Attacks with a ray\n"
-	.string "of light that\n"
-	.string "sparkles like gems.$"
-
-PokemonCenterMoveTutor_Text_BounceDesc::
-	.string "Bounces up, then\n"
-	.string "down next turn.\n"
-	.string "May paralyze.$"
-
-PokemonCenterMoveTutor_Text_HealBellDesc::
-	.string "Chimes soothingly\n"
-	.string "to eliminate all\n"
-	.string "status problems.$"
-
-PokemonCenterMoveTutor_Text_SuperpowerDesc::
-	.string "Attacks with full\n"
-	.string "power, but lowers\n"
-	.string "Attack & Defense.$"
-
-PokemonCenterMoveTutor_Text_CrunchDesc::
-	.string "Crunches with\n"
-	.string "sharp fangs. May\n"
-	.string "lower Sp. Def.$"
-
-PokemonCenterMoveTutor_Text_MysticalFireDesc::
-	.string "Breathes special,\n"
-	.string "hot fire. May\n"
-	.string "lower Sp. Atk.$"
-
-PokemonCenterMoveTutor_Text_GunkShotDesc::
-	.string "Shoots filthy\n"
-	.string "garbage at the\n"
-	.string "foe. May poison.$"
-
-PokemonCenterMoveTutor_Text_HyperVoiceDesc::
-	.string "A loud attack\n"
-	.string "that uses sound\n"
-	.string "waves to injure.$"
-
-PokemonCenterMoveTutor_Text_SkyAttackDesc::
-	.string "Searches out weak\n"
-	.string "spots, then\n"
-	.string "strikes next turn.$"
-
-PokemonCenterMoveTutor_Text_HeatCrashDesc::
-	.string "Does more damage\n"
-	.string "if the user weighs\n"
-	.string "more than the foe.$"
-
-PokemonCenterMoveTutor_Text_StoredPowerDesc::
-	.string "Ups damage the\n"
-	.string "more the user's\n"
-	.string "stats are raised.$"
-
-PokemonCenterMoveTutor_Text_TrickDesc::
-	.string "Tricks the foe\n"
-	.string "into trading\n"
-	.string "held items.$"
-
-PokemonCenterMoveTutor_Text_DynamicPunchDesc::
-	.string "Powerful, sure to\n"
-	.string "cause confusion,\n"
-	.string "but inaccurate.$"
-
-PokemonCenterMoveTutor_Text_HelpingHandDesc::
-	.string "Boosts the power\n"
-	.string "of an ally's\n"
-	.string "attack in battle.$"
-
-PokemonCenterMoveTutor_Text_ToxicSpikesDesc::
-	.string "Sets spikes that\n"
-	.string "poison a foe\n"
-	.string "switching in.$"
-
-@ Set 6
-PokemonCenterMoveTutor_Text_MegahornDesc::
-	.string "A brutal ramming\n"
-	.string "attack using\n"
-	.string "out-thrust horns.$"
-
-PokemonCenterMoveTutor_Text_AuraSphereDesc::
-	.string "A blast of aura\n"
-	.string "power that cannot\n"
-	.string "be avoided.$"
+PokemonCenterMoveTutor_Text_TailSlapDesc::
+	.string "Strikes the foe\n"
+	.string "with its tail 2 to 5\n"
+	.string "times.$"
 
 PokemonCenterMoveTutor_Text_ThroatChopDesc::
 	.string "Strikes the foe's\n"
 	.string "throat to silence\n"
 	.string "it for 2 turns.$"
 
-PokemonCenterMoveTutor_Text_EarthPowerDesc::
-	.string "Ground under the\n"
-	.string "foe erupts. May\n"
-	.string "lower Sp. Def.$"
+PokemonCenterMoveTutor_Text_AirSlashDesc::
+	.string "Cuts with a blade\n"
+	.string "of air. May also\n"
+	.string "cause flinching.$"
 
-PokemonCenterMoveTutor_Text_HeatWaveDesc::
-	.string "Exhales a hot\n"
-	.string "breath on the foe.\n"
-	.string "May inflict a burn.$"
+PokemonCenterMoveTutor_Text_AlluringVoiceDesc::
+	.string "Confuses foe if\n"
+	.string "its stats were\n"
+	.string "boosted this turn.$"
 
-PokemonCenterMoveTutor_Text_LiquidationDesc::
-	.string "Slams the target\n"
-	.string "with a water blast.\n"
-	.string "May lower Defense.$"
+PokemonCenterMoveTutor_Text_PinMissileDesc::
+	.string "Fires sharp pins\n"
+	.string "that strike 2 to 5\n"
+	.string "times.$"
+
+PokemonCenterMoveTutor_Text_RockBlastDesc::
+	.string "Hurls boulders at\n"
+	.string "the foe 2 to 5\n"
+	.string "times in a row.$"
+
+PokemonCenterMoveTutor_Text_IcicleSpearDesc::
+	.string "Sharp icicles are\n"
+	.string "fired at the foe.\n"
+	.string "Hits 2 to 5 times.$"
+
+PokemonCenterMoveTutor_Text_PowerGemDesc::
+	.string "Attacks with a ray\n"
+	.string "of light that\n"
+	.string "sparkles like gems.$"
+
+PokemonCenterMoveTutor_Text_ScaleShotDesc::
+	.string "Shoots scales 2 to\n"
+	.string "5 times. Ups Speed,\n"
+	.string "lowers Defense.$"
+
+PokemonCenterMoveTutor_Text_SeedBombDesc::
+	.string "A barrage of hard-\n"
+	.string "shelled seeds is\n"
+	.string "rained on the foe.$"
+
+PokemonCenterMoveTutor_Text_ScorchingSandsDesc::
+	.string "Throws hot sand at\n"
+	.string "the target. May\n"
+	.string "leave a burn.$"
+
+PokemonCenterMoveTutor_Text_FakeTearsDesc::
+	.string "Fakes crying to\n"
+	.string "sharply lowers the\n"
+	.string "foe's Sp. Def.$"
 
 PokemonCenterMoveTutor_Text_BatonPassDesc::
 	.string "Switches out the\n"
 	.string "user while keeping\n"
 	.string "effects in play.$"
 
-PokemonCenterMoveTutor_Text_FoulPlayDesc::
-	.string "Does damage based\n"
-	.string "on the foe's\n"
-	.string "Attack stat.$"
+@ Set 5
+PokemonCenterMoveTutor_Text_CrunchDesc::
+	.string "Crunches with\n"
+	.string "sharp fangs. May\n"
+	.string "lower Sp. Def.$"
 
-PokemonCenterMoveTutor_Text_SolarBladeDesc::
-	.string "Absorbs light in\n"
-	.string "one turn, attacks\n"
-	.string "the next turn.$"
+PokemonCenterMoveTutor_Text_TriAttackDesc::
+	.string "Fires three types\n"
+	.string "of beams at the\n"
+	.string "same time.$"
 
-PokemonCenterMoveTutor_Text_PhantomForceDesc::
-	.string "Vanishes, then\n"
-	.string "strikes next turn.\n"
-	.string "Ignores Protect.$"
+PokemonCenterMoveTutor_Text_BlazeKickDesc::
+	.string "High critical-hit\n"
+	.string "ratio. May also\n"
+	.string "burn the target.$"
 
-PokemonCenterMoveTutor_Text_MeteorMashDesc::
-	.string "Fires a Meteor\n"
-	.string "-like punch.\n"
-	.string "May raise Attack.$"
+PokemonCenterMoveTutor_Text_BodyPressDesc::
+	.string "Does more damage\n"
+	.string "the higher the\n"
+	.string "user's Defense.$"
+
+PokemonCenterMoveTutor_Text_LiquidationDesc::
+	.string "Slams the foe with\n"
+	.string "water. May lower\n"
+	.string "Defense.$"
+
+PokemonCenterMoveTutor_Text_IceSpinnerDesc::
+	.string "Ice-covered feet\n"
+	.string "hits foe and\n"
+	.string "destroys terrain.$"
 
 PokemonCenterMoveTutor_Text_PsychicFangsDesc::
 	.string "Bites with Psychic\n"
 	.string "power. Also\n"
 	.string "destroys Screens.$"
+
+PokemonCenterMoveTutor_Text_DarkestLariatDesc::
+	.string "Swings its arms to\n"
+	.string "strike. Ignores\n"
+	.string "stat changes.$"
+
+PokemonCenterMoveTutor_Text_EarthPowerDesc::
+	.string "Ground under the\n"
+	.string "foe erupts. May\n"
+	.string "lower Sp. Def.$"
+
+PokemonCenterMoveTutor_Text_BounceDesc::
+	.string "Bounces up, then\n"
+	.string "down next turn.\n"
+	.string "May paralyze.$"
+
+PokemonCenterMoveTutor_Text_TerrainPulseDesc::
+	.string "Type and power\n"
+	.string "changes depending\n"
+	.string "on the terrain.$"
+
+PokemonCenterMoveTutor_Text_WeatherBallDesc::
+	.string "The move's type\n"
+	.string "and power change\n"
+	.string "with the weather.$"
+
+PokemonCenterMoveTutor_Text_PollenPuffDesc::
+	.string "Explodes on foes,\n"
+	.string "but restores ally's\n"
+	.string "HP.$"
+
+PokemonCenterMoveTutor_Text_AvalancheDesc::
+	.string "Doubles damage\n"
+	.string "if user was hurt\n"
+	.string "by foe this turn.$"
+
+PokemonCenterMoveTutor_Text_PetalBlizzardDesc::
+	.string "Stirs up a violent\n"
+	.string "storm of petals to\n"
+	.string "attack.$"
+
+PokemonCenterMoveTutor_Text_AgilityDesc::
+	.string "Relaxes the body\n"
+	.string "to sharply boost\n"
+	.string "Speed.$"
 
 PokemonCenterMoveTutor_Text_EncoreDesc::
 	.string "Makes the foe\n"
@@ -991,36 +999,303 @@ PokemonCenterMoveTutor_Text_PsychicTerrainDesc::
 	.string "on the ground from\n"
 	.string "priority moves.$"
 
-@ Set 7
-PokemonCenterMoveTutor_Text_DoubleEdgeDesc::
-	.string "A life-risking\n"
-	.string "tackle that also\n"
-	.string "hurts the user.$"
+PokemonCenterMoveTutor_Text_WorrySeedDesc::
+	.string "Makes target's\n"
+	.string "ability Insomnia,\n"
+	.string "preventing sleep.$"
+
+@ Set 6
+PokemonCenterMoveTutor_Text_LeafBladeDesc::
+	.string "Has an increased\n"
+	.string "critical-hit\n"
+	.string "ratio.$"
+
+PokemonCenterMoveTutor_Text_MeteorMashDesc::
+	.string "Fires a meteor\n"
+	.string "-like punch.\n"
+	.string "May raise Attack.$"
 
 PokemonCenterMoveTutor_Text_PlayRoughDesc::
 	.string "The user plays ro-\n"
 	.string "ugh with the foe.\n"
 	.string "May lower Attack.$"
 
-PokemonCenterMoveTutor_Text_NastyPlotDesc::
-	.string "Thinking bad\n"
-	.string "thoughts sharply\n"
-	.string "raises Sp. Atk.$"
+PokemonCenterMoveTutor_Text_BugBuzzDesc::
+	.string "Creates a harmful\n"
+	.string "sound wave. May\n"
+	.string "lower Sp. Def.$"
 
-PokemonCenterMoveTutor_Text_SelfDestructDesc::
-	.string "Inflicts severe\n"
-	.string "damage but makes\n"
-	.string "the user faint.$"
+PokemonCenterMoveTutor_Text_MuddyWaterDesc::
+	.string "Attacks with muddy\n"
+	.string "water. May lower\n"
+	.string "accuracy.$"
+
+PokemonCenterMoveTutor_Text_HighHorsepowerDesc::
+	.string "Slams hard into the\n"
+	.string "foe with its entire\n"
+	.string "body.$"
+
+PokemonCenterMoveTutor_Text_PsychoCutDesc::
+	.string "Has an increased\n"
+	.string "critical-hit\n"
+	.string "ratio.$"
+
+PokemonCenterMoveTutor_Text_NightSlashDesc::
+	.string "Has an increased\n"
+	.string "critical-hit\n"
+	.string "ratio.$"
+
+PokemonCenterMoveTutor_Text_HyperVoiceDesc::
+	.string "A loud attack\n"
+	.string "that uses sound\n"
+	.string "waves to injure.$"
+
+PokemonCenterMoveTutor_Text_DualWingbeatDesc::
+	.string "User slams the foe\n"
+	.string "with wings and hits\n"
+	.string "twice in a row.$"
+
+PokemonCenterMoveTutor_Text_CrossPoisonDesc::
+	.string "High critical-hit\n"
+	.string "ratio. May also\n"
+	.string "poison the target.$"
+
+PokemonCenterMoveTutor_Text_PhantomForceDesc::
+	.string "Vanishes, then\n"
+	.string "strikes next turn.\n"
+	.string "Ignores Protect.$"
+
+PokemonCenterMoveTutor_Text_DualChopDesc::
+	.string "Attacks with\n"
+	.string "brutal strikes.\n"
+	.string "Hits 2 times.$"
+
+PokemonCenterMoveTutor_Text_HeatWaveDesc::
+	.string "Exhales a hot\n"
+	.string "breath on the foe.\n"
+	.string "May inflict a burn.$"
+
+PokemonCenterMoveTutor_Text_BodySlamDesc::
+	.string "A full-body slam\n"
+	.string "that may cause\n"
+	.string "paralysis.$"
+
+PokemonCenterMoveTutor_Text_HazeDesc::
+	.string "Creates a black\n"
+	.string "haze that removes\n"
+	.string "all stat changes.$"
+
+PokemonCenterMoveTutor_Text_CosmicPowerDesc::
+	.string "Raises Defense and\n"
+	.string "Sp. Def with a\n"
+	.string "mystical power.$"
+
+PokemonCenterMoveTutor_Text_SpikesDesc::
+	.string "Sets spikes that\n"
+	.string "hurt a grounded\n"
+	.string "foe switching in.$"
+
+PokemonCenterMoveTutor_Text_ScreechDesc::
+	.string "Emits a screech to\n"
+	.string "sharply lower the\n"
+	.string "foe's Defense.$"
+
+PokemonCenterMoveTutor_Text_GravityDesc::
+	.string "For 5 turns flight\n"
+	.string "is impossible and\n"
+	.string "accuracy rises.$"
+
+PokemonCenterMoveTutor_Text_EndeavorDesc::
+	.string "Cuts the target's\n"
+	.string "HP to equal the\n"
+	.string "user's HP.$"
+
+@ Set 7
+PokemonCenterMoveTutor_Text_MoonblastDesc::
+	.string "Attacks with the\n"
+	.string "power of the moon.\n"
+	.string "May lower Sp. Atk.$"
+
+PokemonCenterMoveTutor_Text_FoulPlayDesc::
+	.string "Does damage based\n"
+	.string "on the foe's\n"
+	.string "Attack stat.$"
+
+PokemonCenterMoveTutor_Text_HeatCrashDesc::
+	.string "Does more damage\n"
+	.string "if the user weighs\n"
+	.string "more than the foe.$"
+
+PokemonCenterMoveTutor_Text_SuperpowerDesc::
+	.string "Attacks with full\n"
+	.string "power, but lowers\n"
+	.string "Attack & Defense.$"
+
+PokemonCenterMoveTutor_Text_HeavySlamDesc::
+	.string "Does more damage\n"
+	.string "if the user weighs\n"
+	.string "more than the foe.$"
+
+PokemonCenterMoveTutor_Text_SolarBladeDesc::
+	.string "Absorbs light in\n"
+	.string "one turn, attacks\n"
+	.string "the next turn.$"
+
+PokemonCenterMoveTutor_Text_ReversalDesc::
+	.string "Inflicts more\n"
+	.string "damage if the\n"
+	.string "user's HP is down.$"
+
+PokemonCenterMoveTutor_Text_RisingVoltageDesc::
+	.string "This move's power\n"
+	.string "doubles under\n"
+	.string "Electric Terrain.$"
+
+PokemonCenterMoveTutor_Text_GrassyGlideDesc::
+	.string "A gliding attack.\n"
+	.string "Goes first under\n"
+	.string "Grassy Terrain.$"
+
+PokemonCenterMoveTutor_Text_MistyExplosionDesc::
+	.string "Hits everything\n"
+	.string "and faints. Powers\n"
+	.string "up on Misty Terrain.$"
+
+PokemonCenterMoveTutor_Text_ExpandingForceDesc::
+	.string "Powers up and hits\n"
+	.string "both foes on\n"
+	.string "Psychic Terrain.$"
+
+PokemonCenterMoveTutor_Text_IronDefenseDesc::
+	.string "Body surface is\n"
+	.string "hardened, sharply\n"
+	.string "raising Defense.$"
+
+PokemonCenterMoveTutor_Text_MagicRoomDesc::
+	.string "Held items lose\n"
+	.string "their effect for 5\n"
+	.string "turns.$"
+
+PokemonCenterMoveTutor_Text_WonderRoomDesc::
+	.string "Defense and Sp.\n"
+	.string "Def are swapped\n"
+	.string "for 5 turns.$"
+
+PokemonCenterMoveTutor_Text_SynthesisDesc::
+	.string "Restores HP. The\n"
+	.string "amount varies\n"
+	.string "with the weather.$"
+
+PokemonCenterMoveTutor_Text_FeatherDanceDesc::
+	.string "Envelops the foe\n"
+	.string "in down to sharply\n"
+	.string "lower Attack.$"
+
+PokemonCenterMoveTutor_Text_ToxicSpikesDesc::
+	.string "Sets spikes that\n"
+	.string "poison a foe\n"
+	.string "switching in.$"
+
+PokemonCenterMoveTutor_Text_HealBellDesc::
+	.string "Chimes soothingly\n"
+	.string "to eliminate all\n"
+	.string "status problems.$"
+
+PokemonCenterMoveTutor_Text_DragonDanceDesc::
+	.string "A mystical dance\n"
+	.string "that ups Attack\n"
+	.string "and Speed.$"
+
+PokemonCenterMoveTutor_Text_QuiverDanceDesc::
+	.string "A mystic dance\n"
+	.string "that ups Sp. Atk,\n"
+	.string "Sp. Def & Speed.$"
+
+PokemonCenterMoveTutor_Text_TailwindDesc::
+	.string "A turbulent wind\n"
+	.string "ups allies' Speed\n"
+	.string "for 4 turns.$"
+
+@ Set 8
+PokemonCenterMoveTutor_Text_DoubleEdgeDesc::
+	.string "A life-risking\n"
+	.string "tackle that also\n"
+	.string "hurts the user.$"
+
+PokemonCenterMoveTutor_Text_FlareBlitzDesc::
+	.string "A flame-cloaked\n"
+	.string "charge that also\n"
+	.string "hurts the user.$"
+
+PokemonCenterMoveTutor_Text_HydroPumpDesc::
+	.string "Blasts water at\n"
+	.string "high power to\n"
+	.string "strike the foe.$"
+
+PokemonCenterMoveTutor_Text_PainSplitDesc::
+	.string "Adds the user and\n"
+	.string "target's HP, then\n"
+	.string "shares it equally.$"
+
+PokemonCenterMoveTutor_Text_PowerWhipDesc::
+	.string "Violently whirls\n"
+	.string "vines, etc. to\n"
+	.string "lash the foe.$"
+
+PokemonCenterMoveTutor_Text_TripleAxelDesc::
+	.string "A 3-kick attack\n"
+	.string "that gets more\n"
+	.string "powerful each hit.$"
 
 PokemonCenterMoveTutor_Text_CloseCombatDesc::
 	.string "Fights the foe up\n"
 	.string "close. Lowers\n"
 	.string "Defense & Sp. Def.$"
 
-PokemonCenterMoveTutor_Text_FlareBlitzDesc::
-	.string "A flame-cloaked\n"
-	.string "charge that also\n"
+PokemonCenterMoveTutor_Text_GunkShotDesc::
+	.string "Shoots filthy\n"
+	.string "garbage at the\n"
+	.string "foe. May poison.$"
+
+PokemonCenterMoveTutor_Text_HurricaneDesc::
+	.string "Attacks with a\n"
+	.string "fierce wind that\n"
+	.string "may also confuse.$"
+
+PokemonCenterMoveTutor_Text_MegahornDesc::
+	.string "A brutal ramming\n"
+	.string "attack using\n"
+	.string "out-thrust horns.$"
+
+PokemonCenterMoveTutor_Text_FutureSightDesc::
+	.string "Heightens inner\n"
+	.string "power to hit 2\n"
+	.string "turns later.$"
+
+PokemonCenterMoveTutor_Text_OutrageDesc::
+	.string "A rampage of 2 to\n"
+	.string "3 turns. The user\n"
+	.string "is confused after.$"
+
+PokemonCenterMoveTutor_Text_VoltTackleDesc::
+	.string "A life-risking\n"
+	.string "tackle that also\n"
 	.string "hurts the user.$"
+
+PokemonCenterMoveTutor_Text_WaveCrashDesc::
+	.string "A life-risking\n"
+	.string "tackle that also\n"
+	.string "hurts the user.$"
+
+PokemonCenterMoveTutor_Text_MeteorBeamDesc::
+	.string "A 2-turn move that\n"
+	.string "raises Sp. Attack\n"
+	.string "before attacking.$"
+
+PokemonCenterMoveTutor_Text_PoltergeistDesc::
+	.string "Control foe's item\n"
+	.string "to attack. Fails if\n"
+	.string "foe has no item.$"
 
 PokemonCenterMoveTutor_Text_BraveBirdDesc::
 	.string "A low altitude\n"
@@ -1032,37 +1307,17 @@ PokemonCenterMoveTutor_Text_LeafStormDesc::
 	.string "leaves. Harshly\n"
 	.string "lowers Sp. Atk.$"
 
-PokemonCenterMoveTutor_Text_PowerWhipDesc::
-	.string "Violently whirls\n"
-	.string "vines, etc. to\n"
-	.string "lash the foe.$"
+PokemonCenterMoveTutor_Text_SkyAttackDesc::
+	.string "Searches out weak\n"
+	.string "spots, then\n"
+	.string "strikes next turn.$"
 
-PokemonCenterMoveTutor_Text_HurricaneDesc::
-	.string "Attacks with a\n"
-	.string "fierce wind that\n"
-	.string "may also confuse.$"
+PokemonCenterMoveTutor_Text_LastResortDesc::
+	.string "User must use its\n"
+	.string "other known moves\n"
+	.string "before this one.$"
 
-PokemonCenterMoveTutor_Text_HydroPumpDesc::
-	.string "Blasts water at\n"
-	.string "high power to\n"
-	.string "strike the foe.$"
-
-PokemonCenterMoveTutor_Text_DragonDanceDesc::
-	.string "A mystical dance\n"
-	.string "that ups Attack\n"
-	.string "and Speed.$"
-
-PokemonCenterMoveTutor_Text_OutrageDesc::
-	.string "A rampage of 2 to\n"
-	.string "3 turns. The user\n"
-	.string "is confused after.$"
-
-PokemonCenterMoveTutor_Text_KnockOffDesc::
-	.string "Knocks down the\n"
-	.string "foe's held item to\n"
-	.string "prevent its use.$"
-
-PokemonCenterMoveTutor_Text_QuiverDanceDesc::
-	.string "A mystic dance\n"
-	.string "that ups Sp. Atk,\n"
-	.string "Sp. Def & Speed.$"
+PokemonCenterMoveTutor_Text_CoachingDesc::
+	.string "Coaches allies to\n"
+	.string "up their Attack\n"
+	.string "and Defense.$"
