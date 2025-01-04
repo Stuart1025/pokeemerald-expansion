@@ -4100,6 +4100,7 @@ static const u16 sWiglettEggMoveLearnset[] = {
 #if P_FAMILY_BOMBIRDIER
 static const u16 sBombirdierEggMoveLearnset[] = {
     MOVE_POWER_TRIP,
+    MOVE_WHIRLWIND,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_BOMBIRDIER
