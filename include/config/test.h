@@ -5,15 +5,15 @@
 #define POKEMON_NAME_LENGTH 12
 
 #undef P_MEGA_EVOLUTIONS
-#define P_MEGA_EVOLUTIONS                TRUE
+#define P_MEGA_EVOLUTIONS                FALSE
 #undef P_PRIMAL_REVERSIONS
-#define P_PRIMAL_REVERSIONS              TRUE
+#define P_PRIMAL_REVERSIONS              FALSE
 #undef P_ULTRA_BURST_FORMS
-#define P_ULTRA_BURST_FORMS              TRUE
+#define P_ULTRA_BURST_FORMS              FALSE
 #undef P_GIGANTAMAX_FORMS
-#define P_GIGANTAMAX_FORMS               TRUE
+#define P_GIGANTAMAX_FORMS               FALSE
 #undef P_TERA_FORMS
-#define P_TERA_FORMS                     TRUE
+#define P_TERA_FORMS                     FALSE
 #undef P_FUSION_FORMS
 #define P_FUSION_FORMS                   TRUE
 #undef P_ALOLAN_FORMS
@@ -855,19 +855,19 @@
 #undef P_FAMILY_COSMOG
 #define P_FAMILY_COSMOG                  TRUE
 #undef P_FAMILY_NIHILEGO
-#define P_FAMILY_NIHILEGO                TRUE
+#define P_FAMILY_NIHILEGO                FALSE
 #undef P_FAMILY_BUZZWOLE
-#define P_FAMILY_BUZZWOLE                TRUE
+#define P_FAMILY_BUZZWOLE                FALSE
 #undef P_FAMILY_PHEROMOSA
-#define P_FAMILY_PHEROMOSA               TRUE
+#define P_FAMILY_PHEROMOSA               FALSE
 #undef P_FAMILY_XURKITREE
-#define P_FAMILY_XURKITREE               TRUE
+#define P_FAMILY_XURKITREE               FALSE
 #undef P_FAMILY_CELESTEELA
-#define P_FAMILY_CELESTEELA              TRUE
+#define P_FAMILY_CELESTEELA              FALSE
 #undef P_FAMILY_KARTANA
-#define P_FAMILY_KARTANA                 TRUE
+#define P_FAMILY_KARTANA                 FALSE
 #undef P_FAMILY_GUZZLORD
-#define P_FAMILY_GUZZLORD                TRUE
+#define P_FAMILY_GUZZLORD                FALSE
 #undef P_FAMILY_NECROZMA
 #define P_FAMILY_NECROZMA                TRUE
 #undef P_FAMILY_MAGEARNA
@@ -875,11 +875,11 @@
 #undef P_FAMILY_MARSHADOW
 #define P_FAMILY_MARSHADOW               TRUE
 #undef P_FAMILY_POIPOLE
-#define P_FAMILY_POIPOLE                 TRUE
+#define P_FAMILY_POIPOLE                 FALSE
 #undef P_FAMILY_STAKATAKA
-#define P_FAMILY_STAKATAKA               TRUE
+#define P_FAMILY_STAKATAKA               FALSE
 #undef P_FAMILY_BLACEPHALON
-#define P_FAMILY_BLACEPHALON             TRUE
+#define P_FAMILY_BLACEPHALON             FALSE
 #undef P_FAMILY_ZERAORA
 #define P_FAMILY_ZERAORA                 TRUE
 #undef P_FAMILY_MELTAN
@@ -1057,29 +1057,29 @@
 #undef P_FAMILY_TATSUGIRI
 #define P_FAMILY_TATSUGIRI               TRUE
 #undef P_FAMILY_GREAT_TUSK
-#define P_FAMILY_GREAT_TUSK              TRUE
+#define P_FAMILY_GREAT_TUSK              FALSE
 #undef P_FAMILY_SCREAM_TAIL
-#define P_FAMILY_SCREAM_TAIL             TRUE
+#define P_FAMILY_SCREAM_TAIL             FALSE
 #undef P_FAMILY_BRUTE_BONNET
-#define P_FAMILY_BRUTE_BONNET            TRUE
+#define P_FAMILY_BRUTE_BONNET            FALSE
 #undef P_FAMILY_FLUTTER_MANE
-#define P_FAMILY_FLUTTER_MANE            TRUE
+#define P_FAMILY_FLUTTER_MANE            FALSE
 #undef P_FAMILY_SLITHER_WING
-#define P_FAMILY_SLITHER_WING            TRUE
+#define P_FAMILY_SLITHER_WING            FALSE
 #undef P_FAMILY_SANDY_SHOCKS
-#define P_FAMILY_SANDY_SHOCKS            TRUE
+#define P_FAMILY_SANDY_SHOCKS            FALSE
 #undef P_FAMILY_IRON_TREADS
-#define P_FAMILY_IRON_TREADS             TRUE
+#define P_FAMILY_IRON_TREADS             FALSE
 #undef P_FAMILY_IRON_BUNDLE
-#define P_FAMILY_IRON_BUNDLE             TRUE
+#define P_FAMILY_IRON_BUNDLE             FALSE
 #undef P_FAMILY_IRON_HANDS
-#define P_FAMILY_IRON_HANDS              TRUE
+#define P_FAMILY_IRON_HANDS              FALSE
 #undef P_FAMILY_IRON_JUGULIS
-#define P_FAMILY_IRON_JUGULIS            TRUE
+#define P_FAMILY_IRON_JUGULIS            FALSE
 #undef P_FAMILY_IRON_MOTH
-#define P_FAMILY_IRON_MOTH               TRUE
+#define P_FAMILY_IRON_MOTH               FALSE
 #undef P_FAMILY_IRON_THORNS
-#define P_FAMILY_IRON_THORNS             TRUE
+#define P_FAMILY_IRON_THORNS             FALSE
 #undef P_FAMILY_FRIGIBAX
 #define P_FAMILY_FRIGIBAX                TRUE
 #undef P_FAMILY_GIMMIGHOUL
@@ -1093,17 +1093,17 @@
 #undef P_FAMILY_CHI_YU
 #define P_FAMILY_CHI_YU                  TRUE
 #undef P_FAMILY_ROARING_MOON
-#define P_FAMILY_ROARING_MOON            TRUE
+#define P_FAMILY_ROARING_MOON            FALSE
 #undef P_FAMILY_IRON_VALIANT
-#define P_FAMILY_IRON_VALIANT            TRUE
+#define P_FAMILY_IRON_VALIANT            FALSE
 #undef P_FAMILY_KORAIDON
 #define P_FAMILY_KORAIDON                TRUE
 #undef P_FAMILY_MIRAIDON
 #define P_FAMILY_MIRAIDON                TRUE
 #undef P_FAMILY_WALKING_WAKE
-#define P_FAMILY_WALKING_WAKE            TRUE
+#define P_FAMILY_WALKING_WAKE            FALSE
 #undef P_FAMILY_IRON_LEAVES
-#define P_FAMILY_IRON_LEAVES             TRUE
+#define P_FAMILY_IRON_LEAVES             FALSE
 #undef P_FAMILY_POLTCHAGEIST
 #define P_FAMILY_POLTCHAGEIST            TRUE
 #undef P_FAMILY_SINISTCHA
@@ -1117,15 +1117,15 @@
 #undef P_FAMILY_OGERPON
 #define P_FAMILY_OGERPON                 TRUE
 #undef P_FAMILY_GOUGING_FIRE
-#define P_FAMILY_GOUGING_FIRE            TRUE
+#define P_FAMILY_GOUGING_FIRE            FALSE
 #undef P_FAMILY_RAGING_BOLT
-#define P_FAMILY_RAGING_BOLT             TRUE
+#define P_FAMILY_RAGING_BOLT             FALSE
 #undef P_FAMILY_IRON_BOULDER
-#define P_FAMILY_IRON_BOULDER            TRUE
+#define P_FAMILY_IRON_BOULDER            FALSE
 #undef P_FAMILY_IRON_CROWN
-#define P_FAMILY_IRON_CROWN              TRUE
+#define P_FAMILY_IRON_CROWN              FALSE
 #undef P_FAMILY_TERAPAGOS
-#define P_FAMILY_TERAPAGOS               TRUE
+#define P_FAMILY_TERAPAGOS               FALSE
 #undef P_FAMILY_PECHARUNT
 #define P_FAMILY_PECHARUNT               TRUE
 
