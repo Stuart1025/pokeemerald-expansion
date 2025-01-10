@@ -95,6 +95,7 @@ static const u16 sEkansEggMoveLearnset[] = {
     MOVE_POISON_FANG,
     MOVE_DISABLE,
     MOVE_SWITCHEROO,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_EKANS
@@ -560,6 +561,7 @@ static const u16 sShellderEggMoveLearnset[] = {
     MOVE_BARRIER,
     MOVE_AQUA_RING,
     MOVE_TWINEEDLE,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_SHELLDER
@@ -622,6 +624,7 @@ static const u16 sExeggcuteEggMoveLearnset[] = {
     MOVE_BLOCK,
     MOVE_WISH,
     MOVE_SWEET_SCENT,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_EXEGGCUTE
@@ -648,6 +651,7 @@ static const u16 sTyrogueEggMoveLearnset[] = {
     MOVE_COUNTER,
     MOVE_BULLET_PUNCH,
     MOVE_FEINT,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_GEN_2_CROSS_EVOS
@@ -950,6 +954,7 @@ static const u16 sMunchlaxEggMoveLearnset[] = {
     MOVE_COUNTER,
     MOVE_AFTER_YOU,
     MOVE_BELCH,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_GEN_4_CROSS_EVOS
@@ -960,6 +965,7 @@ static const u16 sSnorlaxEggMoveLearnset[] = {
     MOVE_COUNTER,
     MOVE_AFTER_YOU,
     MOVE_BELCH,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_SNORLAX
@@ -1036,6 +1042,7 @@ static const u16 sLedybaEggMoveLearnset[] = {
     MOVE_FOCUS_PUNCH,
     MOVE_DIZZY_PUNCH,
     MOVE_COUNTER,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_LEDYBA
@@ -1046,6 +1053,7 @@ static const u16 sSpinarakEggMoveLearnset[] = {
     MOVE_DISABLE,
     MOVE_TWINEEDLE,
     MOVE_RAGE_POWDER,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_SPINARAK
@@ -1242,6 +1250,7 @@ static const u16 sPinecoEggMoveLearnset[] = {
     MOVE_FLAIL,
     MOVE_COUNTER,
     MOVE_POWER_TRICK,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_PINECO
@@ -1324,6 +1333,7 @@ static const u16 sTeddiursaEggMoveLearnset[] = {
     MOVE_YAWN,
     MOVE_CROSS_CHOP,
     MOVE_BELLY_DRUM,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_TEDDIURSA
@@ -1339,6 +1349,7 @@ static const u16 sSlugmaEggMoveLearnset[] = {
     MOVE_ROLLOUT,
     MOVE_INFERNO,
     MOVE_GUARD_SWAP,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_SLUGMA
@@ -1562,6 +1573,7 @@ static const u16 sSeedotEggMoveLearnset[] = {
     MOVE_TAKE_DOWN,
     MOVE_POWER_SWAP,
     MOVE_BEAT_UP,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_SEEDOT
@@ -1615,6 +1627,7 @@ static const u16 sSurskitEggMoveLearnset[] = {
 static const u16 sShroomishEggMoveLearnset[] = {
     MOVE_FOCUS_PUNCH,
     MOVE_RAGE_POWDER,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_SHROOMISH
@@ -1666,6 +1679,7 @@ static const u16 sMakuhitaEggMoveLearnset[] = {
     MOVE_FEINT,
     MOVE_WIDE_GUARD,
     MOVE_FOCUS_PUNCH,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_MAKUHITA
@@ -1739,6 +1753,7 @@ static const u16 sElectrikeEggMoveLearnset[] = {
     MOVE_SWITCHEROO,
     MOVE_FLAME_BURST,
     MOVE_EERIE_IMPULSE,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_ELECTRIKE
@@ -1815,6 +1830,7 @@ static const u16 sCarvanhaEggMoveLearnset[] = {
     MOVE_ANCIENT_POWER,
     MOVE_BRINE,
     MOVE_DESTINY_BOND,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_CARVANHA
@@ -1926,6 +1942,7 @@ static const u16 sZangooseEggMoveLearnset[] = {
     MOVE_FEINT,
     MOVE_QUICK_GUARD,
     MOVE_BELLY_DRUM,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_ZANGOOSE
@@ -1987,6 +2004,7 @@ static const u16 sFeebasEggMoveLearnset[] = {
     MOVE_MIST,
     MOVE_TICKLE,
     MOVE_BRINE,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_FEEBAS
@@ -2137,6 +2155,7 @@ static const u16 sBagonEggMoveLearnset[] = {
     MOVE_TWISTER,
     MOVE_DRAGON_RUSH,
     MOVE_DEFENSE_CURL,
+    MOVE_REFRESH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_BAGON
