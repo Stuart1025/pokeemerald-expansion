@@ -9288,7 +9288,6 @@ static const struct LevelUpMove sCarvanhaLevelUpLearnset[] = {
     LEVEL_UP_MOVE(36, MOVE_LIQUIDATION),
     LEVEL_UP_MOVE(40, MOVE_AGILITY),
     LEVEL_UP_MOVE(44, MOVE_TAKE_DOWN),
-    LEVEL_UP_MOVE(48, MOVE_DESTINY_BOND),
     LEVEL_UP_END
 };
 
