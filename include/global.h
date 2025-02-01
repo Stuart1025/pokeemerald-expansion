@@ -1020,6 +1020,14 @@ struct ExternalEventFlags
 
 } __attribute__((packed));/*size = 0x15*/
 
+//Start Pokevial Branch
+struct Pokevial
+{
+    u8 Size : 4;
+    u8 Dose : 4;
+};
+//End Pokevial Branch
+
 struct SaveBlock1
 {
     /*0x00*/ struct Coords16 pos;
@@ -1131,6 +1139,7 @@ struct SaveBlock1
     /*0x3???*/ struct TrainerHillSave trainerHill;
 #endif //FREE_TRAINER_HILL
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
+    /*      */ struct Pokevial pokevial; //Pokevial Branch
     // sizeof: 0x3???
     u8 registeredItemLastSelected:4; //max 16 items
     u8 registeredItemListCount:4;

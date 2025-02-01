@@ -1318,7 +1318,6 @@ static const u16 sHeracrossEggMoveLearnset[] = {
 static const u16 sSneaselEggMoveLearnset[] = {
     MOVE_COUNTER,
     MOVE_SPITE,
-    MOVE_BITE,
     MOVE_CRUSH_CLAW,
     MOVE_DOUBLE_HIT,
     MOVE_FEINT,
@@ -1346,7 +1345,6 @@ static const u16 sSlugmaEggMoveLearnset[] = {
     MOVE_STOCKPILE,
     MOVE_SPIT_UP,
     MOVE_SWALLOW,
-    MOVE_ROLLOUT,
     MOVE_INFERNO,
     MOVE_GUARD_SWAP,
     MOVE_REFRESH,

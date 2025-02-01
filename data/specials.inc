@@ -554,3 +554,6 @@ gSpecials::
 	def_special Script_GetChosenMonOffensiveIVs
 	def_special Script_GetChosenMonDefensiveIVs
 	def_special UseBlankMessageToCancelPokemonPic
+    def_special PokevialGetDose
+    def_special PokevialGetSize
+    def_special PokevialRefill
