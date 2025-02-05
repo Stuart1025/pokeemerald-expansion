@@ -6164,7 +6164,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             {
                 SWAP(gBattlerAttacker, gBattlerTarget, i);
                 BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_ToxicDebrisActivates;
+                gBattlescriptCurrInstr = BattleScript_SpikyDebrisActivates;
                 effect++;
             }
             break;
