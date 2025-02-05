@@ -2435,4 +2435,22 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Changes type to move's."),
         .aiRating = 8,
     },
+    [ABILITY_EVOBOOST_PHYSICAL] =
+    {
+        .name = _("Evoboost"),
+        .description = COMPOUND_STRING("Powers up physical moves."),
+        .aiRating = 6,
+    },
+    [ABILITY_EVOBOOST_SPECIAL] =
+    {
+        .name = _("Evoboost"),
+        .description = COMPOUND_STRING("Powers up special moves."),
+        .aiRating = 6,
+    },
+    [ABILITY_SPIKY_DEBRIS] =
+    {
+        .name = _("Spiky Debris"),
+        .description = COMPOUND_STRING("Throws spikes if hit."),
+        .aiRating = 4,
+    },
 };
