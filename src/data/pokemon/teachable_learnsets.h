@@ -20681,6 +20681,7 @@ static const u16 sObstagoonTeachableLearnset[] = {
     MOVE_BULK_UP,
     MOVE_CLOSE_COMBAT,
     MOVE_CROSS_POISON,
+    MOVE_DARKEST_LARIAT, /* New Change */
     MOVE_DIG,
     MOVE_DOUBLE_EDGE,
     MOVE_ENDURE,
@@ -22553,6 +22554,7 @@ static const u16 sHariyamaTeachableLearnset[] = {
     MOVE_CLOSE_COMBAT,
     MOVE_COACHING,
     MOVE_CURSE,
+    MOVE_DARKEST_LARIAT, /* New Change */
     MOVE_DIG,
     MOVE_DOUBLE_EDGE,
     MOVE_DRAIN_PUNCH,
