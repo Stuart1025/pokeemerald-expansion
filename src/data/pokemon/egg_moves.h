@@ -1358,6 +1358,7 @@ static const u16 sSwinubEggMoveLearnset[] = {
     MOVE_BITE,
     MOVE_ANCIENT_POWER,
     MOVE_FISSURE,
+    MOVE_WHIRLWIND,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_SWINUB
@@ -1669,15 +1670,14 @@ static const u16 sWhismurEggMoveLearnset[] = {
 #if P_FAMILY_MAKUHITA
 static const u16 sMakuhitaEggMoveLearnset[] = {
     MOVE_FEINT_ATTACK,
-    MOVE_DETECT,
     MOVE_CROSS_CHOP,
     MOVE_DYNAMIC_PUNCH,
     MOVE_COUNTER,
     MOVE_BULLET_PUNCH,
     MOVE_FEINT,
     MOVE_WIDE_GUARD,
-    MOVE_FOCUS_PUNCH,
     MOVE_REFRESH,
+    MOVE_WHIRLWIND,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_MAKUHITA

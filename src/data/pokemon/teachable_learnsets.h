@@ -366,6 +366,7 @@ static const u16 sCharizardTeachableLearnset[] = {
     MOVE_BULLDOZE,
     MOVE_CRUNCH,
     MOVE_DIG,
+    MOVE_DRACO_METEOR, /* New Change */
     MOVE_DRAGON_CLAW,
     MOVE_DRAGON_DANCE,
     MOVE_DRAGON_PULSE,
@@ -728,7 +729,7 @@ static const u16 sPidgeyTeachableLearnset[] = {
     MOVE_FRUSTRATION,
     MOVE_HEAT_WAVE,
     MOVE_HURRICANE,
-    MOVE_HYPER_VOICE /* New Change */
+    MOVE_HYPER_VOICE, /* New Change */
     MOVE_MUD_SLAP,
     MOVE_PROTECT,
     MOVE_RAIN_DANCE,
@@ -767,7 +768,7 @@ static const u16 sPidgeottoTeachableLearnset[] = {
     MOVE_FRUSTRATION,
     MOVE_HEAT_WAVE,
     MOVE_HURRICANE,
-    MOVE_HYPER_VOICE /* New Change */
+    MOVE_HYPER_VOICE, /* New Change */
     MOVE_MUD_SLAP,
     MOVE_PROTECT,
     MOVE_RAIN_DANCE,
@@ -796,6 +797,7 @@ static const u16 sPidgeotTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
     MOVE_ATTRACT,
+    MOVE_AURA_SPHERE, /* New Change */
     MOVE_BRAVE_BIRD,
     MOVE_DEFOG,
     MOVE_DOUBLE_EDGE,
@@ -809,7 +811,7 @@ static const u16 sPidgeotTeachableLearnset[] = {
     MOVE_HEAT_WAVE,
     MOVE_HURRICANE,
     MOVE_HYPER_BEAM,
-    MOVE_HYPER_VOICE /* New Change */
+    MOVE_HYPER_VOICE, /* New Change */
     MOVE_MUD_SLAP,
     MOVE_PROTECT,
     MOVE_RAIN_DANCE,
@@ -3119,6 +3121,7 @@ static const u16 sBellossomTeachableLearnset[] = {
     MOVE_CUT,
     MOVE_DAZZLING_GLEAM,
     MOVE_DRAIN_PUNCH,
+    MOVE_DRAINING_KISS, /* New Change */
     MOVE_EARTH_POWER, /* New Change */
     MOVE_ENDURE,
     MOVE_ENERGY_BALL,
@@ -49186,6 +49189,7 @@ static const u16 sTogedemaruTeachableLearnset[] = {
     MOVE_PIN_MISSILE,
     MOVE_POISON_JAB,
     MOVE_PROTECT,
+    MOVE_RAPID_SPIN, /* New Change */
     MOVE_REFLECT,
     MOVE_REST,
     MOVE_RETURN,
