@@ -1000,6 +1000,21 @@ bool8 ScrCmd_fadeinbgm(struct ScriptContext *ctx)
     return FALSE;
 }
 
+struct ObjectEvent *ScriptHideFollower(void)
+{
+    struct ObjectEvent *obj = GetFollowerObject();
+
+    if (obj == NULL || obj->invisible)
+        return NULL;
+
+    ClearObjectEventMovement(obj, &gSprites[obj->spriteId]);
+    gSprites[obj->spriteId].animCmdIndex = 0; // Reset start frame of animation
+    // Note: ScriptMovement_ returns TRUE on error
+    if (ScriptMovement_StartObjectMovementScript(obj->localId, obj->mapGroup, obj->mapNum, EnterPokeballMovement))
+        return NULL;
+    return obj;
+}
+
 bool8 ScrCmd_applymovement(struct ScriptContext *ctx)
 {
     u16 localId = VarGet(ScriptReadHalfword(ctx));
@@ -1017,17 +1032,11 @@ bool8 ScrCmd_applymovement(struct ScriptContext *ctx)
     gObjectEvents[GetObjectEventIdByLocalId(localId)].directionOverwrite = DIR_NONE;
     ScriptMovement_StartObjectMovementScript(localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, movementScript);
     sMovingNpcId = localId;
-    objEvent = GetFollowerObject();
-    // Force follower into pokeball
     if (localId != OBJ_EVENT_ID_FOLLOWER
-        && !FlagGet(FLAG_SAFE_FOLLOWER_MOVEMENT)
-        && (movementScript < Common_Movement_FollowerSafeStart || movementScript > Common_Movement_FollowerSafeEnd)
-        && (objEvent = GetFollowerObject())
-        && !objEvent->invisible)
+     && !FlagGet(FLAG_SAFE_FOLLOWER_MOVEMENT)
+     && (movementScript < Common_Movement_FollowerSafeStart || movementScript > Common_Movement_FollowerSafeEnd))
     {
-        ClearObjectEventMovement(objEvent, &gSprites[objEvent->spriteId]);
-        gSprites[objEvent->spriteId].animCmdIndex = 0; // Reset start frame of animation
-        ScriptMovement_StartObjectMovementScript(OBJ_EVENT_ID_FOLLOWER, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, EnterPokeballMovement);
+        ScriptHideFollower();
     }
     return FALSE;
 }
@@ -1249,8 +1258,11 @@ bool8 ScrCmd_lockall(struct ScriptContext *ctx)
     }
     else
     {
+        struct ObjectEvent *followerObj = GetFollowerObject();
         FreezeObjects_WaitForPlayer();
         SetupNativeScript(ctx, IsFreezePlayerFinished);
+        if (FlagGet(FLAG_SAFE_FOLLOWER_MOVEMENT) && followerObj) // Unfreeze follower object (conditionally)
+            UnfreezeObjectEvent(followerObj);
         return TRUE;
     }
 }
@@ -2558,163 +2570,24 @@ bool8 Scrcmd_getobjectfacingdirection(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
+bool8 ScrFunc_hidefollower(struct ScriptContext *ctx)
 {
-    u8 caseId = ScriptReadByte(ctx);
-    u8 questId = VarGet(ScriptReadByte(ctx));
+    bool16 wait = VarGet(ScriptReadHalfword(ctx));
+    struct ObjectEvent *obj;
 
-    switch (caseId)
+    if ((obj = ScriptHideFollower()) != NULL && wait)
     {
-    case QUEST_MENU_OPEN:
-    default:
-        BeginNormalPaletteFade(0xFFFFFFFF, 2, 16, 0, 0);
-        QuestMenu_Init(0, CB2_ReturnToFieldContinueScriptPlayMapMusic);
-        ScriptContext_Stop();
-        break;
-    case QUEST_MENU_UNLOCK_QUEST:
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
-        break;
-    case QUEST_MENU_SET_ACTIVE:
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_ACTIVE);
-        break;
-    case QUEST_MENU_SET_REWARD:
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_REWARD);
-        QuestMenu_GetSetQuestState(questId, FLAG_REMOVE_ACTIVE);
-        break;
-    case QUEST_MENU_COMPLETE_QUEST:
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
-        QuestMenu_GetSetQuestState(questId, FLAG_SET_COMPLETED);
-        QuestMenu_GetSetQuestState(questId, FLAG_REMOVE_ACTIVE);
-        QuestMenu_GetSetQuestState(questId, FLAG_REMOVE_REWARD);
-        break;
-    case QUEST_MENU_CHECK_UNLOCKED:
-        if (QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED))
-            gSpecialVar_Result = TRUE;
-        else
-            gSpecialVar_Result = FALSE;
-        break;
-    case QUEST_MENU_CHECK_ACTIVE:
-        if (QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE))
-            gSpecialVar_Result = TRUE;
-        else
-            gSpecialVar_Result = FALSE;
-        break;
-    case QUEST_MENU_CHECK_REWARD:
-        if (QuestMenu_GetSetQuestState(questId, FLAG_GET_REWARD))
-            gSpecialVar_Result = TRUE;
-        else
-            gSpecialVar_Result = FALSE;
-        break;
-    case QUEST_MENU_CHECK_COMPLETE:
-        if (QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
-            gSpecialVar_Result = TRUE;
-        else
-            gSpecialVar_Result = FALSE;
-        break;
-    case QUEST_MENU_BUFFER_QUEST_NAME:
-            QuestMenu_CopyQuestName(gStringVar1, questId);
-        break;
+        sMovingNpcId = obj->localId;
+        sMovingNpcMapGroup = obj->mapGroup;
+        sMovingNpcMapNum = obj->mapNum;
+        SetupNativeScript(ctx, WaitForMovementFinish);
     }
 
+    // Just in case, prevent `applymovement`
+    // from hiding the follower again
+    if (obj)
+        FlagSet(FLAG_SAFE_FOLLOWER_MOVEMENT);
+
+    // execute next script command with no delay
     return TRUE;
 }
-
-bool8 ScrCmd_returnqueststate(struct ScriptContext *ctx)
-{
-    u8 questId = VarGet(ScriptReadByte(ctx));
-
-    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_INACTIVE)){
-        gSpecialVar_Result = FLAG_GET_INACTIVE;
-        return FALSE;
-    }
-    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE)){
-        gSpecialVar_Result = FLAG_GET_ACTIVE;
-        return FALSE;
-    }
-    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_REWARD)){
-        gSpecialVar_Result = FLAG_GET_REWARD;
-        return FALSE;
-    }
-    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED)){
-        gSpecialVar_Result = FLAG_GET_COMPLETED;
-        return FALSE;
-    }
-
-    return TRUE;
-}
-
-bool8 ScrCmd_subquestmenu(struct ScriptContext *ctx)
-{
-    u8 caseId = ScriptReadByte(ctx);
-    u8 parentId = VarGet(ScriptReadHalfword(ctx));
-    u8 childId = VarGet(ScriptReadHalfword(ctx));
-
-    switch (caseId)
-    {
-        case QUEST_MENU_COMPLETE_QUEST:
-            QuestMenu_GetSetSubquestState(parentId ,FLAG_SET_COMPLETED,childId);
-            break;
-        case QUEST_MENU_CHECK_COMPLETE:
-            if (QuestMenu_GetSetSubquestState(parentId ,FLAG_GET_COMPLETED,childId))
-                gSpecialVar_Result = TRUE;
-            else
-                gSpecialVar_Result = FALSE;
-            break;
-        case QUEST_MENU_BUFFER_QUEST_NAME:
-            QuestMenu_CopySubquestName(gStringVar1,parentId,childId);
-            break;
-    }
-
-    return TRUE;
-}
-
-//Start Pokevial Branch
-bool8 ScrCmd_pokevial(struct ScriptContext *ctx)
-{
-    u8 mode = ScriptReadByte(ctx);
-    u8 parameter = ScriptReadByte(ctx);
-    u8 amount = ScriptReadByte(ctx);
-
-    switch (mode) {
-        case VIAL_GET:
-            switch (parameter) {
-                case VIAL_SIZE:
-                    PokevialGetSize();
-                    break;
-                case VIAL_DOSE:
-                    PokevialGetDose();
-                    break;
-            }
-            break;
-
-        case VIAL_UP:
-            switch (parameter) {
-                case VIAL_SIZE:
-                    PokevialSizeUp(amount);
-                    break;
-                case VIAL_DOSE:
-                    PokevialDoseUp(amount);
-                    break;
-            }
-            break;
-
-        case VIAL_DOWN:
-            switch (parameter) {
-                case VIAL_SIZE:
-                    PokevialSizeDown(amount);
-                    break;
-                case VIAL_DOSE:
-                    PokevialDoseDown(amount);
-                    break;
-            }
-            break;
-
-        case VIAL_REFILL:
-            PokevialRefill();
-            break;
-    }
-    return TRUE;
-}
-//End Pokevial Branch
