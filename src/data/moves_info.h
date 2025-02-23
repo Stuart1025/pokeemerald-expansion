@@ -8280,7 +8280,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "An uppercut thrown as if\n"
             "leaping into the sky."),
         .effect = EFFECT_HIT,
-        .power = 85,
+        .power = 90, // Power: 85 -> 90
         .type = TYPE_FIGHTING,
         .accuracy = 100, // Accuracy: 90 -> 100
         .pp = 15,
