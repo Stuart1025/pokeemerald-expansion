@@ -2405,6 +2405,7 @@ static const u16 sRioluEggMoveLearnset[] = {
     MOVE_BULLET_PUNCH,
     MOVE_FOLLOW_ME,
     MOVE_CIRCLE_THROW,
+    MOVE_MACH_PUNCH,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_RIOLU
