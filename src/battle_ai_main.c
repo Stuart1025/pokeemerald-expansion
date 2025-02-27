@@ -2672,6 +2672,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-10);
             break;
         case EFFECT_JUNGLE_HEALING:
+        case EFFECT_LUNAR_BLESSING:
            if (AI_BattlerAtMaxHp(battlerAtk)
             && AI_BattlerAtMaxHp(BATTLE_PARTNER(battlerAtk))
             && !(gBattleMons[battlerAtk].status1 & STATUS1_ANY)
@@ -2681,6 +2682,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
         case EFFECT_TAKE_HEART:
             if ((!(gBattleMons[battlerAtk].status1 & STATUS1_ANY)
              || PartnerMoveEffectIs(BATTLE_PARTNER(battlerAtk), aiData->partnerMove, EFFECT_JUNGLE_HEALING)
+             || PartnerMoveEffectIs(BATTLE_PARTNER(battlerAtk), aiData->partnerMove, EFFECT_LUNAR_BLESSING)
              || PartnerMoveEffectIs(BATTLE_PARTNER(battlerAtk), aiData->partnerMove, EFFECT_HEAL_BELL))
              && !BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPATK)
              && !BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPDEF))
