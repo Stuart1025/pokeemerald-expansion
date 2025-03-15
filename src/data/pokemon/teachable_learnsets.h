@@ -40195,6 +40195,7 @@ static const u16 sMienshaoTeachableLearnset[] = {
     MOVE_PAYBACK,
     MOVE_POISON_JAB,
     MOVE_POWER_UP_PUNCH,
+    MOVE_POWER_WHIP, /* New Change */
     MOVE_PROTECT,
     MOVE_PSYCH_UP,
     MOVE_RAIN_DANCE,
