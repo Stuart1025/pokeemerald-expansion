@@ -599,6 +599,7 @@ static const u16 sButterfreeTeachableLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
     MOVE_ATTRACT,
+    MOVE_AURA_SPHERE, /* New Change */
     MOVE_BATON_PASS,
     MOVE_BUG_BITE,
     MOVE_BUG_BUZZ,
@@ -608,6 +609,7 @@ static const u16 sButterfreeTeachableLearnset[] = {
     MOVE_ENDURE,
     MOVE_ENERGY_BALL,
     MOVE_FACADE,
+    MOVE_FOCUS_BLAST, /* New Change */
     MOVE_FRUSTRATION,
     MOVE_GIGA_DRAIN,
     MOVE_GIGA_IMPACT,
@@ -683,6 +685,7 @@ static const u16 sBeedrillTeachableLearnset[] = {
     MOVE_IRON_DEFENSE,
     MOVE_KNOCK_OFF,
     MOVE_LUNGE,
+    MOVE_NIGHT_SLASH, /* New Change */
     MOVE_OUTRAGE,
     MOVE_PAYBACK,
     MOVE_PIN_MISSILE,
@@ -25695,6 +25698,7 @@ static const u16 sAnorithTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_SWORDS_DANCE,
     MOVE_WATER_PULSE,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
 };
@@ -25752,6 +25756,7 @@ static const u16 sArmaldoTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_SWORDS_DANCE,
     MOVE_WATER_PULSE,
+    MOVE_WAVE_CRASH, /* New Change */
     MOVE_X_SCISSOR,
     MOVE_UNAVAILABLE,
 };
@@ -32711,6 +32716,7 @@ static const u16 sPhioneTeachableLearnset[] = {
     MOVE_CALM_MIND,
     MOVE_DAZZLING_GLEAM,
     MOVE_DIVE,
+    MOVE_DRAINING_KISS, /* New Change */
     MOVE_ENDURE,
     MOVE_FACADE,
     MOVE_FLING,
