@@ -8579,6 +8579,7 @@ static const u16 sHitmonleeTeachableLearnset[] = {
     MOVE_TAUNT,
     MOVE_THIEF,
     MOVE_THROAT_CHOP,
+    MOVE_TRIPLE_AXEL, /* New Change */
     MOVE_VACUUM_WAVE,
     MOVE_WORK_UP,
     MOVE_UNAVAILABLE,
