@@ -11333,6 +11333,7 @@ static const u16 sGyaradosTeachableLearnset[] = {
     MOVE_PAYBACK,
     MOVE_POWER_WHIP,
     MOVE_PROTECT,
+    MOVE_PSYCHIC_FANGS, /* New Change */
     MOVE_RAIN_DANCE,
     MOVE_REFLECT,
     MOVE_REST,
