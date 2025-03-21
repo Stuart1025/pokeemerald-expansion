@@ -9898,6 +9898,7 @@ static const u16 sSeakingTeachableLearnset[] = {
 static const u16 sStaryuTeachableLearnset[] = {
     MOVE_AURA_SPHERE, /* New Change */
     MOVE_BLIZZARD,
+    MOVE_CALM_MIND, /* New Change */
     MOVE_COSMIC_POWER,
     MOVE_DAZZLING_GLEAM,
     MOVE_DIVE,
@@ -9948,6 +9949,7 @@ static const u16 sStarmieTeachableLearnset[] = {
     MOVE_AURA_SPHERE, /* New Change */
     MOVE_AVALANCHE,
     MOVE_BLIZZARD,
+    MOVE_CALM_MIND, /* New Change */
     MOVE_COSMIC_POWER,
     MOVE_DAZZLING_GLEAM,
     MOVE_DIVE,
@@ -12470,6 +12472,7 @@ static const u16 sAerodactylTeachableLearnset[] = {
     MOVE_THIEF,
     MOVE_THUNDER_FANG,
     MOVE_TORMENT,
+    MOVE_U_TURN, /* New Change */
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_AERODACTYL
