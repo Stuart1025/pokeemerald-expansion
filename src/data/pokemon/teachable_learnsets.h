@@ -50118,6 +50118,7 @@ static const u16 sNihilegoTeachableLearnset[] = {
 
 #if P_FAMILY_BUZZWOLE
 static const u16 sBuzzwoleTeachableLearnset[] = {
+    MOVE_BODY_PRESS, /* New Change */
     MOVE_BODY_SLAM,
     MOVE_BOUNCE,
     MOVE_BRICK_BREAK,
