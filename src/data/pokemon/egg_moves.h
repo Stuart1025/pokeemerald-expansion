@@ -2056,6 +2056,7 @@ static const u16 sTropiusEggMoveLearnset[] = {
     MOVE_SLAM,
     MOVE_LEECH_SEED,
     MOVE_NATURE_POWER,
+    MOVE_WHIRLWIND,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_TROPIUS
@@ -2205,6 +2206,7 @@ static const u16 sStarlyEggMoveLearnset[] = {
     MOVE_SAND_ATTACK,
     MOVE_UPROAR,
     MOVE_DETECT,
+    MOVE_WHIRLWIND,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_STARLY
@@ -2778,6 +2780,7 @@ static const u16 sScraggyEggMoveLearnset[] = {
 #if P_FAMILY_SIGILYPH
 static const u16 sSigilyphEggMoveLearnset[] = {
     MOVE_ANCIENT_POWER,
+    MOVE_WHIRLWIND,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_SIGILYPH
@@ -3355,6 +3358,7 @@ static const u16 sBergmiteEggMoveLearnset[] = {
 #if P_FAMILY_NOIBAT
 static const u16 sNoibatEggMoveLearnset[] = {
     MOVE_SWITCHEROO,
+    MOVE_WHIRLWIND,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_NOIBAT

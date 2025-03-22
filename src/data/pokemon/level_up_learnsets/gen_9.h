@@ -4916,6 +4916,7 @@ static const struct LevelUpMove sSnorlaxLevelUpLearnset[] = {
 
 #if P_FAMILY_ARTICUNO
 static const struct LevelUpMove sArticunoLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_WHIRLWIND),
     LEVEL_UP_MOVE( 1, MOVE_GUST),
     LEVEL_UP_MOVE( 1, MOVE_MIST),
     LEVEL_UP_MOVE( 5, MOVE_POWDER_SNOW),
@@ -4940,6 +4941,7 @@ static const struct LevelUpMove sArticunoLevelUpLearnset[] = {
 
 #if P_GALARIAN_FORMS
 static const struct LevelUpMove sArticunoGalarLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_WHIRLWIND),
     LEVEL_UP_MOVE( 1, MOVE_GUST),
     LEVEL_UP_MOVE( 1, MOVE_HYPNOSIS),
     LEVEL_UP_MOVE( 5, MOVE_CONFUSION),
@@ -4966,6 +4968,7 @@ static const struct LevelUpMove sArticunoGalarLevelUpLearnset[] = {
 
 #if P_FAMILY_ZAPDOS
 static const struct LevelUpMove sZapdosLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_WHIRLWIND),
     LEVEL_UP_MOVE( 1, MOVE_PECK),
     LEVEL_UP_MOVE( 1, MOVE_THUNDER_WAVE),
     LEVEL_UP_MOVE( 5, MOVE_THUNDER_SHOCK),
@@ -4990,6 +4993,7 @@ static const struct LevelUpMove sZapdosLevelUpLearnset[] = {
 
 #if P_GALARIAN_FORMS
 static const struct LevelUpMove sZapdosGalarLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_WHIRLWIND),
     LEVEL_UP_MOVE( 1, MOVE_PECK),
     LEVEL_UP_MOVE( 1, MOVE_FOCUS_ENERGY),
     LEVEL_UP_MOVE( 5, MOVE_ROCK_SMASH),
@@ -5016,6 +5020,7 @@ static const struct LevelUpMove sZapdosGalarLevelUpLearnset[] = {
 
 #if P_FAMILY_MOLTRES
 static const struct LevelUpMove sMoltresLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_WHIRLWIND),
     LEVEL_UP_MOVE( 1, MOVE_GUST),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 5, MOVE_EMBER),
@@ -5040,6 +5045,7 @@ static const struct LevelUpMove sMoltresLevelUpLearnset[] = {
 
 #if P_GALARIAN_FORMS
 static const struct LevelUpMove sMoltresGalarLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_WHIRLWIND),
     LEVEL_UP_MOVE( 1, MOVE_GUST),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 5, MOVE_PAYBACK),
@@ -19341,6 +19347,7 @@ static const struct LevelUpMove sTapuLeleLevelUpLearnset[] = {
 
 #if P_FAMILY_TAPU_BULU
 static const struct LevelUpMove sTapuBuluLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_WHIRLWIND),
     LEVEL_UP_MOVE( 1, MOVE_LEAFAGE),
     LEVEL_UP_MOVE( 1, MOVE_ROCK_SMASH),
     LEVEL_UP_MOVE( 5, MOVE_WITHDRAW),
