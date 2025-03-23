@@ -21974,6 +21974,7 @@ static const u16 sBreloomTeachableLearnset[] = {
     MOVE_SWORDS_DANCE,
     MOVE_THUNDER_PUNCH,
     MOVE_TOXIC,
+    MOVE_TRAILBLAZE, /* New Change */
     MOVE_VENOSHOCK,
     MOVE_WORRY_SEED,
     MOVE_ZEN_HEADBUTT,
