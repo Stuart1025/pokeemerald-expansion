@@ -12711,6 +12711,7 @@ static const u16 sArticunoGalarTeachableLearnset[] = {
     MOVE_REFLECT,
     MOVE_REST,
     MOVE_RETURN,
+    MOVE_ROOST, /* New Change */
     MOVE_SCARY_FACE,
     MOVE_SHADOW_BALL,
     MOVE_SKILL_SWAP,
@@ -12807,6 +12808,7 @@ static const u16 sZapdosGalarTeachableLearnset[] = {
     MOVE_FOCUS_ENERGY,
     MOVE_FRUSTRATION,
     MOVE_GIGA_IMPACT,
+    MOVE_HEAT_WAVE, /* New Change */
     MOVE_HELPING_HAND,
     MOVE_HURRICANE,
     MOVE_HYPER_BEAM,
@@ -12822,6 +12824,7 @@ static const u16 sZapdosGalarTeachableLearnset[] = {
     MOVE_REVENGE,
     MOVE_REVERSAL,
     MOVE_ROCK_SMASH,
+    MOVE_ROOST, /* New Change */
     MOVE_SANDSTORM,
     MOVE_SCARY_FACE,
     MOVE_SCREECH,
@@ -12915,6 +12918,7 @@ static const u16 sMoltresGalarTeachableLearnset[] = {
     MOVE_FOUL_PLAY,
     MOVE_FRUSTRATION,
     MOVE_GIGA_IMPACT,
+    MOVE_HEAT_WAVE, /* New Change */
     MOVE_HELPING_HAND,
     MOVE_HEX,
     MOVE_HURRICANE,
@@ -12928,6 +12932,7 @@ static const u16 sMoltresGalarTeachableLearnset[] = {
     MOVE_RAIN_DANCE,
     MOVE_REST,
     MOVE_RETURN,
+    MOVE_ROOST, /* New Change */
     MOVE_SAFEGUARD,
     MOVE_SANDSTORM,
     MOVE_SCARY_FACE,
